@@ -7,28 +7,29 @@
 - [Quick Start Tutorial](03_quick_start_tutorial.md)
 - [PicoMite Hardware](04_picomite_tutorial.md)
 - [Using MMBasic](05_using_mmbasic.md)
-- Full Screen Editor
-- Program and Data Storage
-- Variables and Expressions
-- Subroutines and Functions
-- Using the I/O pins
-- Sound Output
-- Special Device Support
-- Display Panels
-- Touch Support
-- Graphics Commands and Functions
-- PicoMite Advanced Graphics
-- Advanced Graphics Programming Techniques
-- MMBasic Characteristics
-- Predefined Read Only Variables
-- Options
-- Commands
-- Functions
-- Obsolete Commands and Functions
-- Appendix A – Serial Communications
-- Appendix B – I2C Communications
-- Appendix C – 1-Wire Communications
-- Appendix D – SPI Communications
-- Appendix E – Regex Syntax
-- Appendix F – The PIO Programming Package
-- Appendix G – Programming in BASIC - A Tutorial
+- [Full Screen Editor](06_full_screen_editor.md)
+- [Program and Data Storage](07_program_and_data_storage.md)
+- [Variables and Expressions](08_variables_and_expressions.md)
+- [Subroutines and Functions](09_subroutines_and_functions.md)
+- [Using the I/O pins](10_using_the_io_pins.md)
+- [Sound Output](11_sound_output.md)
+- [Special Device Support](12_special_device_support.md)
+- [Display Panels](13_display_panels.md)
+- [Touch Support](14_touch_support.md)
+- [Graphics Commands and Functions](15_graphics_commands_and_functions.md)
+- [PicoMite Advanced Graphics](16_picomite_advanced_graphics.md)
+- [Advanced Graphics Programming Techniques](17_advanced_graphics_programming_techniques.md)
+- [MMBasic Characteristics](18_mmbasic_characteristics.md)
+- [Predefined Read Only Variables](19_predefined_read_only_variables.md)
+- [Options](20_options.md)
+- [Commands](21_commands.md)
+- [Functions](22_functions.md)
+- [Obsolete Commands and Functions](23_obsolete_commands_and_functions.md)
+
+[Appendix A – Serial Communications](A_serial_communications.md)
+[Appendix B – I2C Communications](B_i2c_communications.md)
+[Appendix C – 1-Wire Communications](C_1-wire_communications.md)
+[Appendix D – SPI Communications](D_spi_communications.md)
+[Appendix E – Regex Syntax](E_regex_syntax.md)
+[Appendix F – The PIO Programming Package](F_the_pio_programming_package.md)
+[Appendix G – Programming in BASIC - A Tutorial](G_programming_in_basic_a_tutorial.md)
