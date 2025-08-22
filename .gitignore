@@ -5,5 +5,4 @@
 .vscode/
 
 *.sh
-content/*
-!content/0*
+*.pdf
