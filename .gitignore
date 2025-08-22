@@ -1,0 +1,6 @@
+# Gitignore file for GitHub Pages
+# Ignore files that are not needed in the repository
+.DS_Store
+*.log
+.vscode/
+
