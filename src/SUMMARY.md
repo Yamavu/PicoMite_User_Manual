@@ -9,7 +9,6 @@
 - [Hardware Details](hardware_details.md)
 - [Using MMBasic](using_mmbasic.md)
 - [Full Screen Editor](full_screen_editor.md)
-- [Program and Data Storage](program_and_data_storage.md)
 - [Variables and Expressions](variables_and_expressions.md)
 - [Subroutines and Functions](subroutines_and_functions.md)
 - [Using the I/O pins](using_the_io_pins.md)
