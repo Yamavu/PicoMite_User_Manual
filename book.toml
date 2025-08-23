@@ -1,71 +1,12 @@
-# The title of your book. This will be shown in the navigation bar.
 [book]
-title = "PicoMite"
-
-# The name of the author(s). This is used in the meta tags of the HTML pages.
-authors = ["Geoff Graham", "Peter Mather"]
-
-# A short description of the book. This is also used in the meta tags.
-description = "A Raspberry Pi Pico Running the MMBasic BASIC Interpreter"
-
-# The language of the book. It's an optional field and defaults to 'en'.
-# It is used for language-specific features in the HTML output.
+authors = ["Yamavu"]
 language = "en"
-
-# The URL of the source code repository. If set, an "Edit this page" link
-# will be displayed on each page.
-# git-repository-url = "https://github.com/Yamavu/PicoMite_User_Manual"
-
-# The subdirectory where your book's Markdown files live.
 src = "src"
-
-# The output directory for the built book.
-[build]
-build-dir = "book"
-
-# Whether to create the output directory if it doesn't exist.
-create-missing = true
-
-
-# --------------------------------------------------------------------------------
-# Output-specific options can be set here.
-# You can have multiple output sections, like [output.html], [output.html-print], etc.
-# --------------------------------------------------------------------------------
+title = "PicoMite User Manual"
+authors = ["Geoff Graham", "Peter Mather"]
+git-repository-url = "https://github.com/Yamavu/PicoMite_User_Manual"
 
 [output.html]
-# The URL of the Git repository. An icon will be displayed in the top-right corner.
-# git-repository-url = "https://github.com/Yamavu/PicoMite_User_Manual"
-
-# The URL template for the "Edit this page" link. Use `{path}` as a placeholder.
-# edit-url-template = "https://github.com/rust-lang/mdBook/edit/master/guide/{path}"
-
-# The favicon for your book.
-# favicon = "favicon.svg"
-
-# A list of additional CSS files to be included in the output.
-# additional-css = ["theme/custom.css"]
-
-# A list of additional JS files to be included in the output.
-# additional-js = ["theme/custom.js"]
-
-# Enables or disables the search functionality. Defaults to `true`.
-search = true
-
-# The default theme to use.
 default-theme = "light"
-
-# The theme to use when the system prefers a dark theme.
 preferred-dark-theme = "navy"
-
-# Adds a copy button to code blocks. Defaults to `true`.
 copy-fonts = true
-
-# This configures the playground for Rust code blocks.
-# [output.html.playground]
-# editable = true
-# line-numbers = true
-# runnable = true
-
-# Enables or disables the ability to show/hide the navigation sidebar.
-# [output.html.fold]
-# enable = false

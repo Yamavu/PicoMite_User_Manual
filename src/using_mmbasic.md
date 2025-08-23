@@ -3,18 +3,22 @@
 ## Commands and Program Input
 
 At the command prompt you can enter a command and it will be immediately run. Most of the time you will
-do this to tell the PicoMite to do something like run a program or set an option. But this feature also allows you
-to test out commands at the command prompt.
-To enter a program the easiest method is to use the EDIT command. This will invoke the full screen program
-editor which is built into the PicoMite and is described later in this manual. It includes advanced features such
-as search and copy, cut and paste to and from a clipboard.
+do this to tell the PicoMite firmware to do something like run a program or set an option. But this feature also
+allows you to test out commands at the command prompt.
+
+To enter a program the easiest method is to use the `EDIT` command. This will invoke the full screen program
+editor which is built into the PicoMite firmware and is described later in this manual. It includes advanced
+features such as search and copy, cut and paste to and from a clipboard.
+
 You could also compose the program on your desktop computer using something like Notepad and then
-transfer it to the PicoMite via the XModem protocol (see the XMODEM command) or by streaming it up the
-console serial link (see the AUTOSAVE command).
+transfer it to the Raspberry Pi Pico via the XModem protocol (see the `XMODEM` command) or by streaming it
+up the console serial link (see the `AUTOSAVE` command).
+
 A third and convenient method of writing and debugging a program is to use MMEdit. This is a program
 running on your Windows computer which allows you to edit your program on your computer then transfer it to
-the PicoMite with a single click of the mouse. MMEdit was written by Jim Hiley and can be downloaded for
-free from https://www.c-com.com.au/MMedit.htm.
+the PicoMite with a single click of the mouse. MMEdit was written by Jim Hiley and is free to download and
+use. To learn more and get it go to: https://geoffg.net/mmedit.html
+
 One thing that you cannot do is use the old BASIC way of entering a program which was to prefix each line
 with a line number. Line numbers are optional in MMBasic so you can still use them if you wish but if you
 enter a line with a line number at the prompt MMBasic will simply execute it immediately.
@@ -24,57 +28,54 @@ enter a line with a line number at the prompt MMBasic will simply execute it imm
 A BASIC program starts at the first line and continues until it runs off the end of the program or hits an END
 command - at which point MMBasic will display the command prompt (>) on the console and wait for
 something to be entered.
+
 A program consists of a number of statements or commands, each of which will cause the BASIC interpreter to
 do something (the words statement and command generally mean the same and are used interchangeably).
 Normally each statement is on its own line but you can have multiple statements in the one line separated by
 the colon character (:). For example.
-A = 24.6 : PRINT A
-Each line can start with a line number. Line numbers were mandatory in the early BASIC interpreters however
-modern implementations (such as MMBasic) do not need them. You can still use them if you wish but they
-have no benefit and generally just clutter up your programs. This is an example of a program that uses line
-numbers:
-50 A = 24.6
-60 PRINT A
-A line can also start with a label which can be used as the target for a program jump using the GOTO
-command. For example (the label name is JmpBack):
-JmpBack: A = A + 1
-PRINT A
-GOTO JmpBack
 
-A label has the same specifications (length, character set, etc) as a variable name but it cannot be the
-same as a command name. When used to label a line the label must appear at the beginning of a line
-but after a line number (if used) and be terminated with a colon character (:).
-Editing the Command Line
+```basic
+A = 24.6 : PRINT A
+```
+
+[Appendix G – Programming in BASIC - A Tutorial](G_programming_in_basic_a_tutorial.md) at the rear of this manual provides a comprehensive tutorial on the language which will take you through the fundamentals in an easy to read format with lots of examples.
+
+## Editing the Command Line
+
 When entering a line at the command prompt the line can be edited using the left and right arrow keys to move
-along the line, the Delete key to delete a character and the Insert key to switch between insert and overwrite.
-At any point the Enter key will send the line to MMBasic which will execute it.
-The up and down arrow keys will move through a history of previously entered command lines which can be
-edited and reused.
+along the line, the Delete key to delete a character, the Backspace to delete before the cursor and the Insert key to switch between insert and overwrite modes.
+
+Home/End will move to the beginning/end of the line and Home pressed twice will terminate the edit. At any
+point the Enter key will send the line to MMBasic which will execute it. The up and down arrow keys will
+move through a history of previously entered command lines which can be edited and reused.
 
 ## Shortcut Keys
 
 The function keys on the keyboard or the serial console can be used at the command prompt to automatically
 enter common commands. These function keys will insert the text followed by the Enter key so that the
 command is immediately executed:
-- F2 : RUN
-- F3 : LIST
-- F4 : EDIT
-- F10 : AUTOSAVE
-- F11 : XMODEM RECEIVE
-- F12 : XMODEM SEND
+- **F2** : RUN
+- **F3** : LIST
+- **F4** : EDIT
+- **F10** : AUTOSAVE
+- **F11** : XMODEM RECEIVE
+- **F12** : XMODEM SEND
 
-Function keys F1, and F5 to F9 can be programmed with custom text. See the OPTION FNKey command.
+Function keys **F1**, and ****F5**** to **F9** can be programmed with custom text. See the [OPTION FNKey command](commands/option.md).
 
 ## Interrupting A Running Program
 
 A program is set running by the RUN command. You can interrupt MMBasic and the running program at any
-time by typing CTRL-C on the console input and MMBasic will return to the command prompt.
+time by typing **CTRL-C** on the console input and MMBasic will return to the command prompt.
 
 ## Setting Options
 
-Many options can be set by using commands that start with the keyword OPTION. They are listed in their own
+Many options can be set by using commands that start with the keyword `OPTION`. They are listed in their own
 section of this manual. For example, you can change the CPU clock speed with the command:
+
+```basic
 OPTION CPUSPEED speed
+```
 
 ## Saved Variables
 
@@ -134,7 +135,7 @@ library and become part of MMBasic and perform the same as other built-in functi
 the language. An embedded font can also be added the same way and used just like a normal font.
 
 To install components into the library you need to write and test the routines as you would with any normal
-BASIC routines. When they are working correctly you can use the LIBRARY SAVE command. This will
+BASIC routines. When they are working correctly you can use the `LIBRARY SAVE` command. This will
 transfer the routines (as many as you like) to a non-visible part of flash memory where they will be available to any BASIC program but will not show when the LIST command is used and will not be deleted when a new program is loaded or NEW is used. However, the saved subroutines and functions can be called from within the main program and can even be run at the command prompt (just like a built-in command or function).
 Some points to note:
 
@@ -142,36 +143,40 @@ Some points to note:
 functions, embedded C routines and fonts. The only difference is that they do not show when a program
 is listed and are not deleted when a new program is loaded.
 * Library routines can create and access global variables and are subject to the same rules as the main
-program – for example, respecting OPTION EXPLICIT if it is set.
+program – for example, respecting `OPTION EXPLICIT` if it is set.
 * When the routines are transferred to the library MMBasic will compress them by removing comments,
 extra spaces, blank lines and the hex codes in embedded C routines and fonts. This makes the library
 space efficient, especially when loading large fonts. Following the save the program area is cleared.
-* You can use the LIBRARY SAVE command multiple times. With each save the new contents of the
+* You can use the `LIBRARY SAVE` command multiple times. With each save the new contents of the
 program space are appended to the already existing code in the library.
 * You can use line numbers in the library but you cannot use a line number on an otherwise empty line as
-the target for a GOTO, etc. This is because the LIBRARY SAVE command will remove any blank lines.
+the target for a GOTO, etc. This is because the `LIBRARY SAVE` command will remove any blank lines.
 * You can use READ commands in the library but they will default to reading DATA statements in the
 main program memory. If you want to read from DATA statements in the library you must use the
 RESTORE command before the first READ command. This will reset the pointer to the library space.
 * The library is saved to program flash memory Slot 3 and this will not be available for storing a program if
-LIBRARY SAVE is used.
-* You can see what is in the library by using the LIBRARY LIST command which will list the contents of
+`LIBRARY SAVE` is used.
+* You can see what is in the library by using the `LIBRARY LIST` command which will list the contents of
 the library space.
-* The LIBRARY contents can be saved to disk using LIBRARY DISK SAVE fname$ and restored using
-LIBRARY DISK LOAD fname$
+* The `LIBRARY` contents can be saved to disk using `LIBRARY DISK SAVE fname$` and restored using
+`LIBRARY DISK LOAD fname$`
 
 To delete the routines in the library space you use the LIBRARY DELETE command. This will clear the space
 and return the Flash Slot 3 used by the library back to being available for storage for normal programs. The
-only other way to delete a library is to use OPTION RESET.
+only other way to delete a library is to use `OPTION RESET`.
 
 ## Program Initialisation
 
 The library can also include code that is not contained within a subroutine or function. This code (if it exists)
-will be run automatically before a program starts running (ie, via the RUN command). This feature can be used
+will be run automatically before a program starts running (ie, via the `RUN` command). This feature can be used
 to initialise constants or setup MMBasic in some way. For example, if you wanted to set some constants you
 could include the following lines in the library code:
+
+```basic
 CONST TRUE = 1
 CONST FALSE = 0
+```
+
 For all intents and purposes, the identifiers TRUE and FALSE have been added to the language and will be
 available to any program that is run on the PicoMite.
 
@@ -179,7 +184,7 @@ available to any program that is run on the PicoMite.
 
 There may be a need to execute some code on initial power up, perhaps to initialise some hardware, set some
 options or print a custom start-up banner. This can be accomplished by creating a subroutine with the name
-MM.STARTUP. When the PicoMite is first powered up or reset it will search for this subroutine and, if found,
+`MM.STARTUP`. When the PicoMite is first powered up or reset it will search for this subroutine and, if found,
 it will be run once.
 
 For example, if the PicoMite has a real time clock attached, the program could contain the following code:
@@ -191,10 +196,10 @@ END SUB
 ```
 
 This would cause the internal clock within MMBasic to be set to the current time on every power up or reset.
-After the code in MM.STARTUP has been run MMBasic will continue with running the rest of the program in
+After the code in `MM.STARTUP` has been run MMBasic will continue with running the rest of the program in
 program memory. If there is no other code MMBasic will return to the command prompt.
 
-Note that you should not use MM.STARTUP for general setup of MMBasic (like dimensioning arrays, opening
+Note that you should not use `MM.STARTUP` for general setup of MMBasic (like dimensioning arrays, opening
 communication channels, etc) before running a program. The reason is that when you use the RUN command
 MMBasic will clear the interpreter's state ready for a fresh start.
 

@@ -1,112 +1,22 @@
 # PicoMite Hardware
 
 This diagram shows the possible uses within MMBasic for each I/O pin on the Raspberry Pi Pico:
-PWM0A COM1 TX I2C SDA
-PWM0B COM1 RX I2C SCL
-PWM1A
-PWM1B
-PWM2A COM2 TX
-PWM2B COM2 RX
-PWM3A
-PWM3B
-PWM4A COM2 TX
-PWM4B COM2 RX
-PWM5A
-PWM5B
-PWM6A COM1 TX
-PWM6B COM1 RX
-PWM7A
-PWM7B
 
-SPI RX
-
-GP0
-1
-GP1
-2
-GND
-I2C2 SDA SPI CLK GP2
-4
-I2C2 SCL SPI TX
-GP3
-5
-I2C SDA SPI RX
-GP4
-6
-I2C SCL
-GP5
-7
-GND
-I2C2 SDA SPI CLK GP6
-9
-I2C2 SCL SPI TX
-GP7 10
-I2C SDA SPI2 RX GP8 11
-I2C SCL
-GP9 12
-GND
-I2C2 SDA SPI2 CLK GP10 14
-I2C2 SCL SPI2 TX
-GP11 15
-I2C SDA SPI2 RX GP12 16
-I2C SCL
-GP13 17
-GND
-I2C2 SDA SPI2 CLK GP14 19
-I2C2 SCL SPI2 TX
-GP15 20
-
-VREF
-ADC2
-AGND
-ADC1
-ADC0
-
-VBUS
-VSYS
-GND
-3V3EN
-3V3
-ADC VREF
-34 GP28 SPI2 RX I2C SDA COM1 TX
-GND
-32 GP27 SPI2 TX I2C2 SCL
-31 GP26 SPI2 CLK I2C2 SDA
-RUN
-29 GP22
-I2C2 SDA
-GND
-27 GP21
-I2C SCL COM2 RX
-26 GP20 SPI RX I2C SDA COM2 TX
-25 GP19 SPI TX I2C2 SCL
-24 GP18 SPI CLK I2C2 SDA
-GND
-22 GP17
-I2C SCL COM1 RX
-21 GP16 SPI RX I2C SDA COM1 TX
-
-PWM6A
-PWM5B
-PWM5A
-PWM3A
-PWM2B
-PWM2A
-PWM1B
-PWM1A
-PWM0B
-PWM0A
+<div style="clear: both; margin: .5em;">
+  <img src="04_pinout.svg" alt="RP2040 pinout" style="width:100%">
+</div>
 
 For versions with VGA video output six pins (GP16 to GP21) are reserved for that function. Similarly HDMI
 versions have eight pins (GP12 to GP19) that are reserved for that function. Refer to the chapter titled Video Output for more information.
 
 The version of the firmware with USB keyboard/mouse support also reserves pin 11 (GP8) for the serial
-console Tx and pin 12 (GP9) for Rx. Refer to the chapter Keyboard/Mouse/Ganepad for more information.
+console Tx and pin 12 (GP9) for Rx. Refer to the chapter [Keyboard/Mouse/Gamepad](keyboard_mouse_gamepad.md) for more information.
 
 The notation is as follows:
+
 - GP0 to GP28 : Can be used for digital input or output.
 - COM1, COM2 : Can be used for asynchronous serial I/O (UART0 and UART1 pins on the Pico datasheet).
-- I2C, I2C2 : Can be used for I2C communications (I2C0 and I2C1 pins on the Pico datasheet).
+- I2C, I2C2 : Can be used for I²C communications (I2C0 and I2C1 pins on the Pico datasheet).
 - SPI, SPI2 : Can be used for SPI I/O (see Appendix D). (SPI0 and SPI1 pins on the Pico datasheet).
 - PWMnx : Can be used for PWM output (see the PWM command).
 - GND : Common ground.
@@ -202,7 +112,6 @@ GP30 to GP47 can be used as follows:
 - GP32: DIGITAL_IN: DIGITAL_OUT, COM1 TX, SPI RX, I2C SDA, EXT_PWM8A
 - GP33: DIGITAL_IN: DIGITAL_OUT, COM1 RX, I2C SCL, PWM8B
 - GP34: DIGITAL_IN: DIGITAL_OUT, SPI SCK, I2C2 SDA, PWM9A
-PicoMite User Manual Page 13
 - GP35: DIGITAL_IN: DIGITAL_OUT, SPI TX, I2C2 SCL, PWM9B
 - GP36: DIGITAL_IN: DIGITAL_OUT, COM2 TX, SPI RX, I2C SDA, PWM10A
 - GP37: DIGITAL_IN: DIGITAL_OUT, COM2 RX, I2C SCL, PWM10B
@@ -247,14 +156,12 @@ The maximum total I/O current load for the entire chip is 50mA.
 ## Power Supply
 
 <div style="float: right; margin-right: 20px;">
-  <img src="04_power.jpg" alt="RP2040 power supply" width="250">
+  <img src="04_power.jpg" alt="RP2040 power supply" width="350">
 </div>
 
 The Raspberry Pi Pico has a flexible power system.
 
 The input voltage from either the USB or VBUS inputs is connected through a Schottky diode to the buck-boost SMPS (Switch Mode Power Supply) which has an output of 3.3V. The SMPS will accommodate input voltages from 1.8V to 5.5V allowing the PicoMite to run from a wide range of power sources including batteries.
-
-
 
 External circuitry can be powered by VBUS (normally 5V) or by the 3V3 (3.3V) output which can source up to 300mA.
 

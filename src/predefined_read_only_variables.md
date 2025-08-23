@@ -1,0 +1,1 @@
+# Predefined Read Only Variables

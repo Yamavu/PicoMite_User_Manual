@@ -1,4 +1,55 @@
-# Quick Start Tutorial
+# First Steps
+Once you have access to the console and the MMBasic prompt there are a few things that you can do to prove that
+you have a working computer.
+
+All of these commands should be typed at the command prompt (`>`).
+
+Try a simple calculation:
+```basic
+> PRINT 1/7
+0.1428571429
+```
+
+See how much memory you have:
+```basic
+> MEMORY
+Program:
+0K ( 0%) Program (0 lines)
+80K (100%) Free
+RAM:
+0K ( 0%) 0 Variables
+0K ( 0%) General
+112K (100%) Free
+```
+
+What is the current time? Note that the PicoMite's clock starts at midnight on power up.
+```basic
+> PRINT TIME$
+00:04:01
+```
+
+Set the clock to the current time:
+```basic
+> TIME$ = "10:45"
+```
+
+Check the time again:
+```basic
+> PRINT TIME$
+10:45:09
+```
+
+How many milliseconds have elapsed since power up:
+```basic
+> PRINT TIMER
+440782 .748
+```
+
+Count to 20:
+```vbnet
+> FOR a = 1 to 20 : PRINT a; : NEXT a
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+```
 
 ## A Simple Program
 
@@ -25,7 +76,7 @@ Congratulations. You have just written and run your first program on the PicoMit
   <img src="03_led.jpg" alt="GP21 - 470 ohms - LED >| - GND" width="250">
 </div>
 
-Connect a LED to pin *GP21* (marked on the underside of the board) and a ground pin as shown in the diagram on the right.
+Connect a LED and a 470&#8486; resistor to pin *GP21* (marked on the underside of the board) and a ground pin as shown in the diagram on the right. 
 
 Then use the EDIT command to enter the following program:
 
