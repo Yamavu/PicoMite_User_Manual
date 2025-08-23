@@ -1,5 +1,9 @@
 # Full Screen Editor
 
+<div style="clear: both; margin: .5em 5em;">
+  <img src="07_editor.jpg" alt="Raspberry Pi Pico pinout" style="width:100%">
+</div>
+
 An important productivity feature is the built-in full screen editor. When running it looks like this:
 
 The editor operates with:
