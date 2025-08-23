@@ -1,5 +1,4 @@
 [book]
-authors = ["Yamavu"]
 language = "en"
 src = "src"
 title = "PicoMite User Manual"
