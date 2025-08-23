@@ -1,1 +1,0 @@
-# PicoMite Advanced Graphics

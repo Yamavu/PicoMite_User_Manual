@@ -61,7 +61,7 @@ command is immediately executed:
 - **F11** : XMODEM RECEIVE
 - **F12** : XMODEM SEND
 
-Function keys **F1**, and ****F5**** to **F9** can be programmed with custom text. See the [OPTION FNKey command](commands/option.md).
+Function keys **F1**, and ****F5**** to **F9** can be programmed with custom text. See the [OPTION FNKey command](options.md).
 
 ## Interrupting A Running Program
 

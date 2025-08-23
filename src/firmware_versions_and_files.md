@@ -82,7 +82,7 @@ The following table lists the prefix for each firmware file and its associated c
 | PicoMiteRP2040VGAUSB | RP2040 | | USB | VGA | |
 | PicoMiteRP2350VGAUSB | RP2350 | | USB | VGA | |
 | PicoMiteHDMI | RP2350 | | PS2 | HDMI | |
-| PicoMiteHDMI | RP2350 | | USB | HDMI | |
+| PicoMiteHDMIUSB | RP2350 | | USB | HDMI | |
 | WebMiteRP2040 | RP2040 | &check; | PS2 | | &check; |
 | WebMiteRP2350 | RP2350A | &check; | PS2 | | &check; |
 

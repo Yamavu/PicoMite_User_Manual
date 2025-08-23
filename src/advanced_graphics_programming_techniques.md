@@ -1,1 +1,0 @@
-# Advanced Graphics Programming Techniques
