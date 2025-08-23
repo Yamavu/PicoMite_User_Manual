@@ -13,7 +13,7 @@
 - [Subroutines and Functions](subroutines_and_functions.md)
 - [Video Output](video_output.md)
 - [Keyboard/Mouse/Gamepad](keyboard_mouse_gamepad.md)
-- [Program and Data Storage][program_and_data_storage.md]
+- [Program and Data Storage](program_and_data_storage.md)
 - [Sound Output](sound_output.md)
 - [Using the I/O pins](using_the_io_pins.md)
 - [Special Device Support](special_device_support.md)
