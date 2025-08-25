@@ -1,122 +1,113 @@
 # Options
 
-Detailed Listing
 This table lists the various option commands which can be used to configure MMBasic and change the way it
 operates. Options that are marked as permanent will be saved in non-volatile memory and automatically
 restored when the PicoMite firmware is restarted. Options that are not permanent will be reset on start-up, reset
 and in many cases when a program is run and/or exited.
+
 Many OPTION commands will force a restart of the PicoMite firmware and that will cause the USB console
 interface to be reset. The program in memory will not be lost as it is held in non-volatile flash memory.
-Permanent?
-OPTION ANGLE RADIANS |
-DEGREES
+
+
+## Angle
+
+
+### OPTION ANGLE RADIANS \| DEGREES
 
 This command switches trig functions between degrees and radians.
+
 Acts on SIN, COS, TAN, ATN, ATAN2, MATH ATAN3, ACOS, ASIN
 
-OPTION AUDIO PWMnApin,
-PWMnBpin
-or
-OPTION AUDIO DISABLE
 
- Configures one of the PWM channels as an audio output.
+## Audio
 
-OPTION AUDIO SPI CSpin,
-CLKpin, MOSIpin
-or
-OPTION AUDIO DISABLE
+#Permanent
 
-the audio output to be directed to a MCP48n2 DAC
- Configures
-connected to the specified pins. The LDAC pin on the DAC should be
+### OPTION AUDIO PWMnApin, PWMnBpin <br> OPTION AUDIO DISABLE
 
-OPTION AUDIO VS1053
-CLKpin, MOSIpin, MISOpin,
-XCSpin, XDCSpin, DREQpin,
-XRSTpin
-or
-OPTION AUDIO DISABLE
+Configures one of the PWM channels as an audio output.
 
-the audio output to be directed to a VS1053 CODEC. This
- Configures
-allows MP3 and MIDI playback in addition to the other formats
+`PWMnApin` is the left audio channel, `PWMnBpin` is the right. Both pins must belong to the same audio channel.
 
-OPTION AUDIO I2S
-BCLKpin, DINpin
-or
-OPTION AUDIO DISABLE
+Example, `OPTION AUDIO GP18, GP19` would use `PWM1A` and `PWM1B` on pins 24 and 25 respectively.
 
-the audio output to be directed to an I2S DAC connected to
- Configures
-the specified pins. The LRCK pin on the DAC should be connected to
+This option prevents use of these pins in the BASIC program. The audio output is generated using PWM so a low pass filter is
+necessary on the output. The audio output from the Raspberry Pi Pico is very noisy. Using OPTION POWER and/or supplying power via a separate 3.3V linear regulator can reduce this.
 
-OPTION AUTOREFRESH
-OFF | ON
-
-Black and white displays can only be updated a full screen at a time. By
-using OPTION AUTOREFRESH OFF/ON you can control whether a
-write command immediately updates the display or not. If
-AUTOREFRESH is OFF the REFRESH command can be used to
-trigger the write. This applies to the following displays: N5110,
-SSD1306I2C, SSD1306I2C32, SSD1306SPI and ST7920
-
-OPTION AUTORUN ON
-[,NORESET]
-
-PicoMite User Manual
-
-‘PWMnApin’ is the left audio channel, ‘PWMnBpin’ is the right. Both
-pins must belong to the same audio channel.
-Example, OPTION AUDIO GP18, GP19 would use PWM1A and
-PWM1B on pins 24 and 25 respectively.
-This option prevents use of these pins in the BASIC program.
-The audio output is generated using PWM so a low pass filter is
-necessary on the output. The audio output from the Raspberry Pi Pico is
-very noisy. Using OPTION POWER and/or supplying power via a
-separate 3.3V linear regulator can reduce this.
 This command must be run at the command prompt (not in a program).
 
-connected to GND.
 
-supported and also supports real-time MIDI output. See the PLAY
-command for more details
+### OPTION AUDIO SPI CSpin, CLKpin, MOSIpin <br> OPTION AUDIO DISABLE
 
-the next consecutive GPIO pin to BCLKpin.
+Configures  the audio output to be directed to a MCP48n2 DAC connected to the specified pins. The LDAC pin on the DAC should be
+connected to GND. 
 
-MMBasic to automatically run a program on power up or
- Instructs
-restart.
 
-Page 89
+### OPTION AUDIO VS1053 CLKpin, MOSIpin, MISOpin, XCSpin, XDCSpin, DREQpin, XRSTpin <br> OPTION AUDIO DISABLE
 
-or
-OPTION AUTORUN n
-[,NORESET]
-or
-OPTION AUTORUN OFF
+Configures the audio output to be directed to a VS1053 CODEC. This allows MP3 and MIDI playback in addition to the other formats
+supported and also supports real-time MIDI output. See the `PLAY` command for more details
 
-ON will cause the current program in program memory to be run.
-Specifying ‘n’ will cause that location in flash memory to be run. ‘n’
-must be in the range 1 to 3.
-Specifying the optional parameter “NORESET” will maintain
-AUTORUN even if the program causes a system error (by default this
+### OPTION AUDIO I2S BCLKpin, DINpin <br> OPTION AUDIO DISABLE
+
+Configures the audio output to be directed to an I2S DAC connected to the specified pins. The LRCK pin on the DAC should be connected to the next consecutive GPIO pin to BCLKpin.
+
+ Configures the audio output to be directed to an I2S DAC connected to the specified pins. The LRCK pin on the DAC should be connected to
+
+## Display
+
+### OPTION AUTOREFRESH OFF | ON
+
+Black and white displays can only be updated a full screen at a time. By using OPTION AUTOREFRESH OFF/ON you can control whether a write command immediately updates the display or not. 
+
+If `AUTOREFRESH` is `OFF` the `REFRESH` command can be used to
+trigger the write. This applies to the following displays: N5110, SSD1306I2C, SSD1306I2C32, SSD1306SPI and ST7920
+
+
+## Autorun
+
+Instructs MMBasic to automatically run a program on power up or restart.
+
+Entering the break key (default CTRL-C) at the console will interrupt the running program and return to the command prompt.
+
+
+### OPTION AUTORUN ON [,NORESET] 
+
+`ON` will cause the current program in program memory to be run.
+
+Specifying the optional parameter “NORESET” will maintain AUTORUN even if the program causes a system error (by default this
 will cause the firmware to cancel any OPTION AUTORUN setting).
-OFF will disable the autorun option and is the default for a new
-program.
-Entering the break key (default CTRL-C) at the console will interrupt the
-running program and return to the command prompt.
 
-OPTION BASE 0 | 1
+### OPTION AUTORUN n [,NORESET] 
+
+Specifying `n` will cause that location in flash memory to be run. `n` must be in the range 1 to 3.
+
+Specifying the optional parameter “NORESET” will maintain AUTORUN even if the program causes a system error (by default this
+will cause the firmware to cancel any OPTION AUTORUN setting).
+
+### OPTION AUTORUN OFF
+
+OFF will disable the autorun option and is the default for a new program.
+
+## Base
+
+### OPTION BASE 0 | 1
 
 Set the lowest value for array subscripts to either 0 or 1.
 This must be used before any arrays are declared and is reset to the
 default of 0 on power up.
 
-OPTION BAUDRATE nn
+
+## Baudrate
+
+### OPTION BAUDRATE nn
 
 Set the baudrate of the serial console (if it is configured).
 
-OPTION BREAK nn
+
+## Break
+
+### OPTION BREAK nn
 
 Set the value of the break key to the ASCII value 'nn'. This key is used to
 interrupt a running program.
@@ -134,9 +125,7 @@ the case used for listing command and function names when
 using the LIST command. The default is TITLE but the old standard of
 MMBasic can be restored using OPTION CASE UPPER.
 
-OPTION COLOURCODE ON
-or
-OPTION COLOURCODE
+OPTION COLOURCODE ON <br> OPTION COLOURCODE
 OFF
 
 on or off colour coding for the editor's output. Keywords will be in
@@ -349,9 +338,7 @@ d1positivepin, d2positivepin
 
 OPTION KEYBOARD nn
 [,capslock] [,numlock]
-[,repeatstart] [,repeatrate]
-or
-OPTION KEYBOARD
+[,repeatstart] [,repeatrate] <br> OPTION KEYBOARD
 DISABLE
 
 a keyboard. This can be used for console input and any
@@ -407,9 +394,7 @@ NOT VGA OR HDMI VERSIONS
 Configures an LCD panel on versions that accept a connected LCD.
 
 OPTION LCDPANEL
-VIRTUAL_C
-or
-OPTION LCDPANEL
+VIRTUAL_C <br> OPTION LCDPANEL
 VIRTUAL_M
 
 Configures a virtual LCD panel without a physically connected panel.
@@ -419,9 +404,7 @@ Using this feature a program can draw graphical images on this virtual
 panel and then save them as a BMP file. Useful for creating a graphic
 image for export without an attached display
 
-OPTION LCDPANEL options
-or
-OPTION LCDPANEL DISABLE
+OPTION LCDPANEL options <br> OPTION LCDPANEL DISABLE
 
 Configures the PicoMite firmware to work with an attached LCD panel.
 See the chapter LCD Displays for the details.
@@ -429,9 +412,7 @@ This command must be run at the command prompt (not in a program).
 
 OPTION LCDPANEL
 CONSOLE [font [, fc [, bc [,
-blight]]] [,NOSCROLL]
-or
-OPTION LCDPANEL
+blight]]] [,NOSCROLL] <br> OPTION LCDPANEL
 NOCONSOLE
 
 Configures the LCD display panel for use as the console output. The LCD
@@ -460,9 +441,7 @@ Page 93
 hres, vres
 
 OPTION LCDPANEL
-CONSOLE [font [, fc [,bc]]
-or
-OPTION LCDPANEL
+CONSOLE [font [, fc [,bc]] <br> OPTION LCDPANEL
 NOCONSOLE
 
 OPTION LCD320 ON/OFF
@@ -491,9 +470,7 @@ displays the 320x240 image is scaled by 2 and occupies the screen area
 In the case of 480x272 displays the 320x240 image is windowed and
 occupies the screen area 80,16 to 399,255
 
-OPTION LEGACY ON
-or
-OPTION LEGACY OFF
+OPTION LEGACY ON <br> OPTION LEGACY OFF
 
 This will turn on or off compatibility mode with the graphic commands
 used in the original Colour Maximite. The commands COLOUR, LINE,
@@ -602,9 +579,7 @@ PWM
 
  Changes operation of the 3.3V supply switch mode power supply.
 
-OPTION PSRAM PIN n
-or
-OPTION PSRAM PIN
+OPTION PSRAM PIN n <br> OPTION PSRAM PIN
 DISABLE
 
  Enable/disable PSRAM support.
@@ -615,7 +590,7 @@ By default this runs in PFM mode. PWM gives better noise performance
 but is less power-efficient. Note that under heavy load the system will
 run in PWM mode regardless of this setting.
 
-‘n’ is the PSRAM chip select (CS) pin and can be GP0, GP8, GP19, or
+`n` is the PSRAM chip select (CS) pin and can be GP0, GP8, GP19, or
 GP47.
 Typically GP47 is used for Pimoroni boards. Default is disabled.
 
@@ -627,9 +602,7 @@ Page 95
 
 This command must be run at the command prompt (not in a program).
 
-OPTION RESET cfg
-or
-OPTION RESET LIST
+OPTION RESET cfg <br> OPTION RESET LIST
 
 OPTION RESOLUTION nn
 [,cpuspeedinKhz]
@@ -668,9 +641,7 @@ This command must be run at the command prompt (not in a program).
 
 OPTION SDCARD CSpin
 [,CLKpin, MOSIpin,
-MISOpin]
-or
-OPTION SDCARD DISABLE
+MISOpin] <br> OPTION SDCARD DISABLE
 
  Specify or disable the I/O pins to use for the SD Card interface.
 
@@ -734,9 +705,7 @@ parameter which can take the values FAST = 400KHz or SLOW =
 This command must be run at the command prompt (not in a program).
 
 OPTION SYSTEM SPI
-CLKpin, MOSIpin, MISOpin
-or
-OPTION SYSTEM SPI
+CLKpin, MOSIpin, MISOpin <br> OPTION SYSTEM SPI
 DISABLE
 
 or disable the SPI port and pins for use by system devices (SD
@@ -756,9 +725,7 @@ OFF|ONLY|ON
 OPTION TFTP OFF|ON
 
 OPTION TOUCH T_CS pin,
-T_IRQ pin [, Beep]
-or
-OPTION TOUCH DISABLE
+T_IRQ pin [, Beep] <br> OPTION TOUCH DISABLE
 
 PicoMite User Manual
 
