@@ -20,17 +20,17 @@ devices using a range of built-in communications protocols.
 ## Command Prompt
 
 Interaction with MMBasic is done via the console at the command prompt (ie, the greater than symbol
-(>) on the console). On startup MMBasic will issue the command prompt and wait for some
+ `>` on the console). On startup MMBasic will issue the command prompt and wait for some
 command to be entered. It will also return to the command prompt if your program ends or if it
 generated an error message.
 
 When the command prompt is displayed you have a wide range of commands that you can enter and
-execute. Typically they would list the program held in memory (LIST) or edit it (EDIT) or perhaps
-set some options (the OPTION command). Most times the command is just RUN which instructs
+execute. Typically they would list the program held in memory ( `LIST` ) or edit it ( `EDIT` ) or perhaps
+set some options (the `OPTION` command). Most times the command is just `RUN` which instructs
 MMBasic to run the program held in program memory.
 
 Almost any command can be entered at the command prompt and this is often used to test a command
-to see how it works. A simple example is the PRINT command (more on this later), which you can
+to see how it works. A simple example is the `PRINT` command (more on this later), which you can
 test by entering the following at the command prompt:
 
 ```basic
@@ -44,8 +44,8 @@ BASIC, so it would be worthwhile having a Raspberry Pi Pico loaded with the Pico
 handy for the occasional test while you are working through this tutorial.
 
 Structure of a BASIC Program
-A BASIC program starts at the first line and continues until it runs off the end or hits an END
-command - at which point MMBasic will display the command prompt (>) on the console and wait for
+A BASIC program starts at the first line and continues until it runs off the end or hits an `END` 
+command - at which point MMBasic will display the command prompt `>` on the console and wait for
 something to be entered.
 
 A program consists of a number of statements or commands, each of which will cause the BASIC
@@ -71,9 +71,9 @@ This is an example of a program that uses line numbers:
 60 PRINT A
 ```
 
-A line can also start with a label which can be used as the target for a program jump using the GOTO
-command. This will be explained in more detail when we cover the GOTO command but this is an
-example (the label name is JmpBack):
+A line can also start with a label which can be used as the target for a program jump using the `GOTO`
+command. This will be explained in more detail when we cover the `GOTO` command but this is an
+example (the label name is `JmpBack`):
 
 ```basic
 JmpBack: A = A + 1
@@ -83,6 +83,7 @@ GOTO JmpBack
 
 
 ## Comments
+
 A comment is any text that follows the single quote character ('). A comment can be placed anywhere
 and extends to the end of the line. If MMBasic runs into a comment it will just skip to the end of it
 (ie, it does not take any action regarding a comment).
@@ -106,17 +107,18 @@ or
 INPUT var ' get the temperature
 ```
 
-Older BASIC programs used the command REM to start a comment and you can also use that if you
+Older BASIC programs used the command `REM` to start a comment and you can also use that if you
 wish but the single quote character is easier to use and more convenient.
 
 
 ## The PRINT Command
+
 There are a number of common commands that are fundamental and we will cover them in this
 tutorial but arguably the most useful is the PRINT command. Its job is simple; to print something on
 the console. This is mostly used to output data for you to see (like the result of calculations) or
 provide informative messages.
 
-PRINT is also useful when you are tracing a fault in your program; you can use it to print out the
+`PRINT` is also useful when you are tracing a fault in your program; you can use it to print out the
 values of variables and display messages at key stages in the execution of the program.
 
 In its simplest form the command will just print whatever is on its command line. So, for example:
@@ -137,7 +139,7 @@ be calculated. We will cover expressions in more detail later but as an example 
 ```
 
 would calculate the result of three divided by twenty one and display it. Note that the greater than
-symbol (>) is the command prompt produced by MMBasic – you do not type that in.
+symbol `>` is the command prompt produced by MMBasic – you do not type that in.
 
 Other examples of the PRINT command include:
 
@@ -173,7 +175,7 @@ To illustrate tabbing, the following command prints a tabbed list of numbers:
 ```
 
 Note that there is a space printed before each number. This space is a place holder for the minus
-symbol (-) in case the value is negative. You can see the difference with the numbers 12 and 9.4 in
+symbol `-` in case the value is negative. You can see the difference with the numbers 12 and 9.4 in
 this example:
 
 ```basic
@@ -296,7 +298,7 @@ You can also use functions in expressions. These are special operations provided
 example to calculate trigonometric values.
 
 An example of using a function is the following which will print the length of the hypotenuse of a
-right angled triangle. This uses the SQR() function which returns the square root of a number (a and
+right angled triangle. This uses the `SQR()` function which returns the square root of a number (a and
 b are variables holding the lengths of the other sides):
 
 ```basic
@@ -304,7 +306,7 @@ PRINT SQR(a * a + b * b)
 ```
 
 MMBasic will first evaluate this expression by multiplying a by a, then multiplying b by b, then
-adding the results together. The resulting number is then passed to the SQR() function which will
+adding the results together. The resulting number is then passed to the `SQR()` function which will
 calculate the square root of that number (ie, the hypotenuse) and return it for the PRINT command to
 display.
 
@@ -328,13 +330,15 @@ with this expression:
 PRINT SIN(RAD(d))
 ```
 
-In this case MMBasic will first take the value of d and convert it to radians using the RAD() function.
+In this case MMBasic will first take the value of d and convert it to radians using the `RAD()` function.
 
-The output of this function then becomes the input to the SIN() function.
+The output of this function then becomes the input to the `SIN()` function.
 
-The IF Statement
+
+## The IF Statement
+
 Making decisions is at the core of most computer programs and in BASIC this is usually done with
-the IF statement. This is written almost like an English sentence:
+the `IF` statement. This is written almost like an English sentence:
 
 ```basic
 IF condition THEN action
@@ -348,7 +352,7 @@ For example:
 IF Temp < 25 THEN PRINT "Cold"
 ```
 
-Temp would be a variable holding the current temperature (in ºC) and PRINT "Cold" the action to
+Temp would be a variable holding the current temperature (in ºC) and `PRINT` "Cold" the action to
 be done.
 
 There are a range of tests that you can make:
@@ -360,7 +364,7 @@ Symbol | Meaning
 \> | greater than
 \<\> | not equal
 \<= | less than or equals
-\>= |  greater than or equals
+\>= | greater than or equals
 
 You can also add an ELSE clause which will be executed if the initial condition tested false:
 
@@ -374,7 +378,7 @@ For example, this will execute different actions when the temperature is under 2
 IF Temp < 25 THEN PRINT "Cold" ELSE PRINT "Hot"
 ```
 
-The previous examples all used single line IF statements but you can also use a multiline IF statement.
+The previous examples all used single line `IF` statements but you can also use a multiline `IF` statement.
 
 They look like this:
 
@@ -397,12 +401,12 @@ false-action
 ENDIF
 ```
 
-Unlike the single line IF statement you can have many true actions with each on their own line and
-similarly many false actions. Generally the single line IF statement is handy if you have a simple
+Unlike the single line `IF` statement you can have many true actions with each on their own line and
+similarly many false actions. Generally the single line `IF` statement is handy if you have a simple
 action that needs to be taken while the multiline version is much easier to understand if the actions are
 numerous and more complicated.
 
-An example of a multiline IF statement with more than one action is:
+An example of a multiline `IF` statement with more than one action is:
 
 ```basic
 IF Amount < 100 THEN
@@ -415,11 +419,11 @@ PRINT "Enter second amount"
 ENDIF
 ```
 
-Note that in the above example each action is indented to show what part of the IF structure it belongs
+Note that in the above example each action is indented to show what part of the `IF` structure it belongs
 to. Indenting is not mandatory but it makes a program much easier to understand for someone who is
 not familiar with it and therefore it is highly recommended.
 
-In a multiline IF statement you can make additional tests using the ELSE IF command. This is best
+In a multiline `IF` statement you can make additional tests using the `ELSE IF` command. This is best
 explained by using an example (the temperatures are all in ºC):
 
 ```basic
@@ -434,21 +438,21 @@ PRINT “Hot”
 ENDIF
 ```
 
-The ELSE IF uses the same tests as an ordinary IF (ie, <, <=, etc) but that test will only be made if the
-preceding test was false. So, for example, you will only get the message Warm if Temp < 0 failed,
-and Temp < 20 failed but Temp < 35 was true. The final ELSE will catch the case where all the
+The ELSE `IF` uses the same tests as an ordinary `IF` (ie, `<`, `<=`, etc) but that test will only be made if the
+preceding test was false. So, for example, you will only get the message Warm if `Temp < 0` failed,
+and `Temp < 20` failed but `Temp < 35` was true. The final `ELSE` will catch the case where all the
 tests were false.
 
-An expression like Temp < 20 is evaluated by MMBasic as either true or false with true having a
+An expression like `Temp < 20` is evaluated by MMBasic as either true or false with true having a
 value of one and false zero. You can see this if you entered the following at the console:
 
 ```basic
 PRINT 30 > 20
 ```
 
-MMBasic will print 1 meaning that the value of the expression is true.
+MMBasic will print `1` meaning that the value of the expression is true.
 
-Similarly the following will print 0 meaning that the expression evaluated to false.
+Similarly the following will print `0` meaning that the expression evaluated to false.
 
 
 ```basic
@@ -458,7 +462,7 @@ PRINT 30 < 20
 The IF statement does not really care about what the condition actually is, it just evaluates the
 condition and if the result is zero it will take that as false and if non zero it will take it as true.
 
-This allows for some handy shortcuts. For example, if BalanceCorrect is a variable that is true
+This allows for some handy shortcuts. For example, if `BalanceCorrect` is a variable that is true
 (non zero) when some feature of the program is correct then the following can be used to make a
 decision based on that value:
 
@@ -469,7 +473,7 @@ IF BalanceCorrect THEN …do something…
 ## FOR Loops
 Another common requirement in programming is repeating a set of actions. For instance, you might
 want to step through all seven days in the week and perform the same function for each day. BASIC
-provides the FOR loop construct for this type of job and it works like this:
+provides the `FOR` loop construct for this type of job and it works like this:
 
 ```basic
 FOR day = 1 TO 7
@@ -477,11 +481,11 @@ Do something based on the value of ‘day’
 NEXT day
 ```
 
-This starts by creating the variable day and assigning the value of 1 to it. The program will then
-execute the following statements until it comes to the NEXT statement. This tells the BASIC
-interpreter to increment the value of day, go back to the previous FOR statement and re-execute the
+This starts by creating the variable `day` and assigning the value of `1` to it. The program will then
+execute the following statements until it comes to the `NEXT` statement. This tells the BASIC
+interpreter to increment the value of day, go back to the previous `FOR` statement and re-execute the
 following statements a second time. This will continue looping around until the value of day exceeds
-7 and the program will then exit the loop and continue with the statements following the NEXT
+7 and the program will then exit the loop and continue with the statements following the `NEXT`
 statement.
 
 As a simple example, you can print the numbers from one to ten like this:
@@ -492,19 +496,19 @@ PRINT nbr,;
 NEXT nbr
 ```
 
-The comma at the end of the PRINT statement tells the interpreter to tab to the next tab column after
+The comma at the end of the `PRINT` statement tells the interpreter to tab to the next tab column after
 printing the number and the semicolon will leave the cursor on this line rather than automatically
 moving to the next line. As a result, the numbers will be printed in neat columns across the page.
 
 This is what you would see:
 
 ```basic
-1    2    3    4    5    6    7    8    9    10
+1  2  3  4  5  6  7  8  9  10
 ```
 
 
-The FOR loop also has a couple of extra tricks up it sleeves. You can change the amount that the
-variable is incremented by using the STEP keyword. So, for example, the following will print just the
+The `FOR` loop also has a couple of extra tricks up it sleeves. You can change the amount that the
+variable is incremented by using the `STEP` keyword. So, for example, the following will print just the
 odd numbers:
 
 ```basic
@@ -513,7 +517,7 @@ PRINT nbr,;
 NEXT nbr
 ```
 
-The value of the step (or increment value) defaults to one if the STEP keyword is not used but you can
+The value of the step (or increment value) defaults to one if the `STEP` keyword is not used but you can
 set it to whatever number you want.
 
 When MMBasic is incrementing the variable it will check to see if the variable has exceeded the TO
@@ -522,7 +526,7 @@ nine and it will be printed but on the next loop nbr will be eleven and at that 
 leave the loop. This test is also applied at the start of the loop. For example, if in the beginning the
 value of the variable exceeds the TO value, the loop will never be executed, not even once.
 
-By setting the STEP value to a negative number you can use the FOR loop to step down from a high
+By setting the `STEP` value to a negative number you can use the FOR loop to step down from a high
 number to low. In that case the starting number must be greater than the TO number.
 
 For example, the following will print the numbers from 1 to 10 in reverse:
@@ -717,9 +721,9 @@ as a string consisting of just one character or an empty string (ie, contains no
 been entered.
 
 ## GOTO and Labels
-One method of controlling the flow of the program is the GOTO command. This essentially tells
+One method of controlling the flow of the program is the `GOTO` command. This essentially tells
 MMBasic to jump to another part of the program and continue executing from there. The target of the
-GOTO is a label and this needs to be explained first.
+`GOTO` is a label and this needs to be explained first.
 
 A label is an identifier that marks part of the program. It must be the first thing on the line and it must
 be terminated with the colon (:) character. The name that you use can be up to 31 characters long and
@@ -730,7 +734,7 @@ LoopBack is a label:
 LoopBack: a = a + 1
 ```
 
-When you use the GOTO command to jump to that particular part of the program you would use the
+When you use the `GOTO` command to jump to that particular part of the program you would use the
 command like this:
 
 ```basic
@@ -752,15 +756,17 @@ execution will jump back to the label LoopBack where the process will repeat. Ev
 of z will reach 10 and the program will run off the end and terminate.
 
 Note that a FOR loop can do the same thing (and is simpler), so this example is purely designed to
-illustrate what the GOTO command can do.
+illustrate what the `GOTO` command can do.
 
-In the past the GOTO command gained a bad reputation. This is because using GOTOs it is possible
+In the past the `GOTO` command gained a bad reputation. This is because using GOTOs it is possible
 to create a program that continuously jumps from one point to another (often referred to as "spaghetti
 code") and that type of program is almost impossible for another programmer to understand. With
-constructs like the multiline IF statements the need for the GOTO statement has been reduced and it
+constructs like the multiline IF statements the need for the `GOTO` statement has been reduced and it
 should be used only when there is no other way of changing the program's flow.
 
-Testing for Prime Numbers
+
+## Testing for Prime Numbers
+
 The following is a simple program which brings together many of the programming features
 previously discussed.
 
@@ -770,7 +776,7 @@ InpErr:
 PRINT
 INPUT "Enter a number: "; a
 IF a < 2 THEN
-PRINT "Number must be equal or greater than 2"
+PRINT "Number must be 2 or greater"
 GOTO InpErr
 ENDIF
 Divs = 0
@@ -793,25 +799,25 @@ or not and then loop around and ask for another number. The way that the user ca
 (if they wanted to) is by typing the break character (normally CTRL-C).
 
 The program then prints a prompt for the user which is terminated with a semicolon character. This
-means that the cursor is left at the end of the prompt for the INPUT command which will get the
+means that the cursor is left at the end of the prompt for the `INPUT` command which will get the
 number and store it in the variable a.
 
 Following this the number is tested. If it is less than 2 an error message will be printed and the
 program will jump backwards and ask for the number again.
 
-We are now ready to test if the number is a prime number. The program uses a FOR loop to step
+We are now ready to test if the number is a prime number. The program uses a `FOR` loop to step
 through the possible divisors testing if each one can divide evenly into the entered number. Each time
 it does the program will increment the variable Divs.
 
-Note that the test is done with the function FIX(r) which simply strips off any digits after the decimal
-point. So, the condition r = FIX(r) will be true if r is an integer (ie, has no digits after the
+Note that the test is done with the function `FIX(r)` which simply strips off any digits after the decimal
+point. So, the condition r = `FIX(r)` will be true if r is an integer (ie, has no digits after the
 decimal point).
 
 Finally, the program will construct the message for the user. The key part is that if the variable Divs
 is greater than zero it means that one or more numbers were found that could divide evenly into the
-test number. In that case the IF statement inserts the word "not" into the output message.
+test number. In that case the `IF` statement inserts the word "not" into the output message.
 
-For example, if the entered number was 21 the user will see this response:
+For example, if the entered number was `21` the user will see this response:
 
 ```basic
 21 is not a prime number.
@@ -819,17 +825,17 @@ For example, if the entered number was 21 the user will see this response:
 
 This is the result of running the program and some of the output:
 
-You can test this program by using the editor (the EDIT command) to enter it.
+You can test this program by using the editor (the `EDIT` command) to enter it.
 
 Using your newly learnt skills you could then have a shot at making it more efficient. For example,
 because the program counts how many times a number can be divided into the test number it takes a
 lot longer than it should to detect a non prime number. The program would run much more efficiently
-if it jumped out of the FOR loop at the first number that divided evenly. You could use the GOTO
-command to do this or you could use the command EXIT FOR – that would cause the FOR loop to
+if it jumped out of the `FOR` loop at the first number that divided evenly. You could use the `GOTO`
+command to do this or you could use the command `EXIT FOR` – that would cause the `FOR` loop to
 terminate immediately.
 
 Other efficiencies include only testing the division with odd numbers (by using an initial test for an
-even number then starting the FOR loop at 3 and using STEP 2) or by only using prime numbers for
+even number then starting the `FOR` loop at 3 and using `STEP 2`) or by only using prime numbers for
 the test (that would be much more complicated).
 
 ## Arrays
@@ -847,7 +853,7 @@ one, or unit two, etc.
 Similarly an array in BASIC is a single variable with multiple
 sub units (called elements in BASIC) which are numbered. You
 can place data in element one, or element two, etc. In BASIC an
-array is created by the DIM command, for example:
+array is created by the `DIM` command, for example:
 
 ```basic
 DIM numarr(300)
@@ -946,7 +952,7 @@ numbers is not a problem but there are some cases where you need to accurately s
 As an example, let us say that you want to manipulate time accurately down to the microsecond so
 that you can compare two different date/times to work out which one is earlier. The easy way to do
 this is to convert the date/time to the number of microseconds since some date (say 1st Jan in year
-zero) - then finding the earliest of the two is just a matter of using an arithmetic compare in an IF
+zero) - then finding the earliest of the two is just a matter of using an arithmetic compare in an `IF`
 statement.
 
 The problem is that the number of microseconds since that date will exceed the accuracy range of
@@ -1015,7 +1021,7 @@ IF Car$ = "Holden" THEN PRINT "Was an Aussie made car"
 
 The comparison is made using the full ASCII character set so a space will come before a printable
 character. Also the comparison is case sensitive so 'holden' will not equal "Holden". Using the
-function UCASE() to convert the string to upper case you can then have a case insensitive
+function `UCASE()` to convert the string to upper case you can then have a case insensitive
 comparison. For example:
 
 ```basic
@@ -1025,7 +1031,7 @@ IF UCASE$(Car$) = "HOLDEN" THEN PRINT "Was an Aussie made car"
 You can have arrays of strings but you need to be careful when you declare them as you can rapidly
 run out of RAM (general memory used for storing variables, etc). This is because MMBasic will by
 default allocate 255 bytes of RAM for each element of the array. For example, a string array with 100
-elements will by default use 25K of RAM. To alleviate this you can use the LENGTH qualifier to
+elements will by default use 25K of RAM. To alleviate this you can use the `LENGTH` qualifier to
 limit the maximum size of each element. For instance, if you know that the maximum length of any
 string that will be stored in the array will be less than 20 characters you can use the following
 declaration to allocate just 20 bytes for each element:
@@ -1036,7 +1042,7 @@ DIM MyArray$(100) LENGTH 20
 
 The resultant array will only use 2K of RAM.
 
-Note that sometimes people think that by using the LENGTH qualifier when declaring a normal (non
+Note that sometimes people think that by using the `LENGTH` qualifier when declaring a normal (non
 array) string variable they will save some RAM. This is not correct; they always occupy 256 bytes.
 
 ## Manipulating Strings
@@ -1054,7 +1060,7 @@ For example if S$ = "This is a string"
 - and: `R$ = RIGHT$(S$, 8)` would result in the value of R$ being set to: "a string"
 - finally: `R$ = MID$(S$, 6, 2)` would result in the value of R$ being set to: "is"
 
-Note that in MID$() the first character position in a string is number 1, the second is number 2 and so
+Note that in `MID$()` the first character position in a string is number 1, the second is number 2 and so
 on. So, counting the first character as one, the sixth position is the start of the word "is".
 
 Another useful function is:
@@ -1064,7 +1070,7 @@ Command | Description
 `INSTR(string$, pattern$ )` | Returns a number representing the position at which pattern$ occurs in string$.
 
 This can be used to search for a string inside another string. The number returned is the position of
-the substring inside the main string. Like with MID$() the start of the string is position 1.
+the substring inside the main string. Like with `MID$()` the start of the string is position 1.
 
 For example if `S$ = "This is a string"` Then: `pos = INSTR(S$, " ")` would result in pos being set to the position of the first space in S$ (ie, 5).
 
@@ -1074,7 +1080,7 @@ For example if `S$ = "This is a string"` Then: `pos = INSTR(S$, " ")` would resu
 R$ = LEFT$(S$, INSTR(S$, " ") - 1)
 ```
 
-There is also an extended version of INSTR():
+There is also an extended version of `INSTR()`:
 
 ```basic
 INSTR(pos, string$, pattern$ )
@@ -1121,7 +1127,7 @@ A scientist would write this number as 7.5 x 1018 which is called scientific not
 to comprehend.
 
 MMBasic will automatically shift to scientific notation when dealing with very large or small floating
-point numbers. For example, if the above number was stored in a floating point variable the PRINT
+point numbers. For example, if the above number was stored in a floating point variable the `PRINT`
 command would display it as 7.5E+18 (this is BASIC’s way of representing 7.5 x 1018). As another
 example, the number 0.0000000456 would display as 4.56E-8 which is the same as 4.56 x 10-8.
 
@@ -1137,14 +1143,14 @@ normal number (with lots of zeros).
 
 
 ## DIM Command
-We have used the DIM command before for defining arrays but it can also be used to create ordinary
+We have used the `DIM` command before for defining arrays but it can also be used to create ordinary
 variables. For example, you can simultaneously create four string variables like this:
 
 ```basic
 DIM STRING Car, Name, Street, City
 ```
 
-Note that because these variables have been defined as strings using the DIM command we do not
+Note that because these variables have been defined as strings using the `DIM` command we do not
 need the $ suffix, the definition alone is enough for MMBasic to identify their type. Similarly, when
 you use these variables in an expression you do not need the type suffix: For example:
 
@@ -1152,7 +1158,7 @@ you use these variables in an expression you do not need the type suffix: For ex
 City = "Sydney"
 ```
 
-You can also use the keyword INTEGER to define a number of integer variables and FLOAT to do
+You can also use the keyword `INTEGER` to define a number of integer variables and `FLOAT` to do
 the same for floating point variables. This type of notation can similarly be used to define arrays.
 
 For example:
@@ -1161,7 +1167,7 @@ For example:
 DIM INTEGER seconds(200)
 ```
 
-Another method of defining the variables type is to use the keyword AS. For example:
+Another method of defining the variables type is to use the keyword `AS`. For example:
 
 ```basic
 DIM Car AS STRING, Name AS STRING, Street AS STRING
@@ -1176,7 +1182,10 @@ DIM Car AS STRING, Age AS INTEGER, Value AS FLOAT
 
 You can use any of these methods of defining a variable's type, they all act the same.
 
-The advantage of defining variables using the DIM command is that they are clearly defined
+
+### Require explicit definitions
+
+The advantage of defining variables using the `DIM` command is that they are clearly defined
 (preferably at the start of the program) and their type (float, integer or string) is not subject to
 misinterpretation.
 
@@ -1187,11 +1196,10 @@ OPTION EXPLICIT
 OPTION DEFAULT NONE
 ```
 
-The first specifies to MMBasic that all variables must be explicitly defined using DIM before they can
+The first specifies to MMBasic that all variables must be explicitly defined using `DIM` before they can
 be used. The second specifies that the type of all variables must be specified when they are created.
 
-
-### Why are these two commands important?
+Why are these two commands important?
 
 The first can help avoid a common programming error which is where you accidently misspell a
 variable's name. For example, your program might have the current temperature saved in a variable
@@ -1199,22 +1207,21 @@ called Temp but at one point you accidently misspell it as Tmp. This will cause 
 automatically create a variable called Tmp and set its value to zero.
 
 This is obviously not what you want and it will introduce a subtle error which could be hard to find,
-even if you were aware that something was not right. On the other hand, if you used the OPTION
-EXPLICIT command at the start of your program MMBasic would refuse to automatically create the
+even if you were aware that something was not right. On the other hand, if you used the `OPTION EXPLICIT` command at the start of your program MMBasic would refuse to automatically create the
 variable and instead would display an error thereby saving you from a probable headache.
 
-The command OPTION DEFAULT NONE further helps because it tells MMBasic that the
+The command `OPTION DEFAULT NONE` further helps because it tells MMBasic that the
 programmer must specifically specify the type of every variable when they are declared. It is easy to
 forget to specify the type and allowing MMBasic to automatically assume the type can lead to
 unexpected consequences.
 
 For small, quick and dirty programs, it is fine to allow MMBasic to automatically create variables but
-in larger programs you should always disable this feature with OPTION EXPLICIT and strengthen it
-with OPTION DEFAULT NONE.
+in larger programs you should always disable this feature with `OPTION EXPLICIT` and strengthen it
+with `OPTION DEFAULT NONE` .
 
 When a variable is created it is set to zero for float and integers and an empty string (ie, contains no
 characters) for a string variable. You can set its initial value to something else when it is created using
-DIM.
+ `DIM` .
 
 
 For example:
@@ -1242,7 +1249,7 @@ risk of the value being accidently changed - which can happen if variables were 
 These are called constants and they can represent I/O pin numbers, signal limits, mathematical
 constants and so on.
 
-You can create a constant using the CONST command. This defines an identifier that acts like a
+You can create a constant using the `CONST` command. This defines an identifier that acts like a
 variable but is set to a value that cannot be changed.
 
 For example, if you wanted to check the voltage of a battery connected to pin 31 you could define the
@@ -1312,7 +1319,7 @@ IF A < B THEN ErrMsg "Number too small"
 
 When the subroutine is called like this the message "Error: Number too small" will be
 printed on the console. Inside the subroutine Msg$ will have the value of "Number too small" when
-called like this and it will be concatenated in the PRINT statement to make the full error message.
+called like this and it will be concatenated in the `PRINT` statement to make the full error message.
 
 A subroutine can have any number of arguments which can be float, integer or string with each
 argument separated by a comma.
@@ -1338,7 +1345,7 @@ it will display an error and return to the command prompt. For example, if you s
 the second argument your program will stop with an error.
 
 You do not have to use the type suffixes, you can instead define the type of the arguments using the
-AS keyword similar to the way it is used in the DIM command.
+`AS` keyword similar to the way it is used in the `DIM` command.
 
 For example, the following is identical to the above example:
 
@@ -1348,7 +1355,7 @@ SUB MySub Msg AS STRING, Nbr AS INTEGER
 END SUB
 ```
 
-Of course, if you used only one variable type throughout the program and used OPTION DEFAULT
+Of course, if you used only one variable type throughout the program and used `OPTION DEFAULT` 
 to set that type you could ignore the question of variable types completely.
 
 When a subroutine is called with an argument that is a variable (ie, not a constant or expression)
@@ -1360,25 +1367,25 @@ variable used in the call. This is called passing arguments by reference.
 This is best explained by example:
 
 ```basic
-DIM MyNumber = 5     ‘ set the variable to 5
-CalcSquare MyNumber  ‘ the subroutine will square its value
+DIM MyNumber = 5      ‘ set the variable to 5
+CalcSquare MyNumber   ‘ the subroutine will square its value
 PRINT MyNumber
 END
-SUB CalcSquare nbr   ‘ this will print the number 25
-nbr = nbr * nbr      ‘ square the argument and pass it back
+SUB CalcSquare nbr    ‘ this will print the number 25
+nbr = nbr * nbr       ‘ square the argument and pass it back
 END SUB
 ```
 
 The subroutine CalcSquare will take its argument, square it and write it back to the variable
 representing the argument (nbr). Because the subroutine was called with a variable (MyNumber) the
 variable nbr will point back to MyNumber and any change to nbr will also change MyNumber
-accordingly. As a result the PRINT statement will output 25.
+accordingly. As a result the `PRINT` statement will output 25.
 
 Passing arguments by reference is handy because it allows a subroutine to pass values back to the
 code that called it. However, it could lead to trouble if a subroutine used the variable representing an
 argument as a general purpose variable and changed its value. Then, if it were called with a variable as
 an argument, that variable would be inadvertently changed. To avoid this, you should prefix its
-definition with the keyword BYVAL. This instructs MMBasic to always use the value of the
+definition with the keyword `BYVAL` . This instructs MMBasic to always use the value of the
 argument, even if it is a variable, and to never point back to the variable used in the call.
 
 When you call a subroutine you can omit some (or all) of the parameters and they will take the value
@@ -1399,14 +1406,16 @@ END SUB
 ```
 
 Within a subroutine you can use most features of MMBasic including calling other subroutines,
-IF…THEN commands, FOR…NEXT loops and so on. However, one thing that you cannot do is
-jump out of a subroutine using GOTO (if you do the result will be undefined and may cause your hair
+`IF … THEN` commands, `FOR…NEXT` loops and so on. However, one thing that you cannot do is
+jump out of a subroutine using `GOTO` (if you do the result will be undefined and may cause your hair
 to turn grey).
 
-Normally the subroutine will exit when the END SUB command is reached but you can also terminate
-the subroutine early by using the EXIT SUB command.
+Normally the subroutine will exit when the `END SUB` command is reached but you can also terminate
+the subroutine early by using the `EXIT SUB` command.
 
-Functions
+
+## Functions
+
 Functions are similar to subroutines with the main difference being that a function is used to return a
 value in an expression. For example, if you wanted a function to convert a temperature from degrees
 Celsius to Fahrenheit you could define:
@@ -1448,7 +1457,7 @@ there are no arguments (parentheses are optional when calling a subroutine).
 To return a value from the function you assign a value to the function's name within the function. If
 the function's name is terminated with a type suffix (ie, $, a % or a !) the function will return that type
 
-(string, integer or float), otherwise it will return whatever the OPTION DEFAULT is set to. For
+(string, integer or float), otherwise it will return whatever the `OPTION DEFAULT` is set to. For
 example, the following function will return a string:
 
 ```basic
@@ -1458,7 +1467,7 @@ END FUNCTION
 ```
 
 You can explicitly specify the type of the function by using the AS keyword and then you do not need
-to use a type suffix (similar to defining a variable using DIM).
+to use a type suffix (similar to defining a variable using `DIM` ).
 
 This is the above example rewritten to take advantage of this feature:
 
@@ -1471,22 +1480,22 @@ END FUNCTION
 In this case the type returned by the function LVal will be a string.
 
 As for subroutines you can use most features of MMBasic within functions. This includes
-FOR…NEXT loops, calling other functions and subroutines, etc. Also, the function will return to the
-expression that called it when the END FUNCTION command is reached but you can also return early
-by using the EXIT FUNCTION command.
+`FOR…NEXT` loops, calling other functions and subroutines, etc. Also, the function will return to the
+expression that called it when the `END FUNCTION` command is reached but you can also return early
+by using the `EXIT FUNCTION` command.
 
 
 ## Local Variables
 
-Variables that are created using DIM or that are just automatically created are called global variables.
+Variables that are created using `DIM` or that are just automatically created are called global variables.
 
 This means that they can be seen and used anywhere in the program including within subroutines and
 functions. However, inside a subroutine or function you will often need to use variables for various
 tasks that are internal to the subroutine/function. In portable code you do not want the name you
 chose for such a variable to clash with a global variable of the same name. To this end you can define
-a variable using the LOCAL command within the subroutine/function.
+a variable using the `LOCAL` command within the subroutine/function.
 
-The syntax for LOCAL is identical to the DIM command, this means that the variable can be an array,
+The syntax for `LOCAL` is identical to the `DIM` command, this means that the variable can be an array,
 you can set the type of the variable and you can initialise it to some value.
 
 For example, this is our ErrMsg subroutine but this time it has been extended to use a local variable
@@ -1501,25 +1510,23 @@ PRINT tstr
 END SUB
 ```
 
-The variable tstr is declared as LOCAL within the subroutine, which means that (like the argument
+The variable `tstr` is declared as `LOCAL` within the subroutine, which means that (like the argument
 list) it will only exist within the subroutine and will vanish when the subroutine exits. You can have a
-global variable called tstr in your main program and it will be different from the variable tstr in
-the subroutine (in this case the global tstr will be hidden within the subroutine).
+global variable called `tstr` in your main program and it will be different from the variable `tstr` in
+the subroutine (in this case the global `tstr` will be hidden within the subroutine).
 
 You should always use local variables for operations within your subroutine or function because they
 help make the module much more self contained and portable.
 
 ## Static Variables
-LOCAL variables are reset to their initial values (normally zero or an empty string) every time the
+ `LOCAL` variables are reset to their initial values (normally zero `0` or an empty string `""`) every time the
 subroutine or function starts, however there are times when you would like the variable to retain its
-value between calls. This type of variable is defined with the STATIC command.
+value between calls. This type of variable is defined with the `STATIC` command.
 
-We can demonstrate how STATIC variables are useful by extending the ErrMsg subroutine to prevent
+We can demonstrate how `STATIC` variables are useful by extending the ErrMsg subroutine to prevent
 duplicated calls to the subroutine repeatedly displaying the same message. For example, our program
 might call this subroutine from multiple places but if the message is the same in a number of
 subsequent calls we would like to see the message just once.
-
-
 
 This is our new subroutine:
 
@@ -1540,10 +1547,10 @@ the text of the last message and we can compare it to the current message text t
 different and therefore should be printed. This would give just one message every time a call is made
 with a duplicate message text.
 
-The STATIC command uses exactly the same syntax as DIM. This means that you can define
+The `STATIC` command uses exactly the same syntax as `DIM` . This means that you can define
 different types of static variables including arrays and you can also initialise them to some value.
 
-The static variable is created on the first time the STATIC command is encountered and it is
+The static variable is created on the first time the `STATIC` command is encountered and it is
 automatically set to zero (if a float or integer) or an empty string. On subsequent calls to the
 subroutine or function MMBasic will recognise that the variable has already been created and it will
 leave its value untouched (ie, whatever it was in the previous call). As with DIM you can also
@@ -1565,9 +1572,9 @@ Examples include:
 - What steps in a sequence have we completed?
 - What text has already been displayed?
 
-Normally you will use global variables (created using DIM) to track a state but sometimes you want
-this to be contained within a module and this is where static variables are valuable. Just like LOCAL
-the use of STATIC helps to make your subroutines and functions more self contained and portable.
+Normally you will use global variables (created using `DIM` ) to track a state but sometimes you want
+this to be contained within a module and this is where static variables are valuable. Just like `LOCAL` 
+the use of `STATIC` helps to make your subroutines and functions more self contained and portable.
 
 Calculate Days
 We have covered a lot of programming commands and techniques so far in this tutorial and before we
@@ -1636,18 +1643,18 @@ When this program is run it will ask for the two dates to be entered and you nee
 
 This screen capture shows what the running program will look like.
 
-The main feature of the program is the defined function GetDays() which takes a string entered at the console, splits it into its day, month and year components then calculates the number of days since 1st January 1900.
+The main feature of the program is the defined function `GetDays()` which takes a string entered at the console, splits it into its day, month and year components then calculates the number of days since 1st January 1900.
 
 This function is called twice, once for the first date and then again for the second date. It is then just a matter of subtracting one date (in days) from the other to get the difference in days.
 
 We will not go into the detail of how the calculations are made (ie, handling leap years) as that can be left as an exercise for the reader. However, it is appropriate to point out some features of MMBasic
 that are used by the program.
 
-It demonstrates how local variables can be used and how they can be initialised. In the function GetDays() two arrays are declared and initialised at the same time. These are just a convenient method of looking up the names of the months and the cumulative number of days for each month.
+It demonstrates how local variables can be used and how they can be initialised. In the function `GetDays()` two arrays are declared and initialised at the same time. These are just a convenient method of looking up the names of the months and the cumulative number of days for each month.
 
 Later in the function (the FOR loop) you can see how they make dealing with twelve different months quite efficient.
 
-Another feature highlighted by this program is the string handling features of MMBasic. The INSTR() function is used to locate the two space characters in the date string and then later the MID$() function uses these to extract the day, month and year components of the date. The VAL() function is used to turn a string of digits (like the year) into a number that can be stored in a numeric variable.
+Another feature highlighted by this program is the string handling features of MMBasic. The `INSTR()` function is used to locate the two space characters in the date string and then later the MID$() function uses these to extract the day, month and year components of the date. The `VAL()` function is used to turn a string of digits (like the year) into a number that can be stored in a numeric variable.
 
 Note that the value of a function is initialised to zero every time the function is called and unless it is set to some value it will return a zero value. This makes error handling easy because we can just exit the function if an error is discovered. It is then the responsibility of the calling program code to check for a return value of zero which signifies an error.
 
@@ -1655,7 +1662,7 @@ This program illustrates one of the benefits of using subroutines and functions 
 
 For this reason functions like this should be the properly tested and then, if possible, left untouched (in case you add some error).
 
-There are a few features of this program that we have not covered before. The first is the MOD operator which will calculate the remainder of dividing one number into another. For example, if you divided 4 into 15 you would have a remainder of 3 which is exactly what the expression 15 MOD 4 will return. The ABS() function is also new and will return its argument as a positive number (eg, ABS(-15) will return +15 as will ABS(15)).
+There are a few features of this program that we have not covered before. The first is the MOD operator which will calculate the remainder of dividing one number into another. For example, if you divided 4 into 15 you would have a remainder of 3 which is exactly what the expression 15 MOD 4 will return. The `ABS()` function is also new and will return its argument as a positive number (eg, ABS(-15) will return +15 as will ABS(15)).
 
 The EXIT FOR command will exit a FOR loop even though it has not reached the end of its looping, EXIT FUNCTION will immediately exit a function even though execution has not reached the end of the function and CONTINUE DO will immediately cause the program to jump to the end of a DO loop and execute it again.
 
