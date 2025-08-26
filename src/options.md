@@ -228,71 +228,47 @@ These commands let the user save and restore the complete set of options defined
 
 ### OPTION DISPLAY lines [,chars]
 
- Set
-the characteristics of the display terminal used for the console. Both
-the LIST and EDIT commands need to know this information to
-correctly format the text for display.
+Set the characteristics of the display terminal used for the console. Both the `LIST` and `EDIT` commands need to know this information to correctly format the text for display.
 
-`lines` is the number of lines on the display and `chars` is the width of the
-display in characters. The default is 24 lines x 80 chars and when
-changed this option will be remembered even when the power is
-removed. Maximum values are 100 lines and 240chars.
+`lines` is the number of lines on the display and `chars` is the width of the display in characters. The default is 24 lines x 80 chars and when changed this option will be remembered even when the power is removed. Maximum values are 100 lines and 240 chars.
 
-This will send an ESC sequence to set the VT100 terminal to the
-matching size. TerraTerm, Putty and MMCC respond to this sequence
+This will send an ESC sequence to set the VT100 terminal to the matching size. TerraTerm, Putty and MMCC respond to this sequence
 and set the terminal width (if the option is enabled in the terminal setup).
 
-This option is not available if an LCD display is being used as the
-console.
+This option is not available if an LCD display is being used as the console.
 
 
 ### OPTION ESCAPE
 
-Enables the ability to insert escape sequences into string constants. See
-the section Special Characters in Strings.
+Enables the ability to insert escape sequences into string constants. See the section Special Characters in Strings.
 
 
 ### OPTION EXPLICIT
 
-Placing this command at the start of a program will require that every
-variable be explicitly declared using the DIM, LOCAL or STATIC
-commands before it can be used in the program.
+Placing this command at the start of a program will require that every variable be explicitly declared using the `DIM`, `LOCAL` or `STATIC` commands before it can be used in the program.
 
-This option is disabled by default when a program is run. If it is used it
-must be specified before any variables are used.
+This option is disabled by default when a program is run. If it is used it must be specified before any variables are used.
 
 
-### OPTION FAST AUDIO
-ON|OFF
+### OPTION FAST AUDIO ON|OFF
 
-When using the PLAY SOUND command, changes to sounds, volumes,
-or frequencies can cause audible clicks in the output. The firmware
-attempts to mitigate this by ramping the volume down on the channel’s
-previous output before changing the output and ramping it back up
-again. This significantly improves the audio output but at the expense of
+When using the `PLAY SOUND` command, changes to sounds, volumes, or frequencies can cause audible clicks in the output. The firmware attempts to mitigate this by ramping the volume down on the channel’s previous output before changing the output and ramping it back up again. This significantly improves the audio output but at the expense of a short delay in the `PLAY SOUND` command (worst case 3mSec). This delay can be avoided using OPTION FAST AUDIO ON in a program.
 
+The audible clicks may then re-appear but this is at the programmer’s discretion.
 
-
-a short delay in the PLAY SOUND command (worst case 3mSec). This
-delay can be avoided using OPTION FAST AUDIO ON in a program.
-
-The audible clicks may then re-appear but this is at the programmer’s
-discretion.
-
-This is a temporary option that is reset to OFF whenever a program is
-run.
+This is a temporary option that is reset to `OFF` whenever a program is run.
 
 
 ### OPTION FNKey string$
 
 Define the string that will be generated when a function key is pressed at
-the command prompt. `FNKey` can be F1, and F5 thru to F9.
+the command prompt. `FNKey` can be *F1*, and *F5* thru to *F9*.
 
 Example:
+
 ```basic
 OPTION F8 “RUN “+chr$(34)+”myprog” +chr$(34)+chr$(13)+chr$(10).
 ```
-
 
 This command must be run at the command prompt (not in a program).
 
@@ -686,8 +662,11 @@ This command must be run at the command prompt (not in a program).
 
 ### OPTION SYSTEM SPI CLKpin, MOSIpin, MISOpin <br> OPTION SYSTEM SPI DISABLE
 
-Specify or disable the SPI port and pins for use by system devices (SD
-Card, LCD panel, etc).
+Specify or disable the SPI port and pins for use by system devices (SD Card, LCD panel, etc).
+
+The PicoMite firmware uses a specific hardware SPI port for system devices, leaving the other for the user. This command specifies which pins are to be used, and hence which of the SPI ports is to be used. The pins allocated to the `SYSTEM SPI` will not be available to other MMBasic commands.
+
+This command must be run at the command prompt (not in a program).
 
 
 ### OPTION TAB 2 | 3 | 4 | 8
@@ -695,56 +674,39 @@ Card, LCD panel, etc).
  Set the spacing for the tab key. Default is 2.
 
 
-### OPTION TCP SERVER PORT
-n
+### OPTION TCP SERVER PORT n
+
+*WEBMITE ONLY*
+
+Launches a TCP server on port `n` during every restart of the WebMite.
+
+Typically HTTP servers use port `80`.
+
+USE `OPTION TCP SERVER PORT 0` to disable
+
+When the server is running it can respond to up to `MM.INFO(MAX CONNECTIONS)`
 
 
-### OPTION TELNET CONSOLE
-OFF|ONLY|ON
+### OPTION TELNET CONSOLE OFF|ONLY|ON
 
+*WEBMITE ONLY*
+
+Configures the handling the console over Telnet.
+
+- `ON` = Console output sent to USB and Telnet
+- `ONLY` = Console output sent to Telnet only
+- `OFF` = Console output sent to USB only
 
 ### OPTION TFTP OFF|ON
 
+*WEBMITE ONLY*
 
-### OPTION TOUCH T_CS pin,
-T_IRQ pin [, Beep] <br> OPTION TOUCH DISABLE
-
-PicoMite User Manual
-
-The PicoMite firmware uses a specific hardware SPI port for system
-devices, leaving the other for the user. This command specifies which
-pins are to be used, and hence which of the SPI ports is to be used. The
-pins allocated to the SYSTEM SPI will not be available to other
-MMBasic commands.
-
-This command must be run at the command prompt (not in a program).
-
-
-
-
-
-
-
-
-
-WEBMITE ONLY
-Launches a TCP server on port `n` during every restart of the WebMite.
-
-Typically HTTP servers use port 80.
-
-USE "OPTION TCP SERVER PORT 0" to disable
-When the server is running it can respond to up to MM.INFO(MAX
-CONNECTIONS)
-WEBMITE ONLY
-Configures the handling the console over Telnet.
-
-ON = Console output sent to USB and Telnet
-ONLY= Console output sent to Telnet only
-OFF = Console output sent to USB only
-WEBMITE ONLY
 Enables or disables the TFTP server. Default is on.
 
-NOT VGA OR HDMI VERSIONS
+### OPTION TOUCH T_CS pin <br> T_IRQ pin [, Beep] <br> OPTION TOUCH DISABLE
+
+*NOT VGA OR HDMI VERSIONS*
+
 Configures MMBasic for the touch sensitive feature of an attached LCD
 panel.
 
@@ -752,8 +714,6 @@ panel.
 touch interrupt respectively (any free pins can be used). The remaining
 pins are connected to those specified using the OPTION SYSTEM SPI
 command.
-
-
 
 `Beep` is an optional pin which can be connected to a small
 buzzer/beeper to generate a "click" or beep sound when an Advanced
@@ -763,81 +723,51 @@ described in Advanced Graphics Functions.pdf.
 This command must be run at the command prompt (not in a program).
 
 
-### OPTION TOUCH FT6336
-IRQpin, RESETpin [,BEEPpin]
-[,sensitivity]
+### OPTION TOUCH FT6336 IRQpin, RESETpin [,BEEPpin] [,sensitivity]
 
-
+*NOT VGA OR HDMI VERSIONS*
 
+Enables touch support for FT6336 capacitive touch chip. Sensitivity is a number between `0` and `255` - defaults to `50`, lower is more sensitive.
+
+`SDA` and `SCK` should be connected to valid I2C pins and set up with `OPTION SYSTEM I2C`. See also the `TOUCH` function.
 
 ### OPTION VCC voltage
 
-
-### OPTION UDP SERVER
-PORT n
-
-
-### OPTION VGA PINS
-HSYNCpin, BLUEpin
-
 Specifies the voltage (Vcc) supplied to the Raspberry Pi Pico.
 
-When using the ADC pins to measure voltage the PicoMite firmware
-uses the voltage on the pin marked VREF as its reference. This voltage
-can be accurately measured using a DMM and set using this command
-for more accurate measurement.
+When using the ADC pins to measure voltage the PicoMite firmware uses the voltage on the pin marked VREF as its reference. This voltage can be accurately measured using a DMM and set using this command for more accurate measurement.
 
-The parameter is not saved and should be initialised either on the
-command line or in a program. The default if not set is 3.3.
+The parameter is not saved and should be initialised either on the command line or in a program. The default if not set is `3.3`.
+
+### OPTION UDP SERVER PORT n
+
+*WEBMITE VERSION ONLY*
+
+Sets up a listening socket on the port specified. Any UDP datagrams received on that port will be processed and the contents saved in `MM.MESSAGE$`. The IP address of the sender will be stored in `MM.ADDRESS$`. Note: If the UDP datagram is longer than 255 characters then any extra is discarded.
+
+USE `OPTION UDP SERVER PORT 0` to disable
 
 
-
+### OPTION VGA PINS HSYNCpin, BLUEpin
 
-Page 98
+*VGA VERSION ONLY*
 
-WEBMITE VERSION ONLY
-Sets up a listening socket on the port specified. Any UDP datagrams
-received on that port will be processed and the contents saved in
-MM.MESSAGE$. The IP address of the sender will be stored in
-MM.ADDRESS$. Note: If the UDP datagram is longer than 255
-characters then any extra is discarded.
+Changes the pins used for VGA display output allowing more flexibility in PCB design or wiring. `HSYNCpin` defines the start of a pair of contiguous GP numbered pins that are connected to `HSYNC` and `VSYNC`.
 
-USE "OPTION UDP SERVER PORT 0" to disable
+“BLUEpin” defines the start of four contiguous GP numbered pins that are connected to `BLUE`, `GREEN_LSB`, `GREEN_MSB`, and `RED`.
 
- VGA VERSION ONLY
 
-Changes the pins used for VGA display output allowing more flexibility
-in PCB design or wiring. “HSYNCpin” defines the start of a pair of
-contiguous GP numbered pins that are connected to HSYNC and
-VSYNC
-“BLUEpin” defines the start of four contiguous GP numbered pins that
-are connected to BLUE, GREEN_LSB, GREEN_MSB, and RED.
+### OPTION WEB MESSAGES ON/OFF
 
 WEBMITE VERSION ONLY
 Disable informational web messages when set to OFF. Default is ON
 
 
-### OPTION WEB MESSAGES
-ON/OFF
+### OPTION WIFI ssid$, passwd$, [name$] [,ipaddress$, mask$, gateway$]
 
+*WEBMITE VERSION ONLY*
 
-### OPTION WIFI ssid$, passwd$,
-[name$] [,ipaddress$, mask$,
-gateway$]
-
-NOT VGA OR HDMI VERSIONS
-Enables touch support for FT6336 capacitive touch chip. Sensitivity is a
-number between 0 and 255 - defaults to 50, lower is more sensitive.
-
-SDA and SCK should be connected to valid I2C pins and set up with
-### OPTION SYSTEM I2C. See also the TOUCH function.
-
-
-
-
-WEBMITE VERSION ONLY
-Configures the firmware to automatically connect to a WiFi network on
-restart.
+Configures the firmware to automatically connect to a WiFi network on restart.
 
 `ssid$` is the name of the network and `password$` is the access
 password. Both are strings and if string constants are used they should
@@ -848,6 +778,8 @@ name is created from the unique device ID.
 
 Optionally, a static IP address, IP mask, and gateway address can be
 specified as `ipaddress$`, `mask$`, `gateway$`
-eg, OPTION WIFI “mysid”,”mypassword”, ”myPico”,
-“192.168.1.111”, ”255.255.255.0”, ”192.168.1.1”
+eg,
 
+```basic
+OPTION WIFI “mysid”,”mypassword”, ”myPico”, “192.168.1.111”, ”255.255.255.0”, ”192.168.1.1”
+```
