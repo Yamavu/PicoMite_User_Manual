@@ -23,7 +23,7 @@ and set the terminal width (if the option is enabled in the terminal setup).
 This option is not available if an LCD display is being used as the console.
 
 
-### OPTION HDMI PINS clockpositivepin, d0positivepin, d1positivepin, d2positivepin
+## OPTION HDMI PINS clockpositivepin, d0positivepin, d1positivepin, d2positivepin
 
 *HDMI VERSION ONLY*
 
@@ -84,7 +84,7 @@ Configures the PicoMite firmware to work with an attached LCD panel.
 
 See the chapter [LCD Displays](../display_panels.md) for the details.
 
-This command must be run at the command prompt (not in a program).
+*This command must be run at the command prompt (not in a program).*
 
 
 ## OPTION LCDPANEL CONSOLE [font [, fc [, bc [, blight]]] [,NOSCROLL] <br> OPTION LCDPANEL NOCONSOLE
@@ -99,7 +99,7 @@ The optional `NOSCROLL` command changes the firmware such that when outputting t
 
 Note that for displays other than the SSD1963 scrolling for any console output is very slow so it is recommended to use the NOSCROLL option for these displays. This setting is saved in flash and will be automatically applied on startup. To disable it use the `OPTION LCDPANEL NOCONSOLE` command.
 
-This command must be run at the command prompt.
+*This command must be run at the command prompt (not in a program).*
 
 
 ## OPTION LCDPANEL USER hres, vres
@@ -124,7 +124,7 @@ If output is required to be temporarily disabled in a program use the `OPTION CO
 For SSD1963 based displays in landscape and SPI displays in portrait the firmware uses H/W scrolling to improve display console performance.
 
 
-### OPTION RESOLUTION nn [,cpuspeedinKhz]
+## OPTION RESOLUTION nn [,cpuspeedinKhz]
 
 *HDMI and VGA VERSIONS ONLY*
 For firmware with HDMI video set the video resolution to `nn`.
@@ -145,7 +145,7 @@ Each VGA and HDMI resolution can operate in a number of modes which are set usin
 Note that `800x600` and `848x480` resolutions reduce both the maximum program size and the variable space available to the Basic programs
 
 
-### OPTION TOUCH T_CS pin <br> T_IRQ pin [, Beep] <br> OPTION TOUCH DISABLE
+## OPTION TOUCH T_CS pin <br> T_IRQ pin [, Beep] <br> OPTION TOUCH DISABLE
 
 *NOT VGA OR HDMI VERSIONS*
 
@@ -162,10 +162,10 @@ buzzer/beeper to generate a "click" or beep sound when an Advanced
 Graphics control is touched (ie, radio button, switch, etc). This is
 described in Advanced Graphics Functions.pdf.
 
-This command must be run at the command prompt (not in a program).
+*This command must be run at the command prompt (not in a program).*
 
 
-### OPTION TOUCH FT6336 IRQpin, RESETpin [,BEEPpin] [,sensitivity]
+## OPTION TOUCH FT6336 IRQpin, RESETpin [,BEEPpin] [,sensitivity]
 
 *NOT VGA OR HDMI VERSIONS*
 
@@ -174,7 +174,7 @@ Enables touch support for FT6336 capacitive touch chip. Sensitivity is a number 
 `SDA` and `SCK` should be connected to valid I2C pins and set up with `OPTION SYSTEM I2C`. See also the `TOUCH` function.
 
 
-### OPTION VGA PINS HSYNCpin, BLUEpin
+## OPTION VGA PINS HSYNCpin, BLUEpin
 
 *VGA VERSION ONLY*
 

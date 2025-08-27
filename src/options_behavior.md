@@ -57,7 +57,7 @@ A numeric value cannot be used. The default is `white, black`. If background is 
 
 This sets the default display mode on boot.
 
-This command must be run at the command prompt (not in a program).
+*This command must be run at the command prompt (not in a program).*
 
 
 ## OPTION ESCAPE
@@ -72,7 +72,7 @@ Placing this command at the start of a program will require that every variable 
 This option is disabled by default when a program is run. If it is used it must be specified before any variables are used.
 
 
-### OPTION LEGACY ON <br> OPTION LEGACY OFF
+## OPTION LEGACY ON <br> OPTION LEGACY OFF
 
 This will turn on or off compatibility mode with the graphic commands used in the original Colour Maximite. The commands `COLOUR`, `LINE`, `CIRCLE` and `PIXEL` use the legacy syntax and all drawing commands will accept colours in the range of 0 to 7.
 
@@ -89,7 +89,7 @@ The milliseconds counter is set to zero whenever the time is updated using the `
 command. Default is `OFF`.
 
 
-### OPTION PLATFORM name$
+## OPTION PLATFORM name$
 
 Allows a user to identify a particular hardware configuration that can
 then be used in programs to control the program's operation.
