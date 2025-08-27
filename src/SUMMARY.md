@@ -2,6 +2,8 @@
 
 [About](about.md)
 
+---
+
 - [Introduction](introduction.md)
 - [Firmware Versions and Files](firmware_versions_and_files.md)
 - [Serial Console](serial_console.md)
@@ -23,10 +25,21 @@
 - [Long Strings](long_strings.md)
 - [MMBasic Characteristics](mmbasic_characteristics.md)
 - [Predefined Read Only Variables](predefined_read_only_variables.md)
+
+---
+
 - [Options](options.md)
+  - [Audio](options_audio.md)
+  - [Behavior](options_behavior.md)
+  - [Display](options_display.md)
+  - [Network](options_network.md)
+  - [Hardware](options_hardware.md)
+  - [Keyboard](options_keyboard.md)
 - [Commands](commands.md)
 - [Functions](functions.md)
 - [Obsolete Commands and Functions](obsolete_commands_and_functions.md)
+
+---
 
 [Appendix A – Serial Communications](A_serial_communications.md)
 [Appendix B – I2C Communications](B_i2c_communications.md)
