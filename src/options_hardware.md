@@ -107,3 +107,22 @@ The parameter is not saved and should be initialised either on the command line 
 Enable auto-load time$ & date$ from RTC on boot & every hour. If enabled and the RTC does not respond then any running program will abort with an error. At the command prompt an information message will be output.
 
 This command must be run at the command prompt (not in a program).
+
+### OPTION SERIAL CONSOLE uartapin, uartbpin [,B]
+
+Specify that the console be accessed via a hardware serial port (instead
+of virtual serial over USB).
+
+`uartapin` and `uartbpin` can be any valid pair of rx and tx pins for either
+COM1 or COM2. The order that they are specified is not important.
+
+The speed defaults to 115200 baud but can be changed with OPTION
+BAUDRATE. Adding the "B" parameter means output will go to "B"oth
+the serial port and the USB.
+
+
+### OPTION SERIAL CONSOLE DISABLE
+
+Revert to the normal the USB console.
+
+These commands must be run at the command prompt (not in a program).
