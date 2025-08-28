@@ -2,7 +2,7 @@
 
 These options change the behavior of the  BASIC code.
 
-## OPTION ANGLE RADIANS \| DEGREES
+## OPTION ANGLE RADIANS | DEGREES
 
 This command switches trig functions between degrees and radians.
 

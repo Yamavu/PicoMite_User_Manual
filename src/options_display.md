@@ -61,14 +61,9 @@ This enables or disables 16-bit LCD displays in 320x240 mode allowing things lik
 In the case of 480x272 displays the 320x240 image is windowed and occupies the screen area 80,16 to 399,255
 
 
-## OPTION LCDPANEL
+## OPTION LCDPANEL VIRTUAL_C <br> OPTION LCDPANEL VIRTUAL_M
 
 *not VGA or HDMI versions*
-
-Configures an LCD panel on versions that accept a connected LCD.
-
-
-## OPTION LCDPANEL VIRTUAL_C <br> OPTION LCDPANEL VIRTUAL_M
 
 Configures a virtual LCD panel without a physically connected panel.
 
@@ -80,6 +75,8 @@ Using this feature a program can draw graphical images on this virtual panel and
 
 ## OPTION LCDPANEL options <br> OPTION LCDPANEL DISABLE
 
+*not VGA or HDMI versions*
+
 Configures the PicoMite firmware to work with an attached LCD panel.
 
 See the chapter [LCD Displays](../display_panels.md) for the details.
@@ -88,6 +85,8 @@ See the chapter [LCD Displays](../display_panels.md) for the details.
 
 
 ## OPTION LCDPANEL CONSOLE [font [, fc [, bc [, blight]]] [,NOSCROLL] <br> OPTION LCDPANEL NOCONSOLE
+
+*not VGA or HDMI versions*
 
 Configures the LCD display panel for use as the console output. The LCD must support transparent text (i.e. the SSD1963_x, ILI9341 or ST7789_320 controllers).
 
@@ -100,11 +99,6 @@ The optional `NOSCROLL` command changes the firmware such that when outputting t
 Note that for displays other than the SSD1963 scrolling for any console output is very slow so it is recommended to use the NOSCROLL option for these displays. This setting is saved in flash and will be automatically applied on startup. To disable it use the `OPTION LCDPANEL NOCONSOLE` command.
 
 *This command must be run at the command prompt (not in a program).*
-
-
-## OPTION LCDPANEL USER hres, vres
-
-Configures a user written display driver in MMBasic. See the file “User Display Driver.txt” in the PicoMite firmware distribution for a description of how to write the driver.
 
 
 ## OPTION LCDPANEL CONSOLE [font [, fc [,bc]]] <br> OPTION LCDPANEL NOCONSOLE
@@ -122,6 +116,13 @@ This option is permanent, both print output and console output will be disabled 
 If output is required to be temporarily disabled in a program use the `OPTION CONSOLE` command.
 
 For SSD1963 based displays in landscape and SPI displays in portrait the firmware uses H/W scrolling to improve display console performance.
+
+
+## OPTION LCDPANEL USER hres, vres
+
+*not VGA or HDMI versions*
+
+Configures a user written display driver in MMBasic. See the file “User Display Driver.txt” in the PicoMite firmware distribution for a description of how to write the driver.
 
 
 ## OPTION RESOLUTION nn [,cpuspeedinKhz]
