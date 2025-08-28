@@ -1,4 +1,4 @@
-# OPTION CONTINUATION<br>LINES ON/OFF
+## OPTION CONTINUATION<br>LINES ON/OFF
 
 Enables or disables the use of continuation lines in the editor and with the `LIST` command. Line continuation is indicated by a space followed by an underscore character at the end of a line.
 

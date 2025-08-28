@@ -38,9 +38,7 @@ def split_markdown_by_headings(file_path: str, level: int = 1):
     for m in re.finditer(heading_regex, content):
         if len(parts) > 0:
             parts[-1]["end"] = m.start(0)
-        parts.append(
-            {"filename": f"{prep_name(m.group(1))}.md", "start": m.start(1)}
-        )
+        parts.append({"filename": f"{prep_name(m.group(1))}.md", "start": m.start(1)})
         # p.write_text(content[m.start(1):m.end(0)], encoding="UTF-8")
     print(parts)
     if len(parts) > 0:
@@ -54,17 +52,19 @@ def split_markdown_by_headings(file_path: str, level: int = 1):
             print(f"name collission: {part_path.name}")
             print(f"print : {part_path.name}")
         else:
-            part_path.write_text("# " + content[part["start"]: part["end"]])
+            part_content = f"{heading} " + content[part["start"] : part["end"]]
+            part_path.write_text(part_content)
     chapter_path = Path(chapter["filename"])
     if chapter_path.exists():
         print(f"name collission: {chapter_path.name}")
         print(f"print : {chapter_path.name}")
     else:
-        chapter_content = content[chapter["start"]: chapter["end"]]+"\n"
+        chapter_content = (
+            content[chapter["start"] : chapter["end"] - len(heading) - 1] + "\n"
+        )
         for part in parts:
-            chapter_content += "{{#include " + part['filename'] + "}}\n\n"
+            chapter_content += "{{#include " + part["filename"] + "}}\n\n"
         chapter_path.write_text(chapter_content)
-    
 
 
 def main():

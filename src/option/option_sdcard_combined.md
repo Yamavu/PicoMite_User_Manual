@@ -1,4 +1,4 @@
-# OPTION SDCARD COMBINED CS
+## OPTION SDCARD COMBINED CS
 
 This specifies that the touch chip select pin is also used for the SDcard.
 

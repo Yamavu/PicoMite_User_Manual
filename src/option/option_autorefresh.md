@@ -1,4 +1,4 @@
-# OPTION AUTOREFRESH OFF | ON
+## OPTION AUTOREFRESH OFF | ON
 
 Black and white displays can only be updated a full screen at a time. By using OPTION AUTOREFRESH OFF/ON you can control whether a write command immediately updates the display or not. 
 

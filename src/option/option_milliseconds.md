@@ -1,4 +1,4 @@
-# OPTION MILLISECONDS ON|OFF
+## OPTION MILLISECONDS ON|OFF
 
 This enables or disables a millisecond output in the `TIME$` function .i.e, `HH:MM:SS.mmm`.
 

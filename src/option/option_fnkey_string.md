@@ -1,4 +1,4 @@
-# OPTION FNKey string$
+## OPTION FNKey string$
 
 Define the string that will be generated when a function key is pressed at
 the command prompt. `FNKey` can be *F1*, and *F5* thru to *F9*.

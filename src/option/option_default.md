@@ -1,4 +1,4 @@
-# OPTION DEFAULT FLOAT | INTEGER | STRING | NONE
+## OPTION DEFAULT FLOAT | INTEGER | STRING | NONE
 
 Used to set the default type for a variable which is not explicitly defined.
 

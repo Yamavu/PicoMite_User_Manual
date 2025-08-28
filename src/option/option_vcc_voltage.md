@@ -1,4 +1,4 @@
-# OPTION VCC voltage
+## OPTION VCC voltage
 
 Specifies the voltage (Vcc) supplied to the Raspberry Pi Pico.
 

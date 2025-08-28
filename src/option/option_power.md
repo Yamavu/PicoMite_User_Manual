@@ -1,4 +1,4 @@
-# OPTION POWER PFM | PWM
+## OPTION POWER PFM | PWM
 
 Changes operation of the 3.3V supply switch mode power supply.
 

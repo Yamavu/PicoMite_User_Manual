@@ -31,7 +31,7 @@
 - [Options](options.md)
   - [Audio](options_audio.md)
   - [Behavior](options_behavior.md)
-  - [Behavior](options_command_prompt.md)
+  - [Command Prompt](options_command_prompt.md)
   - [Display](options_display.md)
   - [Hardware](options_hardware.md)
   - [Keyboard](options_keyboard.md)

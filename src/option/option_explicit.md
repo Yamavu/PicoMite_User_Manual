@@ -1,4 +1,4 @@
-# OPTION EXPLICIT
+## OPTION EXPLICIT
 
 Placing this command at the start of a program will require that every variable be explicitly declared using the `DIM`, `LOCAL` or `STATIC` commands before it can be used in the program.
 

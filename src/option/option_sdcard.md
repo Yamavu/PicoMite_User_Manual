@@ -1,4 +1,4 @@
-# OPTION SDCARD CSpin [,CLKpin, MOSIpin, MISOpin] <br> OPTION SDCARD DISABLE
+## OPTION SDCARD CSpin [,CLKpin, MOSIpin, MISOpin] <br> OPTION SDCARD DISABLE
 
 Specify or disable the I/O pins to use for the SD Card interface.
 
