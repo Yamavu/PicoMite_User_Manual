@@ -19,9 +19,11 @@ Many `OPTION` commands will force a restart of the PicoMite firmware and that wi
 
 {{#include option/pin_nbr.md}}
 
-{{#include option/disk_save_fname_br_option_disk_load_fname.md}}
+{{#include option/disk_save.md}}
+
+{{#include option/disk_load.md}}
 
 {{#include option/reset.md}}
 
-{{#include option/reset_cfg_br_option_reset_list.md}}
+{{#include option/reset_list.md}}
 

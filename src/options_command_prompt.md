@@ -17,12 +17,12 @@ Entering the break key (default CTRL-C) at the console will interrupt the runnin
 
 {{#include option/case.md}}
 
-{{#include option/colourcode_on_br_option_colourcode_off.md}}
+{{#include option/colourcode.md}}
 
 {{#include option/console_output.md}}
 
-{{#include option/continuation_br_lines_on_off.md}}
+{{#include option/continuation.md}}
 
-{{#include option/fnkey_string.md}}
+{{#include option/fnkey.md}}
 
 {{#include option/tab.md}}
