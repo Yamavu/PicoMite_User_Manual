@@ -1,0 +1,3 @@
+## FLASH DISK LOAD n, fname$ [,O[VERWRITE]]
+
+Loads the contents of file fname$ into flash slot n as a binary image. The filecan be created using LIBRARY DISK SAVE. Also, any file created externallywith data required by a program can be loaded and accessed using commandslike PEEK and MEMORY COPY using the address of the flash slot.If the optional parameter OVERWRITE (or O) is specified the content of theflash slot will be overwritten without an error being raised.

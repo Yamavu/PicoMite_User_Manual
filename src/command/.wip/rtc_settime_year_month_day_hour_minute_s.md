@@ -1,0 +1,3 @@
+## RTC SETTIME year, month, day, hour, minute, second
+
+RTC SETTIME will set the time in the clock chip. 'hour' must use 24 hournotation. ‘year’ can be two or four digits. The RTC SETTIME command willalso accept a single string argument in the format of dd/mm/yy hh:mm. Thismeans the date/time could be entered by the user using a GUI FORMATBOXwith the DATETIME2 format (see Advanced Graphics Functions.pdf).

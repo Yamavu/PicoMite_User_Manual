@@ -3,6 +3,12 @@
 Commands
 Detailed Listing
 Square brackets indicate that the parameter or characters are optional.
+
+
+{{#include commands_single_character.md}}
+
+
+
 ‘ (single quotation mark)
 
 Starts a comment and any text following it will be ignored. Comments can be

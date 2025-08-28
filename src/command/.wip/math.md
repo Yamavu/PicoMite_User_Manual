@@ -1,0 +1,3 @@
+## MATH
+
+The math command performs many simple mathematical calculations that canbe programmed in BASIC but there are speed advantages to coding loopingstructures in the firmware and there is the advantage that once debugged theyare there for everyone without re-inventing the wheel. Note: 2 dimensionalmaths matrices are always specified DIM matrix(n_columns, n_rows) and ofcourse the dimensions respect OPTION BASE. Quaternions are stored as a 5element array w, x, y, z, magnitude.

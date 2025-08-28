@@ -1,0 +1,3 @@
+## SETPIN GP1, FFIN [,gate]
+
+Sets GP1 as a fast frequency input.Inputs up to the CPU speed /2 can be recorded.‘gate’ can be used to specify the gate time (the length of time used to count theinput cycles). It can be any number between 10 ms and 100000 ms. The PIN()function will always return the frequency correctly scaled in Hz regardless ofthe gate time used. If 'option' is omitted the gate time will be 1 second.The function uses PWM channel 0 to do the counting so it is incompatible withany other use of that PWM channel.

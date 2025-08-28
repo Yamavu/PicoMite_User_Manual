@@ -1,0 +1,3 @@
+## END SUB
+
+variable.'arg1', 'arg2', etc are the arguments or parameters to the subroutine. An array isspecified by using empty brackets. i.e. arg3(). The type of the argument canbe specified by using a type suffix (i.e. arg1$) or by specifying the type usingAS <type> (i.e. arg1 AS STRING).Arguments in the caller's list that are a variable and have the correct type willbe passed by reference to the subroutine. This means that any changes to thecorresponding argument in the subroutine will also be copied to the caller's

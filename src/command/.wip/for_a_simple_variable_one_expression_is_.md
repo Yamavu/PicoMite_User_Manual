@@ -1,0 +1,3 @@
+## For a simple variable one expression is used, for an array a list of comma separated expressions surrounded by brackets is used.
+
+keyword (i.e. FLOAT, INTEGER or STRING) after each variable. If you usethis method the type must be specified for each variable and can be changedfrom variable to variable.For example: DIM amount AS FLOAT, name AS STRINGFloating point or integer variables will be set to zero when created and stringswill be set to an empty string (i.e. ""). You can initialise the value of the

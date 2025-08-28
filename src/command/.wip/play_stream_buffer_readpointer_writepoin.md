@@ -1,0 +1,3 @@
+## PLAY STREAM buffer%(), readpointer%, writepointer%
+
+Sends data to the VS1053 CODEC from the circular buffer “buffer%”. Thiscommand initiates a background output stream where the VS1053 is sentanything in the buffer between the readpointer and the write pointer, updatingthe readpointer as it goes. Can be used for arbitrary waveform output.Will set a byte or a word within the virtual memory space. Where more thanone byte is written the address must be exactly divisible by the number ofbytes: 2, 4, or 8 otherwise an error will be reported.

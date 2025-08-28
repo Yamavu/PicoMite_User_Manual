@@ -1,0 +1,3 @@
+## END SELECT
+
+If 'value' cannot be matched with a 'testexp' it will be automatically matched tothe CASE ELSE. If CASE ELSE is not present the program will not execute any<statements> and continue with the code following the END SELECT. When amatch is made the <statements> following the CASE statement will beexecuted until END SELECT or another CASE is encountered when theprogram will then continue with the code following the END SELECT.

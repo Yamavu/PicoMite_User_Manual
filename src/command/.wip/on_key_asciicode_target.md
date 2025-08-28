@@ -1,0 +1,3 @@
+## ON KEY ASCIIcode, target
+
+Note that all characters waiting in the input buffer should be read in the interruptsubroutine otherwise another interrupt will be automatically generated as soon asthe program returns from the interrupt.The second version allows you to associate an interrupt routine with a specifickey press. This operates at a low level for the serial console and if activated thekey does not get put into the input buffer but merely triggers the interrupt. It usesa separate interrupt from the simple ON KEY command so can be used at thesame time if required.In both variants, to disable the interrupt use numeric zero for the target, i.e.:ON KEY 0. or ON KEY ASCIIcode, 0

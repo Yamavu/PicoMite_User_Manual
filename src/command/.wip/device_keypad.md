@@ -1,0 +1,3 @@
+## DEVICE KEYPAD
+
+See KEYPAD command

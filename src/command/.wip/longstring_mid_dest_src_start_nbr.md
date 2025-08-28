@@ -1,0 +1,3 @@
+## LONGSTRING MID dest%(), src%(), start, nbr
+
+Will copy 'nbr' characters from ‘src%()’ to ‘dest%()’ starting at characterposition 'start' overwriting whatever was in ‘dest%()’. i.e. copy from themiddle of ‘src%()’. 'nbr' is optional and if omitted the characters from 'start' tothe end of the string will be copied ‘src%()’ and ‘dest%()’ must be long stringvariables. 'start' and 'nbr' must be integer constants or expressions.

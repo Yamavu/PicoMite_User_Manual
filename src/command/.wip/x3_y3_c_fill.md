@@ -1,0 +1,3 @@
+## X3, Y3 [, C [, FILL]]
+
+corners at X1, Y1 and X2, Y2 and X3, Y3. 'C' is the colour of the triangle anddefaults to the current foreground colour. 'FILL' is the fill colour and defaultsto no fill (it can also be set to -1 for no fill).All parameters can be expressed as arrays and the software will plot thenumber of triangles as determined by the dimensions of the smallest arrayunless X1 = Y1 = X2 = Y2 = X3 = Y3 = -1 in which case processing will stopat that point 'x1', 'y1', 'x2', 'y2', 'x3',and 'y3' must all be arrays or all be singlevariables /constants otherwise an error will be generated 'c' and 'fill' can beeither arrays or single variables/constants.

@@ -1,0 +1,3 @@
+## ON ERROR CLEAR
+
+ON ERROR SKIP will ignore an error in a number of commands (specified bythe number 'nn') executed following this command. 'nn' is optional, the default ifnot specified is one. After the number of commands has completed (with anerror or not) the behaviour of MMBasic will revert to ON ERROR ABORT.If an error occurs and is ignored/skipped the read only variable MM.ERRNOwill be set to non zero and MM.ERRMSG$ will be set to the error message thatwould normally be generated. These are reset to zero and an empty string by ONERROR CLEAR. They are also cleared when the program is run and when ONERROR IGNORE and ON ERROR SKIP are used.ON ERROR IGNORE can make it very difficult to debug a program so it isstrongly recommended that only ON ERROR SKIP be used.

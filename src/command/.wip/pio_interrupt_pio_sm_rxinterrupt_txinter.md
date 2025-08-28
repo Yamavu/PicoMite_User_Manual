@@ -1,0 +1,3 @@
+## PIO INTERRUPT pio, sm [,RXinterrupt] [,TXinterrupt]
+
+Sets Basic interrupts for PIO activity.Use the value 0 for RXinterrupt or TXinterrupt to disable an interrupt.Omit values not needed.The RX interrupt triggers whenever a word has been "pushed" by the PIO codeinto the specified FIFO. The data MUST be read in the interrupt to clear it.The TX interrupt triggers whenever the specified FIFO has been FULL and thePIO code has now "pulled" it

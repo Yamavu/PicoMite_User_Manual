@@ -1,0 +1,3 @@
+## DEVICE BITSTREAM pinno, n_transitions, array%()
+
+This command is used to generate an extremely accurate bit sequence on thepin specified. The pin must have previously been set up as an output and set tothe required starting level.Notes:  The array contains the length of each level in the bitstream in microseconds. The maximum period allowed is 65.5 mSec  The first transition will occur immediately on executing the command.  The last period in the array is ignored other than defining the time before control returns to the program or command line.  The pin is left in the starting state if the number of transitions is even and the opposite state if the number of transitions is odd.

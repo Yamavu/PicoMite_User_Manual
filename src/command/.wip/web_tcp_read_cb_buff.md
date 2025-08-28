@@ -1,0 +1,3 @@
+## WEB TCP READ cb%, buff%()
+
+Read the data from a potential TCP connection' cb%'. ' buff%()' is an array toreceive any data from that connection as a longstring. The size of this bufferwill limit the amount of data received from the remote client. If there isnothing received on that connection this will return an empty string (ie,LLEN(buff%())=0).If there is data that has been received then the BASIC program must respondwith one of the WEB TRANSMIT commands in order to respond and close theconnection.

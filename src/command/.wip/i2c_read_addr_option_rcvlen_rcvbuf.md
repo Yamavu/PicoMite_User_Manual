@@ -1,0 +1,3 @@
+## I2C READ addr, option, rcvlen, rcvbuf
+
+Get data from the I2C slave device. ‘addr’ is the slave’s I2C address.‘option’ can be 0 for normal operation or 1 to keep control of the bus after thecommand (a stop condition will not be sent at the completion of the command) ‘rcvlen’ is the number of bytes to receive.‘rcvbuf’ is the variable or array used to save the received data - this can be:  A string variable. Bytes will be stored as sequential characters.  A one dimensional array of numbers specified with empty brackets. Received bytes will be stored in sequential elements of the array starting with the first. Example: I2C READ &H6F, 0, 3, ARRAY()A normal numeric variable (in this case rcvlen must be 1).

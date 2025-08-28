@@ -1,0 +1,3 @@
+## MATH Q_EULER yaw, pitch, roll, outRQ()
+
+Generates a normalised rotation quaternion outRQ() to rotate quaternionvectors as defined by the yaw, pitch and roll anglesWith the vector in front of the “viewer” yaw is looking from the top of theector and rotates clockwise, pitch rotates the top away from the camera and rollrotates around the z-axis clockwise.The yaw, pitch and roll angles default to radians but respect the setting ofOPTION ANGLE

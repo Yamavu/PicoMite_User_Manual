@@ -1,0 +1,3 @@
+## ARRAY SLICE sourcearray(), [d1] [,d2] [,d3] [,d4] [,d5] destinationarray()
+
+This command copies a specified set of values from a multi-dimensional arrayinto a single dimensional array. It is much faster than using a FOR loop. Theslice is specified by giving a value for all but one of the source array indicesand there should be as many indices in the command, including the blank one,as there are dimensions in the source array. The arrays can be numerical orstrings and ‘sourcearray’ and ‘destinationarray’ must be the same (NB: canconvert between integers and floats for numerical arrays).eg, OPTION BASE 1 DIM a(3,4,5) DIM b(4) ARRAY SLICE a(), 2, , 3, b()Will copy the elements 2,1,3 and 2,2,3 and 2,3,3 and 2,4,3 into array b()

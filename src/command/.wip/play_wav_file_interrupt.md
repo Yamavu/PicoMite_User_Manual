@@ -1,0 +1,3 @@
+## PLAY WAV file$ [, interrupt]
+
+Will play a WAV file on the sound output.'file$' is the WAV file to play (the extension of .wav will be appended ifmissing). The WAV file must be PCM encoded in mono or stereo with 8 or16-bit sampling. The sample rate can be up to 48kHz in stereo (96kHz if thePico is overclocked).The WAV file is played in the background. 'interrupt' is optional and is thename of a subroutine which will be called when the file has finished playing.

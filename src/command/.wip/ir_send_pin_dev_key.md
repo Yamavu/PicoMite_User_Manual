@@ -1,0 +1,3 @@
+## IR SEND pin, dev, key
+
+Generate a 12-bit Sony Remote Control protocol infrared signal.'pin' is the I/O pin to use. This can be any I/O pin which will be automaticallyconfigured as an output and should be connected to an infrared LED. Idle islow with high levels indicating when the LED should be turned on.'dev' is the device being controlled and is a number from 0 to 31, 'key' is thesimulated key press and is a number from 0 to 127.The IR signal is modulated at about 38KHz and sending the signal takes about25mS during which program execution is paused.

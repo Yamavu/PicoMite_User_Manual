@@ -1,0 +1,3 @@
+## PIN
+
+Period input'option' can be used to specify the number of input cycles toaverage the period measurement over. It can be any numberbetween 1 and 10000. The PIN() function will always return theaverage period of one cycle correctly scaled in ms regardless ofthe number of cycles used for the average. If 'option' is omittedthe period of just one cycle will be used.The pins can be GP6, GP7, GP8 or GP9 (can be changed withOPTION COUNT).

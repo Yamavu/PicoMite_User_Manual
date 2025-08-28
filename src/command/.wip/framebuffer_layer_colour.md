@@ -1,0 +1,3 @@
+## FRAMEBUFFER LAYER [colour]
+
+Creates a layer buffer “L” with a colour space and resolution to match thecurrent display mode. The optional parameter colour is specified as a number0-15 (modes 2 and 3), RGB888 colour (mode 4) or 0-255 (mode 5) andspecifies a colour which is ignored when the layer is applied to the display. Indisplay modes where automatic layer application is not supported a layer bufferacts as another framebuffer.

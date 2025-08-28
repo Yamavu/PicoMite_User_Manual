@@ -1,0 +1,3 @@
+## DEVICE SERIALRX pinno, baudrate, istring$, timeout_in_ms, status% [,nbr] [,terminators$]
+
+Inputs serial data on ‘pinno’. ‘baudrate’ can be between 110 and 230400(230400 may need CPU to be overclocked).‘status%’ returns: -1 = timeout (Note: use LEN(istring$) to see number of chars received) 2 = number of characters requested satisfied 3 = terminating character satisfied‘nbr’ specifies the number of characters to be received before the commandreturns. ‘terminators$’ specifies one or more signle characters that can be usedto terminate reception.The program will halt and interrupts ignored while this command is executing.

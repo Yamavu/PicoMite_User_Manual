@@ -1,0 +1,3 @@
+## SETPIN p1[, p2 [, p3]], device
+
+These commands are used for the pin allocation for special devices.Pins must be chosen from the pin designation diagram and must be allocatedbefore the devices can be used. Note that the pins (eg, rx, tx, etc) can bedeclared in any order and that the pins can be referred to by using their pinnumber (eg, 1, 2) or GP number (eg, GP0, GP1).Note that on the WebMite version:  SPI1 and SPI2 are not available on GP20 to GP28  COM1 and COM2 are not available on P20 to GP28  I2C is not available on pin 34 (GP28)  The following are not available; GP29, GP25, GP24 and GP23

@@ -1,0 +1,3 @@
+## LONGSTRING
+
+The LONGSTRING commands allow for the manipulation of strings longerthan the normal MMBasic limit of 255 characters.Variables for holding long strings must be defined as single dimensionedinteger arrays with the number of elements set to the number of charactersrequired for the maximum string length divided by eight. The reason fordividing by eight is that each integer in an MMBasic array occupies eightbytes. Note that the long string routines do not check for overflow in thelength of the strings. If an attempt is made to create a string longer than a longstring variable's size the outcome will be undefined.

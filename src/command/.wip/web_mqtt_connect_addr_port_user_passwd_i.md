@@ -1,0 +1,3 @@
+## WEB MQTT CONNECT addr$, port, user$, passwd$ [, interrupt]
+
+Connect to an MQTT Broker.'addr$' is the IP address, 'port' is the port number to use, 'user$' is the username, 'passwd$' is the account's password and 'interrupt' is optional and ifspecified is the subroutine to call when a message is received.WEB CONNECT does not disconnect from a previously connected network soshould only be used where nothing has been previously set up or where apreviously configured network is not active or a previously configured networkhas failed to connect on boot (no parameters)

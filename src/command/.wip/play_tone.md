@@ -1,0 +1,3 @@
+## PLAY TONE left, right [,dur] [,interrupt]
+
+Generates two separate frequencies on the sound output left and right channels.'left' and 'right' are the frequencies in Hz to use for the left and right channels.The tone plays in the background (the program will continue running after thiscommand) and 'dur' specifies the number of milliseconds that the tone willsound for. If the duration is not specified the tone will continue until explicitlystopped or the program terminates.'interrupt' is an optional subroutine which will be called when the playterminates.The frequency can be from 1Hz to 20KHz and is very accurate (it is based on acrystal oscillator). The frequency can be changed at any time by issuing a newPLAY TONE command.

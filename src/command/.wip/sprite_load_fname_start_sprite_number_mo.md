@@ -1,0 +1,3 @@
+## SPRITE LOAD fname$ [,start_sprite_number] [,mode]
+
+Loads the file ‘fname$’ which must be formatted as an original ColourMaximite sprite file. See the original Colour Maximite MMBasic LanguageManual for the file format. Multiple sprite files can be loaded by specifying adifferent ‘start_sprite_number’ for each file. The programmer is responsiblefor making sure that the sprites do not overlap.Mode defaults to zero in which case the CMM1/CMM2 colour codes are used(Black, Blue, Green, Cyan, Red, Magenta, Yellow, White, Myrtle, Cobalt,Midgreen, Cerulean, Rust, Fuchsia, Brown, Lilac);If mode is specified as 1 then the RGB121 colour codes are used:(Black, Blue, Myrtle, Cobalt, Midgreen, Cerulean, Green, Cyan, Red, Magenta,Rust, Fuchsia, Brown, Lilac, Yellow, White).

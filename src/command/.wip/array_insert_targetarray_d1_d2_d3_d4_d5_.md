@@ -1,0 +1,3 @@
+## ARRAY INSERT targetarray(), [d1] [,d2] [,d3] [,d4] [,d5] , sourcearray()
+
+This is the opposite of ARRAY SLICE, has a very similar syntax, and allowsyou, for example, to substitute a single vector into an array of vectors with asingle instruction or a one dimensional array of strings into a two dimensionalarray of strings. The arrays can be numerical or strings and ‘sourcearray’ and‘destinationarray’ must be the same (NB: can convert between integers andfloats for numerical arrays).eg, OPTION BASE 1 DIM targetarray(3,4,5) DIM sourcearray(4)=(1,2,3,4) ARRAY INSERT targetarray(), 2, , 3, sourcearray()Will set elements 2,1,3 = 1 and 2,2,3 = 2 and 2,3,3 = 3 and 2,4,3 = 4

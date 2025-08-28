@@ -1,0 +1,3 @@
+## PIO INIT MACHINE pio%, statemachine%, clockspeed [,pinctrl] [,execctrl] [,shiftctrl] [,startinstruction] [,sideout [,setout] [,outout]
+
+Initialises PIO 'pio%' with state machine 'statemachine%'. 'clockspeed' is theclock speed of the state machine in kHz. The first four optional arguments arevariables holding initialising values of the state machine registers and theaddress of the first instruction to execute (defaults to zero). These decide howthe PIO will operate.sideout, setout, and outout can be set to 0 (default) or 1 to specify if pinsdefined in pinctrl should be initialised as inputs (0) or outputs (1)
