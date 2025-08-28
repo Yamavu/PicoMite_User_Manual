@@ -3,23 +3,23 @@
 These options change the behavior of the  BASIC code.
 
 
-{{#include  option/option_angle.md}}
+{{#include  option/angle.md}}
 
-{{#include  option/option_base.md}}
+{{#include  option/base.md}}
 
-{{#include  option/option_default.md}}
+{{#include  option/default.md}}
 
-{{#include  option/option_default_colours.md}}
+{{#include  option/default_colours.md}}
 
-{{#include  option/option_default_mode.md}}
+{{#include  option/default_mode.md}}
 
-{{#include  option/option_escape.md}}
+{{#include  option/escape.md}}
 
-{{#include  option/option_explicit.md}}
+{{#include  option/explicit.md}}
 
-{{#include  option/option_legacy.md}}
+{{#include  option/legacy.md}}
 
-{{#include  option/option_milliseconds.md}}
+{{#include  option/milliseconds.md}}
 
-{{#include  option/option_platform.md}}
+{{#include  option/platform.md}}
 

@@ -15,13 +15,13 @@ This table lists the various option commands which can be used to configure MMBa
 Many `OPTION` commands will force a restart of the PicoMite firmware and that will cause the USB console interface to be reset. The program in memory will not be lost as it is held in non-volatile flash memory.
 
 
-{{#include option_list.md}}
+{{#include option/list.md}}
 
-{{#include option_pin_nbr.md}}
+{{#include option/pin_nbr.md}}
 
-{{#include option_disk_save_fname_br_option_disk_load_fname.md}}
+{{#include option/disk_save_fname_br_option_disk_load_fname.md}}
 
-{{#include option_reset.md}}
+{{#include option/reset.md}}
 
-{{#include option_reset_cfg_br_option_reset_list.md}}
+{{#include option/reset_cfg_br_option_reset_list.md}}
 

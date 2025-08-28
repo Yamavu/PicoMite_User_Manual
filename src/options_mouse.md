@@ -1,8 +1,8 @@
 # Mouse
 
 
-{{#include  option/option_mouse.md}}
+{{#include  option/mouse.md}}
 
-{{#include  option/option_mouse_disable.md}}
+{{#include  option/mouse_disable.md}}
 
-{{#include  option/option_nocheck.md}}
+{{#include  option/nocheck.md}}
