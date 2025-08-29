@@ -1,3 +1,0 @@
-## SPRITE SCROLL x, y [,col]
-
-Scrolls the background and any sprites on the active framebuffer (L or N) 'x'pixels to the right and 'y' pixels up. 'x' can be any number between -MM.HRES-1 and MM.HRES-1, 'y' can be any number between -MM.VRES-1and MM.VRES-1.Sprites on any layer other than zero will remain fixed in position on the screen.By default the scroll wraps the image round. If 'col' is specified the colour willreplace the area behind the scrolled image. If 'col' is set to -1 the scrolled areawill be left untouched.

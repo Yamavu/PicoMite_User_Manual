@@ -1,3 +1,0 @@
-## ADC START array1!() [,array2!()] [,array3!()] [,array4!()] [,C1min] [,C1max] [,C2min] [,C2max] [,C3min] [,C3max] [,C4min] [,C4max]
-
-This starts conversion into the specified arrays. The arrays must be floatingpoint and the same size. The size of the arrays defines the number ofconversions. Start can be called repeatedly once the ADC is OPEN‘Cxmin’ and ‘Cxmax’ will scale the readings. For example, C1min=200 andC1max=100 will create values ranging from 200 to 100 for equivalent voltagesof 0 - 3.3. If the scaling is not used the results are returned as a voltagebetween 0 and OPTION VCC (defaults to 3.3V).

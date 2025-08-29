@@ -1,3 +1,0 @@
-## LOAD JPG file$ [, x] [, y]
-
-Load a jpg image from the Flash Filesystem or SD Card and display it on thedisplay. ''file$' is the name of the file and 'x' and 'y' are the screen coordinates for thetop left hand corner of the image. If the coordinates are not specified the imagewill be drawn at the top left hand position on the screen.If an extension is not specified “.JPG” will be added to the file name.Progressive jpg images are not supported.

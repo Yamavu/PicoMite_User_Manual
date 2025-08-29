@@ -1,3 +1,0 @@
-## IF expression THEN <statements> [ELSEIF expression THEN <statements>] [ELSE <statements>]
-
-Multiline IF statement with optional ELSE and ELSEIF cases and ending withENDIF. Each component is on a separate line.Evaluates 'expression' and performs the statement(s) following THEN if theexpression is true or optionally the statement(s) following the ELSE statementif false. The ELSEIF statement (if present) is executed if the previouscondition is false and it starts a new IF chain with further ELSE and/or ELSEIF

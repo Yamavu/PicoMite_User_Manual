@@ -1,3 +1,0 @@
-## RTC GETREG reg, var
-
-contents of registers within the real time clock chip. 'reg' is the register'snumber, 'value' is the number to store in the register and 'var' is a variable thatwill receive the number read from the register. These commands are notnecessary for normal operation but they can be used to manipulate specialfeatures of the chip (alarms, output signals, etc). They are also useful forstoring temporary information in the chip's battery backed RAM.These chips are I2C devices and must be connected to the two I2C pins asspecified by OPTION SYSTEM I2C with appropriate pullup resistors.Also see the command OPTION RTC AUTO ENABLE.

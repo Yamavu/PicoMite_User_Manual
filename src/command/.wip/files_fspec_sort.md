@@ -1,3 +1,0 @@
-## FILES [fspec$] [,sort]
-
-Lists files in any directories on the default Flash Filesystem or SD Card.'fspec$' (if specified) can contain a path and search wildcards in thefilename. Question marks (?) will match any character and an asterisk (*) willmatch any number of characters. If omitted, all files will be listed.For example:* Find all entries*.TXT Find all entries with an extension of TXTE*.* Find all entries starting with EX?X.* Find all three letter file names starting and ending with Xmydir/* Find all entries in directory mydirNB: putting wildcards in the pathname will result in an error'sort' specifies the sort order as follows:size by ascending sizetime by descending time/datename by file name (default if not specified)type by file extension

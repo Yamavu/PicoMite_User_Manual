@@ -1,3 +1,0 @@
-## BACKLIGHT n [,FreqInHz]
-
-then the firmware will automatically set the backlight to that level on power-up. This is particularly useful for battery operation where reducing thebacklight level can significantly increase battery life.Some circuits are too slow to use the default backlight PWM frequency whichis chosen to avoid interference with audio. In which case a user frequency canbe specified. This is a temporary option and will need setting on reboot.

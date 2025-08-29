@@ -1,3 +1,0 @@
-## MATH WINDOW in(), T minout, maxout, out() [,minin!, “ maxin!] m ( N b e
-
-his command takes the “in” array and scales it between “minout” andmaxout” returning the answer in “out”. Optionally, it can also return theinimum and maximum floating point values found in the original data“minin!” and “maxin!”).ote: “minout” can be greater than “maxout” and in this case the data will beoth scaled and inverted..g

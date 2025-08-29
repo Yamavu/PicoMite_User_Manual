@@ -1,3 +1,5 @@
-## NEW
 
-Clears the program memory and all variables including saved variables.
+
+### NEW
+
+ Clears the program memory and all variables including saved variables.

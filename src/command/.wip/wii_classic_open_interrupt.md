@@ -1,3 +1,0 @@
-## WII [CLASSIC] OPEN [,interrupt]
-
-Opens a WII Classic controller and implements background polling of thedevice. The Wii Classic must be wired to the pins specified by OPTIONSYSTEM I2C which is a prerequisite.Open attempts to talk to the Wii Classic and will return an error if not found. Iffound the firmware will sample the Wii data in the background at a rate of50Hz. If an optional user interrupt is specified this will be triggered if any ofthe buttons changes (both on and off)See the DEVICE function for how to read data from the Wii Classic.

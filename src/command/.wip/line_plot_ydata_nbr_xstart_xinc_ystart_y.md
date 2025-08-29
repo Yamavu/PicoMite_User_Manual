@@ -1,3 +1,0 @@
-## LINE PLOT ydata() [,nbr] [,xstart] [,xinc] [,ystart] [,yinc] [,colour]
-
-Plots a line graph from an array of y-axis data points.‘ydata()’ is an array of floats or integers to be plotted‘nbr ‘is the number of line segments to be plotted - defaults to the lesser of thearray size and MM.HRES-2 if omitted‘xstart’ is the x-coordinate to start plotting - defaults to 0‘xinc’ is the increment along the x-axis to plot each coordinate - defaults to 1‘ystart’ is the location in ydata to start the plot - defaults to the array start. NB:respects OPTION BASE‘yinc’ is the increment to the index into ydata to add for each point to beplotted‘colour’ is the colour to draw the line

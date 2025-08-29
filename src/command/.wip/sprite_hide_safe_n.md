@@ -1,3 +1,0 @@
-## SPRITE HIDE SAFE [#]n
-
-Removes sprite n from the display and replaces the stored background.Automatically hides all more recent sprites as well as the requested one andthen replaces them afterwards. This ensures that sprites that are covered byother sprites can be removed without the user tracking the write order. Ofcourse this version is less performant than the simple version and should onlybe used it there is a risk of the sprite being partially covered.

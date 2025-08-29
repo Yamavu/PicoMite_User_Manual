@@ -1,3 +1,0 @@
-## See DIM for the full syntax.
-
-These variables will retain their value between calls to the subroutine orfunction (unlike variables created using the LOCAL command).This command uses exactly the same syntax as DIM. The only difference isthat the length of the variable name created by STATIC and the length of thesubroutine or function name added together cannot exceed 31 characters.Static variables can be initialised to a value. This initialisation will take effectonly on the first call to the subroutine (not on subsequent calls).

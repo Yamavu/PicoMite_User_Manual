@@ -1,3 +1,0 @@
-## PLAY MODFILE file$ [,interrupt]
-
-Will play a MOD file on the sound output.'file$' is the MOD file to play (the extension of .mod will be appended ifmissing).The MOD file is played in the background and will play continuously in aloop. If the optional 'interrupt' is specified This will be called when the file hasplayed once through the sequence and playback will then be terminated. Thiscommand will preferentially use space in PSRAM if enabled for the file buffer(RP2350 only). In this case a modbuffer does not need to be enabled with theOPTION commandPlays a specific sample in the mod file on the channel specified. The volume is

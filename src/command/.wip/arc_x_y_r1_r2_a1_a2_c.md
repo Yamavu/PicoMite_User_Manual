@@ -1,3 +1,0 @@
-## ARC x, y, r1, [r2], a1, a2 [, c]
-
-Draws an arc of a circle with a given colour and width between two radials(defined in degrees). Parameters for the ARC command are:x: X coordinate of centre of arcy: Y coordinate of centre of arcr1: inner radius of arcr2: outer radius of arc - can be omitted if 1 pixel widea1: start angle of arc in degreesa2: end angle of arc in degreesc: Colour of arc (if omitted it will default to the foreground colour)Zero degrees is at the 12 o'clock position.

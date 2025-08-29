@@ -1,3 +1,0 @@
-## LOAD IMAGE file$ [, x] [, y]
-
-Load a bitmapped image (BMP) from the Flash Filesystem or SD Card anddisplay it on the display.''file$' is the name of the file and 'x' and 'y' are the screen coordinates for thetop left hand corner of the image. If the coordinates are not specified the imagewill be drawn at the top left hand position on the screen.If an extension is not specified “.BMP” will be added to the file name.All types of the BMP format are supported including black and white and truecolour 24-bit images.

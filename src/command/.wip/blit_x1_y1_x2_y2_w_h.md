@@ -1,3 +1,0 @@
-## BLIT x1, y1, x2, y2, w, h
-
-Copy one section of the display screen to another part of the display.The source coordinate is 'x1' and 'y1'. The destination coordinate is 'x2' and'y2'. The width of the screen area to copy is 'w' and the height is 'h'.All arguments are in pixels.If the output is to an LCD panel it must be either the SSD19863, ILI9341_8,ILI9341, ILI9488 (if MISO connected), or ST7789_320 controllers.

@@ -1,3 +1,0 @@
-## SPRITE SHOW [#]n, x,y, layer [,options]
-
-Displays sprite ‘n’ on the screen with the top left at coordinates ‘x’, ‘y’.Sprites will only collide with other sprites on the same layer, layer zero, orwith the screen edge. If a sprite is already displayed on the screen, then theSPRITE SHOW command acts to move the sprite to the new location. Thedisplay background is stored as part of the command and will be replaced whenthe sprite is hidden or moved further.The parameter ‘options’ is optional and can be set as follows: bit 0 set - mirrored left to right bit 1 set - mirrored top to bottom bit 2 set - black pixels not treated as transparent default is 0

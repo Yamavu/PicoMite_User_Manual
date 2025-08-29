@@ -1,3 +1,0 @@
-## EXECUTE command$
-
-This executes the Basic command "command$". Use should be limited to basiccommands that execute sequentially for example the GOTO statement will notwork properlyThings that are tested and work OK include GOSUB, Subroutine calls, othersimple statements (like PRINT and simple assignments)Multiple statements separated by : are not allowed and will errorThe command sets an internal watchdog before executing the requestedcommand and if control does not return to the command, like in a GOTOstatement, the timer will expire. In this case you will get the message"Command timeout".RUN is a special case and will cancel the timer allowing you to use thecommand to chain programs if required.

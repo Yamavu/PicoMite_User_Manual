@@ -1,3 +1,0 @@
-## SPRITE SHOW SAFE [#]n, x,y, layer [,orientation] [,ontop]
-
-Shows a sprite and automatically compensates for any other sprites that overlapit.If the sprite is not already being displayed the command acts exactly the sameas SPRITE SHOW.If the sprite is already shown it is moved and remains in its position relative toother sprites based on the original order of writing. i.e. if sprite 1 was writtenbefore sprite 2 and it is moved to overlap sprite 2 it will display under sprite 2.If the optional "ontop" parameter is set to 1 then the sprite moved will becomethe newest sprite and will sit on top of any other sprite it overlaps.Refer to SPRITE SHOW for details of the orientation parameter.

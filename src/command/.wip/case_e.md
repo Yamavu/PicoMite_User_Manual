@@ -1,3 +1,0 @@
-## CASE E
-
-LSEstatements

@@ -1,3 +1,0 @@
-## PLAY FLAC file$ [, interrupt]
-
-Will play a FLAC file on the sound output.'file$' is the FLAC file to play (the extension of .flac will be appended ifmissing). The sample rate can be up to 48kHz in stereo (96kHz if the Pico isoverclocked)The FLAC file is played in the background. 'interrupt' is optional and is thename of a subroutine which will be called when the file has finished playing.If file$ is a directory on the B: drive the Pico will play all of the files in thatdirectory in turn.

@@ -1,3 +1,0 @@
-## OPEN comspec$ AS GPS [,timezone_offset] [,monitor]
-
-Will open a serial communications port for reading from a GPS receiver. Seethe GPS function for details. The sentences interpreted are GPRMC, GNRMC,GPGGA and GNGGA.The timezone_offset parameter is used to convert UTC as received from theGPS to the local timezone. If omitted the timezone will default to UTC. Thetimezone_offset can be a any number between -12 and 14 allowing the time tobe set correctly even for the Chatham Islands in New Zealand (UTC +12:45).If the monitor parameter is set to 1 then all GPS input is directed to theconsole. This can be stopped by closing the GPS channel.

@@ -1,3 +1,0 @@
-## READ variable[, variable]..
-
-Reads values from DATA statements and assigns these values to the namedvariables. Variable types in a READ statement must match the data types inDATA statements as they are read.Arrays can be used as variables (specified with empty brackets, eg, a()) and inthat case the size of the array is used to determine how many elements are to beread. If the array is multidimensional then the leftmost dimension will be thefastest moving.See also DATA and RESTORE.

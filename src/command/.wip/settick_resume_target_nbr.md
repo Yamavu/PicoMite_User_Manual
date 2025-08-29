@@ -1,2 +1,0 @@
-## SETTICK RESUME, target [, nbr]
-

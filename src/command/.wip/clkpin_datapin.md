@@ -1,3 +1,0 @@
-## CLKpin, DATApin
-
-command can be used in a program to configure the mouse while the programis running as against OPTION MOUSE which permanently configures themouse.Channel is included for compatibility with USB mouse functionality and mustbe set to 2. If a mouse is not connected you will get an error and the commandcan be called again once the mouse is connectedCloses access to the mouse and restores the pins to normal use. The command

@@ -1,3 +1,0 @@
-## PIN( pin ) = value
-
-For a ‘pin’ configured as digital output this will set the output to low(‘value’ is zero) or high (‘value’ non-zero). You can set an output high or lowbefore it is configured as an output and that setting will be the default outputwhen the SETPIN command takes effect.See the function PIN() for reading from a pin and the command SETPIN forconfiguring it. Refer to the chapter Using the I/O pins for a general descriptionof the PicoMite firmware's input/output capabilities.

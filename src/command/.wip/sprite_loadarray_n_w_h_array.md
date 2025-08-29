@@ -1,3 +1,0 @@
-## SPRITE LOADARRAY [#]n, w, h, array%()
-
-Creates the sprite 'n' with width 'w' and height 'h' by reading w*h RGB888values from 'array%()'. The RGB888 values must be stored in order of columnsacross and then rows down starting at the top left.This allows the programmer to create simple sprites in a program withoutneeding to load them from disk or read them from the display. The firmwarewill generate an error if 'array%()' is not big enough to hold the number ofvalues required.

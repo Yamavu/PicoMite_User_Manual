@@ -1,3 +1,0 @@
-## MEMORY COPY sourceaddress, destinationaddres, numberofbytes [,sourceincrement][,destination increment]
-
-This command will copy one region of memory to another.COPY INTEGER and FLOAT will copy eight bytes per operation.‘sourceincrement’ is optional and controls the increment of the ‘sourceaddress’pointer as the operation is executed. For example, if sourceincrement=3 thenonly every third element of the source will be copied. The default is 1.‘destinationincrement’ is similar and operates on the ‘destinationaddress’pointer.

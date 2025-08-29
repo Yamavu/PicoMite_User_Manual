@@ -1,3 +1,0 @@
-## LIBRARY DISK LOAD fname$
-
-LIBRARY LIST will list the contents of the library. Use ALL to list withoutpage confirmations.LIBRARY DISK SAVE fname$ will save the current library as a binary fileallowing a subsequent call to LIBRARY DISK LOAD fname$ to restore thelibrary. Together, these allow libraries specific for individual programs to bestored and restored easily and distributed. Other than using version specificfunctionality in the library (WEB, VGA, GUI) libraries can be shared betweenversions.

@@ -1,3 +1,0 @@
-## DEVICE CAMERA
-
-See CAMERA command

@@ -16,6 +16,8 @@ def prep_name(name):
         name = re.sub(r, "_", name)
     name = re.sub("_+", "_", name)
     name = name.strip("_").lower()
+    if m := re.search("^[^_]+", name):
+        name = m.group(0)
     name = name[:40]
     return name
 
@@ -53,8 +55,10 @@ class Entry:
         self.content = re.sub(r" {2,}", " ", self.content)
         _filename = prep_name(self.title)
         output_file = output_dir / f"{prefix}{_filename}.md"
-        md_content = f"## {self.title}\n\n{self.content}"
-        output_file.write_text(md_content)
+        md_content = f"### {self.title}\n\n{self.content}"
+        with open(output_file, "a") as f:
+            f.write("\n\n")
+            f.write(md_content)
         print(output_file, len(self.content))
 
 
@@ -84,7 +88,7 @@ def split_entries(input_file: Path) -> Iterator[Entry]:
                 current_entry = Entry(*[""] * 2)
             current_entry.title += f" {_title_line}"
             current_entry.content += (
-                line[left_col_width:] if len(line) > left_col_width else ""
+                f" {line[left_col_width:]}" if len(line) > left_col_width else ""
             )
 
 

@@ -1,3 +1,0 @@
-## SAVE CONTEXT [CLEAR]
-
-Saves the variable space and optionally clears it - command should be used intop level program and not from within a subroutine. This saves the entirevariable space to the A: drive. The command will fail if there is not enoughfree space on the A: drive. In the case of and RP2350 with PSRAM thevariable space will be saved to a reserved area in the PSRAM and the A: driveis not used.See also LOAD CONTEXT

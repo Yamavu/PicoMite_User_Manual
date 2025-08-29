@@ -1,3 +1,0 @@
-## MEMORY PACK source%()/sourceaddress%, dest%()/destaddress%, number, size
-
-Memory pack and unpack allow integer values from one array to becompressed into another or uncompressed from one to the other.The two arrays are always normal integer arrays but the packed array can have2, 4, 8, 16 or 64 values “packed into them. Thus a single integer array elementcould store 2 off 32-bit words, 4 off 16 bit values, 8 bytes, 16 nibbles, or 64

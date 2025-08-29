@@ -1,3 +1,0 @@
-## CBC/ECB/CTR key$/key[!/%](), in%(), out%() [,iv$/iv[!/%]()]
-
-vector and prepend out%() with the IV. If an explicit IV is specified this will beused instead of the random vector and this will be prepended to out%()For CBC and CTR decryption the firmware assumes that the first 16 bytes ofin%() are the initialisation vector.In the case where you want to transmit a message without IV you can useLONGSTRING RIGHT to remove the IV before sending the message. In thiscase the recipient must know the IV as well as the key and create a completelongstring before using DECRYPT. This can be done by using LONGSTRINGCONCAT to add the incoming message to a longstring containing the IV.

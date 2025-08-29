@@ -1,3 +1,0 @@
-## ONEWIRE READ pin, flag, length, data [, data…]
-
-capable of digital I/O.'flag' is a combination of the following options:1 - Send reset before command2 - Send reset after command4 - Only send/recv a bit instead of a byte of data8 - Invoke a strong pullup after the command (the pin will be set high and opendrain disabled)'length' is the length of data to send or receive'data' is the data to send or variable to receive. The number of data items mustagree with the length parameter.See also Appendix C.

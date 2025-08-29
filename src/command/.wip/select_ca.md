@@ -1,3 +1,0 @@
-## SELECT CA
-
-SE nbr%

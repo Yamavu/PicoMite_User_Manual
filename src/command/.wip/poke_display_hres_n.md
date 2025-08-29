@@ -1,2 +1,0 @@
-## POKE DISPLAY HRES n
-

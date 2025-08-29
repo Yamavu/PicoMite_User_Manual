@@ -1,0 +1,5 @@
+
+
+### RBOX x, y, w, h [, r] [,c] [,fill]
+
+ Draws a box with rounded corners on the video output or attached LCD panel starting at 'x' and 'y' which is 'w' pixels wide and 'h' pixels high. 'r' is the radius of the corners of the box. It defaults to 10. 'c' specifies the colour and defaults to the default foreground colour if not specified. 'fill' is the fill colour. It can be omitted or set to -1 in which case the box will not be filled. All parameters can be expressed as arrays and the software will plot the number of boxes as determined by the dimensions of the smallest array. 'x', 'y', 'w', and 'h' must all be arrays or all be single variables /constants otherwise an error will be generated. 'r', 'c', and 'fill' can be either arrays or single variables/constants. See the chapter Graphics Commands and Functions for a definition of the colours and graphics coordinates.

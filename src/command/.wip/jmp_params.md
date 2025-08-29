@@ -1,2 +1,0 @@
-## JMP params
-

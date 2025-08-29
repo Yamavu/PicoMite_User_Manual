@@ -1,3 +1,0 @@
-## GAMEPAD CONFIGURE vid,pid,i0,c0,i1,c1,i2,c2,i3,c3,i 4,c4,i5,c5,i6,c6,i7,c7,i8,c8,i9,c 9,i10,c10,i11,c11,i12,c12,i13,c 13,i14,c14,i15,c15
-
-Use to configure a gamepad that isn’t supported by the firmware. Run thecommand before plugging in the gamepad. All 34 parameters are mandatory.In each case the i/c parameters define the index into the report and the bitnumber at that index for the data that corresponds to the relevant bit. SeeDEVICE(GAMEPAD n,B) for more information on bit usage (0-15)

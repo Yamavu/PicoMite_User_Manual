@@ -1,3 +1,0 @@
-## BLIT MERGE colour, x, y, w, h
-
-Copies an area of the framebuffer defined by the ‘x’ and ‘y’ pixel coordinatesof the top left and with a width of ‘w’ and height ‘h’ to the LCD display. Aspart of the copy it will overlay the LCD display with pixels from the layerbuffer that aren’t set to the ‘colour’ specified. The colour is specified as anumber between 0 and 15 representing:Black, Blue, Myrtle, Cobalt, Midgreen, Cerulean, green, cyan, red, magenta,rust, fuschia, brown, lilac, yellow and whiteRequires both a framebuffer and a layer buffer to have been created to operate.Will automatically wait for frame blanking before starting the copy onILI9341, ST7789_320 and ILI9488 displays

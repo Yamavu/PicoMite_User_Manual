@@ -1,3 +1,0 @@
-## LOAD PNG fname$ [, x] [, y] [,transparent] [,alphacut]
-
-Loads and displays a png file 'fname'If no extension is specified .png will be automatically added to the filename.The file must be in RGBA8888 format which is the normal default. If specified'x' and 'y' indicate where on the display or framebuffer the image will appear.The optional parameter 'transparent' (defaults to 0) specifies one of the colourcodes (0-15) which will be allocated to pixels in the png file with an alphavalue less than 'alphacut' (defaults to 20). If 'transparent' is set to -1 the pngimage is written with pixels with an alpha value less than 'alphacut' missedcompletely.
