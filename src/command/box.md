@@ -1,0 +1,19 @@
+
+
+### BOX x, y, w, h [, lw] [,c] [,fill]
+
+ Draws a box on the display with the top left hand corner at `x` and `y` with a width of `w` pixels and a height of `h` pixels.
+ 
+ `lw` is the width of the sides of the box and can be zero. It defaults to `1`.
+ 
+ `c` specifies the colour and defaults to the default foreground colour if not specified.
+ 
+ `fill` is the fill colour. It can be omitted or set to `-1` in which case the box will not be filled.
+ 
+ All parameters can be expressed as arrays and the software will plot the number of boxes as determined by the dimensions of the smallest array.
+ 
+ `x` and `y`, must both be arrays or be single variables /constants otherwise an error will be generated.
+ 
+ `w`, `h` , `lw`, `c`, and fill can be either arrays or single variables/constants. 
+ 
+ See the chapter [Graphics Commands and Functions](../graphics_functions.md) for a definition of the colours and graphics coordinates.
