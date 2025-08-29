@@ -25,7 +25,7 @@ HDMI video supports a number of resolutions (see [OPTION RESOLUTION](../option/r
   A colour can be specified (0-15: defaults to 0) which does not show allowing the main display buffer to show through.
 
 * **MODE 4**<br>320 x 240 x 32768 colours<br>
-This is full RGB555 allowing good quality colour images to be displayed. A framebuffer (F) and a layer buffer (L) can be created. These have no impact on the display and can be used for creating images and copying to the display screen (N). <br>
+ This is full RGB555 allowing good quality colour images to be displayed. A framebuffer (F) and a layer buffer (L) can be created. These have no impact on the display and can be used for creating images and copying to the display screen (N). <br>
 Only one can be created
 
 * **MODE 5**<br> 320 x 240 x 256 colours<br>
