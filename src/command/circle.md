@@ -1,0 +1,19 @@
+### CIRCLE x, y, r [,lw] [, a] [, c] [, fill]
+
+Draw a circle centred at `x` and `y` with a radius of `r` on the display output.
+
+`lw` is optional and is the line width (defaults to 1).
+
+`c` is the optional colour and defaults to the current foreground colour if not specified.
+
+The optional `a` is a floating point number which will define the aspect ratio.
+
+If the aspect is not specified the default is 1.0 which gives a standard circle.
+
+`fill` is the fill colour and can be omitted or set to `-1` in which case the box will not be filled. All parameters can be expressed as arrays and the software will plot the number of circles as determined by the dimensions of the smallest array.
+
+`x`, `y` and `r` must all be arrays or all be single variables/constants otherwise an error will be generated.
+
+`lw`, `a`, `c`, and fill can be either arrays or single variables/constants.
+
+See the chapter [Graphics Commands and Functions](../graphics_functions.md) for a definition of the colours and graphics coordinates.
