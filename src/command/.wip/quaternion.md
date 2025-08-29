@@ -2,4 +2,4 @@
 
 ### Quaternion arithmetic
 
- OPTION ANGLE command.
+OPTION ANGLE command.

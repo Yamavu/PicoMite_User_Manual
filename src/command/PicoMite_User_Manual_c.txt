@@ -2,7 +2,7 @@ Commands
 Detailed Listing
 Square brackets indicate that the parameter or characters are optional.
 
- ‘ (single quotation mark)         Starts a comment and any text following it will be ignored. Comments can be
+‘ (single quotation mark)         Starts a comment and any text following it will be ignored. Comments can be
                                    placed anywhere on a line.
 
 *file                              The star/asterisk command is a shortcut for RUN that may only be used at the
@@ -16,7 +16,7 @@ Square brackets indicate that the parameter or characters are optional.
                                    String expressions are not supported/evaluated by this command; any
                                    arguments provided are passed as a literal string to the RUN command.
 
- ? (question mark)                 Shortcut for the PRINT command.
+? (question mark)                 Shortcut for the PRINT command.
 
 /*                                 Start and end of multiline comments. /* and */ must be the first non-space
                                    characters at the start of a line and have a space or end-of-line after them (i.e.
@@ -460,8 +460,8 @@ CPU SLEEP n                   Will cause the processors to sleep for ‘n’ sec
 
 CSUB name [type [, type]      Defines the binary code for an embedded machine code program module
 …]                            written in C or ARM assembler. The module will appear in MMBasic as the
- hex [[ hex[…]                command 'name' and can be used in the same manner as a built-in command.
- hex [[ hex[…]                Multiple embedded routines can be used in a program with each defining a
+hex [[ hex[…]                command 'name' and can be used in the same manner as a built-in command.
+hex [[ hex[…]                Multiple embedded routines can be used in a program with each defining a
                               different module with a different 'name'.
 END CSUB
                               The first 'hex' word is a 32 bit word which is the offset in bytes from the start
@@ -664,19 +664,19 @@ PicoMite User Manual                                                            
                         used) and after the type declaration (if used).
 
 DO                      This structure will loop forever; the EXIT DO command can be used to
- <statements>           terminate the loop or control must be explicitly transferred outside of the loop
+<statements>           terminate the loop or control must be explicitly transferred outside of the loop
 LOOP                    by commands like GOTO or EXIT SUB (if in a subroutine).
 
 DO WHILE expression     Loops while ‘expression’ is true (this is equivalent to the older WHILE-WEND
- <statements>           loop). If, at the start, the expression is false the statements in the loop will not
+<statements>           loop). If, at the start, the expression is false the statements in the loop will not
 LOOP                    be executed, not even once.
 
 DO                      Loops until the expression following UNTIL is true. Because the test is made
- <statements>           at the end of the loop the statements inside the loop will be executed at least
+<statements>           at the end of the loop the statements inside the loop will be executed at least
 LOOP UNTIL expression   once, even if the expression is true.
 
 DO                      Loops until the expression following WHILE is false. Because the test is made
- <statements>           at the end of the loop the statements inside the loop will be executed at least
+<statements>           at the end of the loop the statements inside the loop will be executed at least
 LOOP WHILE expression   once, even if the expression is false.
 
                         NOT AVAILABLE ON THE WEBMITE VERSION
@@ -3160,13 +3160,13 @@ SEEK [#]fnbr, pos               Will position the read/write pointer in a file t
                                 The first byte in a file is numbered one so SEEK #5,1 will position the
                                 read/write pointer to the start of the file opened as #5.
 SELECT CASE value               Executes one of several groups of statements, depending on the value of an
- CASE testexp [[, testexp] …]   expression. 'value' is the expression to be tested. It can be a number or string
+CASE testexp [[, testexp] …]   expression. 'value' is the expression to be tested. It can be a number or string
    <statements>                 variable or a complex expression.
    <statements>                 'testexp' (or test-n) is the value that is to be compared against. It can be:
- CASE test-n [[, test-n] …]        A single expression (i.e. 34, "string" or PIN(4)*5) to which it may equal
+CASE test-n [[, test-n] …]        A single expression (i.e. 34, "string" or PIN(4)*5) to which it may equal
    <statements>                    A range of values in the form of two single expressions separated by the
    <statements>                       keyword "TO" (i.e. 5 TO 9 or "aa" TO "cc")
- CASE ELSE                         A comparison starting with the keyword "IS" (which is optional). For
+CASE ELSE                         A comparison starting with the keyword "IS" (which is optional). For
    <statements>                       example: IS > 5, IS <= 10.
    <statements>                 When a number of test expressions (separated by commas) are used the CASE
                                 statement will be true if any one of these tests evaluates to true.
@@ -3572,8 +3572,8 @@ See DIM for the full syntax.    These variables will retain their value between 
                                 only on the first call to the subroutine (not on subsequent calls).
 
 SUB xxx (arg1 [,arg2, …])       Defines a callable subroutine. This is the same as adding a new command to
- <statements>                   MMBasic while it is running your program.
- <statements>                   'xxx' is the subroutine name and it must meet the specifications for naming a
+<statements>                   MMBasic while it is running your program.
+<statements>                   'xxx' is the subroutine name and it must meet the specifications for naming a
 END SUB                         variable.
                                 'arg1', 'arg2', etc are the arguments or parameters to the subroutine. An array is
                                 specified by using empty brackets. i.e. arg3(). The type of the argument can

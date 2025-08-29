@@ -2,4 +2,4 @@
 
 ### OFF
 
- Not configured or inactive
+Not configured or inactive

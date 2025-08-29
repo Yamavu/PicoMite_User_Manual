@@ -2,4 +2,4 @@
 
 ### TRANSPARENT n
 
- displayed over a background (defaults to 0).
+displayed over a background (defaults to 0).

@@ -2,4 +2,4 @@
 
 ### MM.H
 
- RES. Tiles colours are specified using the standard
+RES. Tiles colours are specified using the standard

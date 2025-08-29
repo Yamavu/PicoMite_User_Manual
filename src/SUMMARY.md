@@ -39,6 +39,13 @@
   - [Network](options_network.md)
   - [Storage](options_storage.md)
 - [Commands](commands.md)
+  - [ADC](commands/adc.md)
+  - [ARRAY](commands/array.md)
+  - [AUTOSAVE](commands/autosave.md)
+  - [BACKLIGHT](commands/backlight.md)
+  - [BIT](commands/bit.md)
+  - [MODE](commands/mode.md)
+    - [MODE (HDMI)](commands/mode_hdmi.md)
 - [Functions](functions.md)
 - [Obsolete Commands and Functions](obsolete_commands_and_functions.md)
 
