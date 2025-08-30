@@ -39,7 +39,7 @@ there is little or no impact on the speed of MMBasic caused by generating the VG
 
 ## HDMI Video
 
-<div style="float: right; margin-right: 20px;">
+<div style="float: right; margin-left: 20px;">
   <img src="10_hdmi_pinout.jpg" alt="HDMI Front View" width="350">
   <div style="text-align:center">HDMI Front View</div>
 </div>
@@ -109,7 +109,7 @@ by the `OPTION RESOLUTION` command. The default is `RESOLUTION 640x480` and `MOD
 
 ### VGA/PS2 Reference Design (Raspberry Pi Pico)
 
-<div style="float: right; margin-right: 20px;">
+<div style="float: right; margin-left: 20px;">
   <img src="10_picomiteRP2040vga.jpg" alt="picomiteRP2040vga" width="350">
 </div>
 
@@ -140,7 +140,7 @@ https://geoffg.net/picomitevga.html (at the bottom of the page).
 
 ### HDMI/USB Reference Design (Raspberry Pi Pico 2)
 
-<div style="float: right; margin-right: 20px;">
+<div style="float: right; margin-left: 20px;">
   <img src="10_picomitehdmiusb.jpg" alt="picomiteRP2040vga" width="350">
 </div>
 

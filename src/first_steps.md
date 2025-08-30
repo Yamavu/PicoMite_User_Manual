@@ -72,7 +72,7 @@ Congratulations. You have just written and run your first program on the PicoMit
 
 ## Flashing a LED
 
-<div style="float: right; margin-right: 20px;">
+<div style="float: right; margin-left: 20px;">
   <img src="03_led.jpg" alt="GP21 - 470 ohms - LED >| - GND" width="250">
 </div>
 

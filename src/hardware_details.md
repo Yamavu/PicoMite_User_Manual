@@ -155,7 +155,7 @@ The maximum total I/O current load for the entire chip is 50mA.
 
 ## Power Supply
 
-<div style="float: right; margin-right: 20px;">
+<div style="float: right; margin-left: 20px;">
   <img src="04_power.jpg" alt="RP2040 power supply" width="350">
 </div>
 

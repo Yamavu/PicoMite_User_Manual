@@ -15,7 +15,7 @@ so, for this firmware, you should refer to the chapter titled Keyboard/Mouse/Gam
 
 ## Virtual Serial Port
 
-<div style="float: right; margin-right: 20px;">
+<div style="float: right; margin-left: 20px;">
   <img src="02_device_manager.jpg" alt="Find the right USB Serial Port (Windows)" width="250">
 </div>
 
@@ -43,7 +43,7 @@ an old fashioned computer terminal where it will display text received from a re
 presses will be sent to the remote computer over the serial link. The terminal emulator that you use should
 support VT100 emulation as this is required by the editor built into the PicoMite firmware.
 
-<div style="float: right; margin-right: 20px;">
+<div style="float: right; margin-left: 20px;">
   <img src="02_serial_port_setup.jpg" alt="setup for Tera Term: Baud Rate: 38400, Data: 8 bit, Parity: None" width="250">
 </div>
 

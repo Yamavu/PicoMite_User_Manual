@@ -108,7 +108,7 @@ will allocate it to channel 2 by default– there is nothing extra required.
 
 
 ## USB Gamepad
-<div style="float: right; margin-right: 20px;">
+<div style="float: right; margin-left: 20px;">
   <img src="11_gamepad.jpg" alt="SNES-like USB-controller" width="250">
 </div>
 
