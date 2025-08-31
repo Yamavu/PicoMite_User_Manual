@@ -71,10 +71,8 @@
   - [Update](command/update.md)
   - [Var Save](command/var_save.md)
 
-
-
-
 - [Functions](functions.md)
+  - [DIR$](function/dir$.md)
 - [Obsolete Commands and Functions](obsolete_commands_and_functions.md)
 
 ---
