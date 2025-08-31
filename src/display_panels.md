@@ -147,7 +147,7 @@ To setup the system I2C bus use the command:
 OPTION SYSTEM I2C sdapin, sclpin
 ```
 
-If an I2C display is configured it will not be necessary to "open" the I2C port for an additional device (I2C OPEN), I2C CLOSE is blocked, and all I2C devices must be capable of 100KHz operation. The I2C bus speed is not affected by changes to the CPU clock speed.
+If an I2C display is configured it will not be necessary to "open" the I2C port for an additional device (`I2C OPEN`), `I2C CLOSE` is blocked, and all I2C devices must be capable of 100KHz operation. The I2C bus speed is not affected by changes to the CPU clock speed.
 
 These panels are configured using the following commands. In all commands the parameters OR is the orientation of the display and it can be LANDSCAPE, PORTRAIT, RLANDSCAPE or RPORTRAIT. These can be abbreviated to L, P, RL or RP. The R prefix indicates the reverse or "upside down" orientation.
 
@@ -222,7 +222,7 @@ WR | Write (active low) | Pin 19/GP14*
 RD | Read (active low) | Pin 20/GP15*
 DC | Command/Data | Pin 17/GP13*
 RESET | Reset the SSD1963 | Pin 21/GP16*
-LED_A | Backlight control for an unmodified display panel | Configurable see OPTION LCDPANEL
+LED_A | Backlight control for an unmodified display panel | Configurable see `OPTION LCDPANEL`
 5V | 5V power for the backlight on some displays (most displays use the 3.3V supply for this)
 3.3V | Power supply.
 GND | Ground
