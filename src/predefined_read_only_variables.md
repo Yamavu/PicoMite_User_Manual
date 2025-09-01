@@ -58,17 +58,14 @@ Returns `1` if a physical display is configured, otherwise `0`
 If a statement caused an error which was ignored these variables will be set
 accordingly.
 
-MM.ERRNO is a number where non zero means that there was an error and
+MM.ERRNO is a number where non zero means that there was an error.
 
 They are reset to zero and an empty string by `RUN`, `ON ERROR IGNORE` or `ON ERROR SKIP`.
 
 
 ### MM.ERRMSG$
 
-If a statement caused an error which was ignored these variables will be set
-accordingly.
-
-MM.ERRNO is a number where non zero means that there was an error and
+If a statement caused an error which was ignored these variables will be set accordingly.
 
 MM.ERRMSG$ is a string representing the error message that would have normally been displayed on the console. 
 

@@ -8,6 +8,8 @@
 - [Firmware Versions and Files](firmware_versions_and_files.md)
 - [Serial Console](serial_console.md)
 - [First Steps](first_steps.md)
+- [Programming in BASIC - A Tutorial](I_programming_in_basic_a_tutorial.md)
+  - [Command Prompt](programming_in_basic_a_tutorial/command_prompt.md)
 - [Hardware Details](hardware_details.md)
 - [Using MMBasic](using_mmbasic.md)
 - [Full Screen Editor](full_screen_editor.md)
@@ -85,4 +87,3 @@
 [Appendix F – The PIO Programming Package](F_the_pio_programming_package.md)
 [Appendix G – Sprites](G_sprites.md)
 [Appendix H – Special Keyboard Keys](H_special_keyboard_keys.md)
-[Appendix I – Programming in BASIC - A Tutorial](I_programming_in_basic_a_tutorial.md)
