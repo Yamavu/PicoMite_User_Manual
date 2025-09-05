@@ -312,7 +312,7 @@ Page 170
 
 PicoMite User Manual
 
-DIR$( fspec, type )
+DIR$( fspec, type )
 or
 DIR$( fspec )
 or

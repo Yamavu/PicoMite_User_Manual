@@ -1,11 +1,12 @@
 ## FOR Loops
+
 Another common requirement in programming is repeating a set of actions. For instance, you might
 want to step through all seven days in the week and perform the same function for each day. BASIC
 provides the `FOR` loop construct for this type of job and it works like this:
 
 ```basic
 FOR day = 1 TO 7
-Do something based on the value of ‘day’
+' Do something based on the value of ‘day’
 NEXT day
 ```
 
@@ -20,15 +21,21 @@ As a simple example, you can print the numbers from one to ten like this:
 
 ```basic
 FOR nbr = 1 TO 10
-PRINT nbr,;
+  PRINT nbr,;
 NEXT nbr
+```
+
+Alternatively MMbasic allows you to place multiple statements on a single line by separating them with a colon `:`.
+
+```basic
+FOR nbr = 1 TO 10 : PRINT nbr,; : NEXT nbr
 ```
 
 The comma at the end of the `PRINT` statement tells the interpreter to tab to the next tab column after
 printing the number and the semicolon will leave the cursor on this line rather than automatically
 moving to the next line. As a result, the numbers will be printed in neat columns across the page.
 
-This is what you would see:
+This is what you would see the output:
 
 ```basic
 1  2  3  4  5  6  7  8  9  10
@@ -64,3 +71,44 @@ FOR nbr = 10 TO 1 STEP -1
 PRINT nbr,;
 NEXT nbr
 ```
+
+### Multiplication Table
+
+To further illustrate how loops work and how useful they can be, the following short program uses
+two FOR loops to print out the multiplication table that we all learnt at school. The program for this is
+not complicated:
+
+```basic
+FOR nbr1 = 1 to 10
+FOR nbr2 = 1 to 10
+PRINT nbr1 * nbr2,;
+NEXT nbr2
+PRINT
+NEXT nbr1
+```
+
+The output is shown in the following screen grab, which also shows a listing of the program.
+
+You need to work through the logic of this example line by line to understand what it is doing.
+
+Essentially it consists of one loop inside another. The inner loop, which increments the variable
+nbr2 prints one horizontal line of the table. When this loop has finished it will execute the following
+PRINT command which has nothing to print - so it will simply output a new line (ie, terminate the
+line printed by the inner loop).
+
+The program will then execute another iteration of the outer loop by incrementing nbr1 and
+re-executing the inner loop again. Finally, when the outer loop is exhausted (when nbr1 exceeds 10)
+the program will reach the end and terminate.
+
+One last point, you can omit the variable name from the NEXT statement and MMBasic will guess
+which variable you are referring to. However, it is good practice to include the name to make it easier
+for someone else who is reading the program to understand it. You can also terminate multiple loops
+using a comma separated list of variables in the NEXT statement. For example:
+
+```basic
+FOR var1 = 1 TO 5
+FOR var2 = 10 to 13
+PRINT var1 * var2
+NEXT var1, var2
+```
+

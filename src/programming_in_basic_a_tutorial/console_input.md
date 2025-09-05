@@ -3,17 +3,14 @@
 As well as printing data for the user to see your programs will also want to get input from the user.
 
 For that to work you need to capture keystrokes from the console and this can be done with the
-INPUT command. In its simplest form the command is:
+[INPUT command](../command/input.md). In its simplest form the command is:
 
 ```basic
 INPUT var
 ```
 
-
 This command will print a question mark on the console's screen and wait for a number to be entered
-followed by the Enter key. That number will then be assigned to the variable var.
-
-
+followed by the Enter key. That number will then be assigned to the variable `var`.
 
 For example, the following program extends the expression for finding the hypotenuse of a triangle by
 allowing the user to enter the lengths of the other sides from the console.
@@ -63,7 +60,7 @@ variable that holds a sequence of characters. If you ran the above program and t
 prompted the program would respond with Hello John.
 
 Sometimes you do not want to wait for the user to hit the enter key, you want to get each character as
-it is typed in. This can be done with the INKEY$ function which will return the value of the character
+it is typed in. This can be done with the [INKEY$ function](../function/inkey$.md) which will return the value of the character
 as a string consisting of just one character or an empty string (ie, contains no characters) if nothing has
 been entered.
 
