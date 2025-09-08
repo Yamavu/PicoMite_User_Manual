@@ -1,9 +1,10 @@
 # Functions
 
 Detailed Listing
-Note that the functions related to communications functions (I2C, 1-Wire, and SPI) are not listed here but are
-described in the appendices at the end of this document.
+Note that the functions related to communications functions (I2C, 1-Wire, and SPI) are not listed here but are described in the appendices at the end of this document.
+
 Square brackets indicate that the parameter or characters are optional.
+
 ABS( number )
 
 Returns the absolute value of the argument 'number' (i.e. any negative sign is

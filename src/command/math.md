@@ -1,6 +1,10 @@
 # MATH
 
-The math command performs many simple mathematical calculations that can be programmed in BASIC but there are speed advantages to coding looping structures in the firmware and there is the advantage that once debugged they are there for everyone without re-inventing the wheel. Note: 2 dimensional maths matrices are always specified `DIM matrix(n_columns, n_rows)` and of course the dimensions respect `OPTION BASE`. Quaternions are stored as a 5 element array w, x, y, z, magnitude.
+The math command performs many simple mathematical calculations that can be programmed in BASIC but there are speed advantages to coding looping structures in the firmware and there is the advantage that once debugged they are there for everyone without re-inventing the wheel. 
+
+2-dimensional maths matrices are always specified `DIM matrix(n_columns, n_rows)` ( the dimensions respect [OPTION BASE](../option/base.md) ).
+
+Quaternions are stored as a 5 element array w, x, y, z, magnitude.
 
 ### MATH RANDOMIZE [n]
 
@@ -92,7 +96,9 @@ Calculates the cross product of two three element vectors `inV1()` and `inV2()` 
 
 This command rotates the coordinate pairs in `xin()` and `yin()` around the centre point defined by `x` and `y` by the angle `a` and puts the results in `xout()` and `yout()`. 
 
-The input and output arrays can be the same and the rotation angle is, by default, in radians but this can be changed using the
+The input and output arrays can be the same and the rotation angle is, by default, in radians but this can be changed using the [OPTION ANGLE](../option/angle.md) command.
+
+## Quaternion arithmetic
 
 ### MATH Q_INVERT inQ(), outQ()
 
@@ -108,7 +114,7 @@ Generates a normalised rotation quaternion `outRQ()` to rotate quaternion vector
 
 ### MATH Q_EULER yaw, pitch, roll, outRQ()
 
-Generates a normalised rotation quaternion `outRQ()` to rotate quaternion vectors as defined by the yaw, pitch and roll angles With the vector in front of the `viewer` yaw is looking from the top of the ector and rotates clockwise, pitch rotates the top away from the camera and roll rotates around the z-axis clockwise. The yaw, pitch and roll angles default to radians but respect the setting of `OPTION ANGLE`
+Generates a normalised rotation quaternion `outRQ()` to rotate quaternion vectors as defined by the yaw, pitch and roll angles With the vector in front of the `viewer` yaw is looking from the top of the ector and rotates clockwise, pitch rotates the top away from the camera and roll rotates around the z-axis clockwise. The yaw, pitch and roll angles default to radians but respect the setting of [OPTION ANGLE](../option/angle.md)
 
 ### MATH Q_MULT inQ1(), inQ2(), outQ()
 
@@ -120,19 +126,14 @@ Rotates the source quaternion vector `inVQ()` by the rotate quaternion `RQ()` an
 
 ## Matric Cell Operations
 
-
 These commands do cell by cell operations (hence C_) on
 identically sized arrays. There are no restrictions on the
 number of dimensions and no restrictions on using the
 same array twice or even three times in the parameters.
+
 The datatype must be the same for all the arrays.
-eg,
 
-```basic
-MATH C_MUL a%(),a%(),a%()
-```
-
-will square all the values in the array `a%()`
+`MATH C_MUL a%(),a%(),a%()` will square all the values in the array `a%()`
 
 ### MATH C_ADD array1%(), array2%(), array3%() 
 
@@ -170,11 +171,11 @@ Performs an inverse fast fourier transform of the data in `FFTarray!`.
 
 ### MATH FFT MAGNITUDE signalarray!(),magnitudearray! ()
 
-Generates magnitudes for frequencies for the data in `signalarray!` "signalarray" must be floating point and the size must be a power of 2 (eg, s(1023) assuming `OPTION BASE` is zero). "magnitudearray" must be floating point and the size must be the same as the signal array The command will return the magnitude of the signal at various frequencies according to the formula:
+Generates magnitudes for frequencies for the data in `signalarray!` "signalarray" must be floating point and the size must be a power of 2 (eg, s(1023) assuming [OPTION BASE](../option/base.md) is zero). "magnitudearray" must be floating point and the size must be the same as the signal array The command will return the magnitude of the signal at various frequencies according to the formula:
 
 ### MATH FFT PHASE signalarray!(), phasearray!()
 
-Generates phases for frequencies for the data in `signalarray!`. "signalarray" must be floating point and the size must be a power of 2 (eg, s(1023) assuming `OPTION BASE` is zero). "phasearray" must be floating point and the size must be the same as the signal array The command will return the phase angle of the signal at various frequencies according to the formula above.
+Generates phases for frequencies for the data in `signalarray!`. "signalarray" must be floating point and the size must be a power of 2 (eg, s(1023) assuming [OPTION BASE](../option/base.md) is zero). "phasearray" must be floating point and the size must be the same as the signal array The command will return the phase angle of the signal at various frequencies according to the formula above.
 
 ### MATH SENSORFUSION type ax, ay, az, gx, gy, gz, mx, my, mz, pitch, roll, yaw [,p1] [,p2]
 
