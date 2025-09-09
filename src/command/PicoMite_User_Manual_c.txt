@@ -1146,7 +1146,7 @@ HUMID pin, tvar, hvar     Returns the temperature and humidity using the DHT22 s
 
 I2C                       More detail is in Appendix B
 
-I2C OPEN speed, timeout   Enables the first I2C module in master mode. ‘speed’ is the clock speed (in
+I2C OPEN speed, timeout   Enables the first I²C module in master mode. ‘speed’ is the clock speed (in
                           KHz) to use and must be one of 100, 400 or 1000.
                           ‘timeout’ is a value in milliseconds after which the master send and receive
                           commands will be interrupted if they have not completed. The minimum value
@@ -1157,7 +1157,7 @@ I2C OPEN speed, timeout   Enables the first I2C module in master mode. ‘speed�
 
 
 Page 118                                                                              PicoMite User Manual
-I2C WRITE addr, option,           Send data to the I2C slave device. ‘addr’ is the slave’s I2C address.
+I2C WRITE addr, option,           Send data to the I²C slave device. ‘addr’ is the slave’s I²C address.
 sendlen, senddata [,sendata ..]   ‘option’ can be 0 for normal operation or 1 to keep control of the bus after the
                                   command (a stop condition will not be sent at the completion of the command)
                                   ‘sendlen’ is the number of bytes to send. ‘senddata’ is the data to be sent - this
@@ -1172,7 +1172,7 @@ sendlen, senddata [,sendata ..]   ‘option’ can be 0 for normal operation or 
                                   The data can be a string variable (not a constant).
                                   Example: I2C WRITE &H6F, 0, 3, STRING$
 
-I2C READ addr, option,            Get data from the I2C slave device. ‘addr’ is the slave’s I2C address.
+I2C READ addr, option,            Get data from the I²C slave device. ‘addr’ is the slave’s I²C address.
 rcvlen, rcvbuf                    ‘option’ can be 0 for normal operation or 1 to keep control of the bus after the
                                   command (a stop condition will not be sent at the completion of the command)
                                    ‘rcvlen’ is the number of bytes to receive.

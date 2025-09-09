@@ -1,6 +1,8 @@
 # Appendix D – SPI Communications
 
-The Serial Peripheral Interface (SPI) communications protocol is used to send and receive data between integrated circuits. The Raspberry Pi Pico acts as the master (i.e. it generates the clock).
+The Serial Peripheral Interface (SPI) communications protocol is used to send and receive data between integrated circuits.
+
+The Raspberry Pi Pico acts as the master (i.e. it generates the clock).
 
 
 ## I/O Pins

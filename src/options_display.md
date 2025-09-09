@@ -1,6 +1,6 @@
 # Display
 
-Various settings for VGA, HDMI, I2C or SPI displays, also touch sensitive displays.
+Various settings for VGA, HDMI, I²C or SPI displays, also touch sensitive displays.
 
 
 {{#include option/autorefresh.md}}

@@ -77,6 +77,7 @@
   - [CMM2](command/cmm2.md)
   - [DIM](command/dim.md)
   - [Files](command/files.md)
+  - [I2C](command/i2c.md)
   - [INPUT](command/input.md)
   - [LINE INPUT](command/line_input.md)
   - [LINE](command/line.md)
@@ -101,7 +102,7 @@
 ---
 
 [Appendix A – Serial Communications](A_serial_communications.md)
-[Appendix B – I2C Communications](B_i2c_communications.md)
+[Appendix B – I²C Communications](B_I²C_communications.md)
 [Appendix C – 1-Wire Communications](C_1-wire_communications.md)
 [Appendix D – SPI Communications](D_spi_communications.md)
 [Appendix E – Regex Syntax](E_regex_syntax.md)

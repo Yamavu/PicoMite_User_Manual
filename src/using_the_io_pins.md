@@ -139,11 +139,11 @@ RP2040 The PWM outputs consists of up to 8 channels (numbered 0 to 7) with each 
 RP2350 The RP2350 supports up to 12 PWM channels numbered 0 to 11) and up to 24 pins can be configured as PWM outputs using the `SETPIN` command.
 
 
-## Communications Interfaces (Serial, SPI and I2C)
+## Communications Interfaces (Serial, SPI and I²C)
 
 These are described in the appendices at the rear of this manual. Before these interfaces can be used the pins that are to be used for the relevant signals must be configured using the `SETPIN` command.
 
-Some devices such as an SD Card, LCD panels, touch, etc also use SPI or I2C interfaces and the pins used for these must similarly be configured using the `OPTION SYSTEM` command before they can be used.
+Some devices such as an SD Card, LCD panels, touch, etc also use SPI or I²C interfaces and the pins used for these must similarly be configured using the `OPTION SYSTEM` command before they can be used.
 
 
 ## Interrupts
@@ -205,10 +205,10 @@ The list of all these interrupts (in high to low priority ranking) is:
 14. WebMite: UDP receive
 15. USB Game Controller/USB or PS2 Mouse/Wii controller
 16. ADC completion
-17. I2C Slave Rx
-18. I2C Slave Tx
-19. I2C2 Slave Rx
-20. I2C2 Slave Tx
+17. I²C Slave Rx
+18. I²C Slave Tx
+19. I²C2 Slave Rx
+20. I²C2 Slave Tx
 21. WAV Finished
 22. COM1: Serial Port
 23. COM2: Serial Port

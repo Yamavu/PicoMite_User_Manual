@@ -6,7 +6,7 @@ Versions and Files at the start of this manual.
 
 USB versions of the firmware will also support a PS3 or PS4 gamepad with a USB interface. For versions
 without USB support the WII (CLASSIC) and WII NUNCHUCK commands can be used to specify a gamepad
-connected using I2C.
+connected using I²C.
 
 A keyboard can be used to input data to the BASIC program or, with a VGA/HDMI video output, be used to
 create a self contained computer with keyboard and display. Instead of using a video output you can also

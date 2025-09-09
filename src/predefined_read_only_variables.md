@@ -611,7 +611,7 @@ the result of the operation: 0 = Device not found, 1 = Device found,
 
 ### MM.I2C
 
-Following an I2C write or read command this integer variable will be set to
+Following an I²C write or read command this integer variable will be set to
 indicate the result of the operation as follows:
 0 = The command completed without error.
 1 = Received a NACK response

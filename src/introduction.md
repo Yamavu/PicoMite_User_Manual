@@ -16,7 +16,7 @@ computer with a keyboard.
 
 <br style="clear:both" />
 
-Using MMBasic you can control the I/O pins and use communications protocols such as I2C or SPI to get data
+Using MMBasic you can control the I/O pins and use communications protocols such as I²C or SPI to get data
 from a variety of sensors. You can display data on low-cost colour LCD displays, measure voltages, detect
 digital inputs and drive output pins to turn on lights, relays, etc. And with the Raspberry Pi Pico W you can
 access the internet and build a WEB server on this low cost module.
@@ -36,7 +36,7 @@ digital input or output, analog input, frequency or period measurement and count
 used to notify when an input pin has changed state. PWM outputs can be used to create various sounds,
 control servos or generate computer-controlled voltages.
 
-- **Support for TFT LCD display panels** using parallel, SPI and I2C interfaces allowing the BASIC
+- **Support for TFT LCD display panels** using parallel, SPI and I²C interfaces allowing the BASIC
 program to display text and draw lines, circles, boxes, etc in up to 16 million colours. Resistive touch
 controllers on these panels are also supported allowing them to be used as sophisticated input devices.
 
@@ -61,7 +61,7 @@ advanced features such as colour coded syntax, search and copy, cut and paste to
 - **Programs can be easily transferred** from a desktop or laptop computer (Windows, Mac or Linux) via
 the serial console or via an SD card.
 
-- **A comprehensive range of communications protocols** are implemented including I2C, asynchronous
+- **A comprehensive range of communications protocols** are implemented including I²C, asynchronous
 serial, RS232, SPI and 1-Wire. These can be used to communicate with many sensors (temperature,
 humidity, acceleration, etc) as well as for sending data to test equipment.
 

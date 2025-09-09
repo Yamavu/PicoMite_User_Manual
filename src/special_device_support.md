@@ -203,10 +203,10 @@ popular and cheap, will keep accurate time even with the power removed and can b
 on eBay. Complete modules including the battery can also be purchased on eBay for a little more.
 The PCF8563 and DS1307 will keep time to within a minute or two over a month while the DS3231 and
 DS3232 are particularly precise and will remain accurate to within a minute over a year.
-These chips are I2C devices and should be connected to the I2C I/O pins of the Raspberry Pi Pico.
-Internal pullup resistors (100KΩ) are applied to the I2C I/O pins so, in many cases external resistors are not
+These chips are I²C devices and should be connected to the I²C I/O pins of the Raspberry Pi Pico.
+Internal pullup resistors (100KΩ) are applied to the I²C I/O pins so, in many cases external resistors are not
 needed.
-In order to enable the RTC you first need to allocate the I2C pins to be used using the command:
+In order to enable the RTC you first need to allocate the I²C pins to be used using the command:
 OPTION SYSTEM I2C
 
 SDApin, SCLpin

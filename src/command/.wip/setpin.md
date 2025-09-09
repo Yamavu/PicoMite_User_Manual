@@ -34,7 +34,7 @@ Allocate the pins to be used for SPI port SPI2. Valid pins are RX: GP8, GP12 or 
 
 ### SETPIN sda, scl, I2C
 
-Allocate the pins to be used for the I2C port I2C. Valid pins are SDA: GP0, GP4, GP8, GP12, GP16, GP20 or GP28 SCL: GP1, GP5, GP9, GP13, GP17 or GP21
+Allocate the pins to be used for the I²C port I2C. Valid pins are SDA: GP0, GP4, GP8, GP12, GP16, GP20 or GP28 SCL: GP1, GP5, GP9, GP13, GP17 or GP21
 
 ### SETPIN sda, scl, I2C2
 
