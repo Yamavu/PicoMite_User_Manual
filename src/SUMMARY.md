@@ -114,5 +114,6 @@
 [Appendix F – The PIO Programming Package](F_the_pio_programming_package.md)
 [Appendix G – Sprites](G_sprites.md)
 [Appendix H – Special Keyboard Keys](H_special_keyboard_keys.md)
+[Appendix J - The CMM2 3D engine](J_CMM2_3D_engine.md)
 [Colors Palettes](./colors.md)
 [Sprite Format](./sprite_format.md)

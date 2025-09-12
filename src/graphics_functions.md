@@ -418,7 +418,7 @@ which is included in the firmware download file.
 
 *NOT AVAILABLE IN WEBMITE VERSIONS*
 
-The 3D Engine includes ten commands for manipulating 3D images including setting the camera, creating, hiding, rotating, etc. See the document The CMM2 3D engine.pdf in the PicoMite firmware download for a full description of these commands and how to use them.
+The 3D Engine includes ten commands for manipulating 3D images including setting the camera, creating, hiding, rotating, etc. See the document [Appendix J - The CMM2 3D engine](J_CMM2_3D_engine.md) for a full description of these commands and how to use them.
 
 ## LCD Graphics Example
 As an example of using the simple graphics commands the following program will draw a simple digital clock on an ILI9341 based LCD display. The program will terminate and return to the command prompt if the

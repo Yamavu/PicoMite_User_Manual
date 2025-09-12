@@ -8,3 +8,6 @@
 *.pdf
 book/**/*
 src/options/*.md
+Embedded Fonts
+Extra Documentation/
+User Display Driver.txt
