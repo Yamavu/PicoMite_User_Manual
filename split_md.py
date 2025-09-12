@@ -6,6 +6,7 @@ from pathlib import Path
 # from typing import Set, List
 
 
+
 def prep_name(name):
     repl = [r"\S+\s*\|.+", r"\W", r"<br\s*\\?>"]
     for r in repl:
@@ -25,6 +26,7 @@ def split_markdown_by_headings(file_path: str, level: int = 1):
     under that heading until the next H3 heading.
     """
     input_path = Path(file_path)
+    output_dir = input_path.parent()
 
     if not input_path.is_file():
         print(f"Error: File '{file_path}' not found.", file=sys.stderr)
