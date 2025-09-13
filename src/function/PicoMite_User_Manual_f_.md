@@ -1,21 +1,23 @@
+## Trigonometric Functions
+
 ### ACOS( number )
 
-Returns the inverse cosine of the argument 'number' in radians.
+Returns the inverse cosine of the argument ´number´ in radians.
 
 
 ### ASC( string$ )
 
-Returns the ASCII code (i.e. byte value) for the first letter in ‘string$’.
+Returns the ASCII code (i.e. byte value) for the first letter in ´string$´.
 
 
 ### ASIN( number )
 
-Returns the inverse sine value of the argument 'number' in radians.
+Returns the inverse sine value of the argument ´number´ in radians.
 
 
 ### ATN( number )
 
-Returns the arctangent of the argument 'number' in radians.
+Returns the arctangent of the argument ´number´ in radians.
 
 
 ### ATAN2( y, x )
@@ -27,36 +29,111 @@ It is similar to calculating the arc tangent of y / x, except that the signs of
 both arguments are used to determine the quadrant of the result.
 
 
+## Formatting Functions
+
+
+### STR$( number ) or STR$( number, m ) or STR$( number, m, n ) or STR$( number, m, n, c$ )
+
+Returns a string in the decimal (base 10) representation of ´number´.
+
+If ´m´ is specified sufficient spaces will be added to the start of the number to
+ensure that the number of characters before the decimal point (including the
+negative or positive sign) will be at least ´m´ characters. If ´m´ is zero or the
+
+number has more than ´m´ significant digits no padding spaces will be added.
+
+
+If ´m´ is negative, positive numbers will be prefixed with the plus symbol and
+negative numbers with the negative symbol. If ´m´ is positive then only the
+negative symbol will be used.
+
+´n´ is the number of digits required to follow the decimal place. If it is zero the
+string will be returned without the decimal point. If it is negative the output
+will always use the exponential format with ´n´ digits resolution. If ´n´ is not
+specified the number of decimal places and output format will vary
+automatically according to the number.
+
+´c$´ is a string and if specified the first character of this string will be used as
+the padding character instead of a space (see the ´m´ argument). Examples:
+          STR$(123.456)              will return "123.456"
+          STR$(-123.456)             will return "-123.456"
+          STR$(123.456, 1)           will return "123.456"
+          STR$(123.456, -1)          will return "+123.456"
+          STR$(123.456, 6)           will return "   123.456"
+          STR$(123.456, -6)          will return " +123.456"
+          STR$(-123.456, 6)          will return " -123.456"
+          STR$(-123.456, 6, 5)       will return " -123.45600"
+          STR$(-123.456, 6, -5)      will return "    -1.23456e+02"
+          STR$(53, 6)                will return "    53"
+          STR$(53, 6, 2)             will return "    53.00"
+          STR$(53, 6, 2, "*")        will return "****53.00"
+
+
+### UCASE$( string$ )
+
+Returns ´string$´ converted to uppercase characters.
+
+
+### VAL( string$ )
+
+Returns the numerical value of the ´string$´. If ´string$´ is an invalid number
+the function will return zero.
+
+This function will recognise the &H prefix for a hexadecimal number, &O for
+octal and &B for binary.
+
+
+### STRING$( nbr, ascii ) or STRING$( nbr, string$ )
+
+Returns a string ´nbr´ bytes long consisting of either the first character of string$
+or the character representing the ASCII value ´ascii´ which is an integer or float
+number in the range of 0 to 255.
+
+
+### TAB( number )
+
+Outputs spaces until the column indicated by ´number´ has been reached on the
+console output.
+
+
+## Binary Functions
+
+### BIT(var%, bitno)
+
+'returns the value of a specific bit (0-63) in an integer variable (0 or 1).
+
+See also the [BIT command](../command/bit.md)
+
 ### BIN$( number [, chars])
 
-Returns a string giving the binary (base 2) value for the 'number'.
+Returns a string giving the binary (base 2) value for the ´number´.
 
-'chars' is optional and specifies the number of characters in the string with zero
+´chars´ is optional and specifies the number of characters in the string with zero
 as the leading padding character(s).
 
 
 ### BIN2STR$(type, value [,BIG])
 
-Returns a string containing the binary representation of 'value'.
+Returns a string containing the binary representation of ´value´.
 
-'type' can be:
-    INT64         signed 64-bit integer converted to an 8 byte string
-    UINT64        unsigned 64-bit integer converted to an 8 byte string
-    INT32         signed 32-bit integer converted to a 4 byte string
-    UINT32        unsigned 32-bit integer converted to a 4 byte string
-    INT16         signed 16-bit integer converted to a 2 byte string
-    UINT16        unsigned 16-bit integer converted to a 2 byte string
-    INT8          signed 8-bit integer converted to a 1 byte string
-    UINT8         unsigned 8-bit integer converted to a 1 byte string
-    SINGLE        single precision floating point number converted to a 4 byte
-                  string
-    DOUBLE double precision floating point number converted to a 8 byte
-                  string
+´type´ | description
+:-: | :-
+INT64 | signed 64-bit integer converted to an 8 byte string
+UINT64 | unsigned 64-bit integer converted to an 8 byte string
+INT32 | signed 32-bit integer converted to a 4 byte string
+UINT32 | unsigned 32-bit integer converted to a 4 byte string
+INT16 | signed 16-bit integer converted to a 2 byte string
+UINT16 | unsigned 16-bit integer converted to a 2 byte string
+INT8 | signed 8-bit integer converted to a 1 byte string
+UINT8 | unsigned 8-bit integer converted to a 1 byte string
+SINGLE | single precision floating point number converted to a 4 byte string
+DOUBLE | double precision floating point number converted to a 8 byte string
+
 By default the string contains the number in little-endian format (i.e. the least
 significant byte is the first one in the string). Setting the third parameter to
-‘BIG’ will return the string in big-endian format (i.e. the most significant byte
+´BIG´ will return the string in big-endian format (i.e. the most significant byte
 is the first one in the string). In the case of the integer conversions, an error
-will be generated if the ‘value’ cannot fit into the ‘type’ (eg, an attempt to store
+will be generated if the ´value´ cannot fit into the ´type´ (eg, an attempt to store
 the value 400 in a INT8).
 
 This function makes it easy to prepare data for efficient binary file I/O or for
@@ -65,25 +142,35 @@ preparing numbers for output to sensors and saving to flash memory.
 See also the function STR2BIN
 
 
-### BIT(var%, bitno)
+### STR2BIN(type, string$ [,BIG])
 
-'returns the value of a specific bit (0-63) in an integer variable (0 or 1).
+Returns a number equal to the binary representation in ´string$´.
 
-See also the BIT command
+´type´ can be:
+* INT64 converts 8 byte string representing a signed 64-bit integer to an integer
+* UINT64 converts 8 byte string representing an unsigned 64-bit integer to an integer
+* INT32 converts 4 byte string representing a signed 32-bit integer to an integer
+* UINT32 converts 4 byte string representing an unsigned 32-bit integer to an integer
+* INT16 converts 2 byte string representing a signed 16-bit integer to an integer
+* UINT16 converts 2 byte string representing an unsigned 16-bit integer to an integer
+* INT8 converts 1 byte string representing a signed 8-bit integer to an integer
+* UINT8 converts 1 byte string representing an unsigned 8-bit integer to an integer
+* SINGLE converts 4 byte string representing single precision float to a float
+* DOUBLE converts 8 byte string representing single precision float to a float
 
+By default the string must contain the number in little-endian format (i.e. the
+least significant byte is the first one in the string). Setting the third parameter
+to ´BIG´ will interpret the string in big-endian format (i.e. the most
+significant byte is the first one in the string).
 
-### BOUND(array() [,dimension]
+This function makes it easy to read data from binary data files, interpret
+numbers from sensors or efficiently read binary data from flash memory
+chips.
 
-This returns the upper limit of the array for the dimension requested.
+An error will be generated if the string is the incorrect length for the
+conversion requested
 
-The dimension defaults to one if not specified. Specifying a dimension value of
-0 will return the current value of OPTION BASE.
-
-Unused dimensions will return a value of zero.
-
-For example:
-DIM myarray(44,45)
-BOUND(myarray(),2) will return 45
+See also the function BIN2STR$
 
 
 ### BYTE(var$, byteno)
@@ -102,10 +189,10 @@ This is an efficient way of programmatically calling user defined functions.
 complex SELECT and IF THEN ELSEIF ENDIF clauses and is processed in a
 much more efficient manner.
 
-‘userfunname$’ can be any string or variable or function that resolves to the
+´userfunname$´ can be any string or variable or function that resolves to the
 name of a normal user function (not an in-built command).
 
-‘userfunparameters’ are the same parameters that would be used to call the
+´userfunparameters´ are the same parameters that would be used to call the
 function directly.
 
 A typical use for this command could be writing any sort of emulator where
@@ -133,7 +220,7 @@ Examples:
 ### CHR$( number )
 
 Returns a one-character string consisting of the character corresponding to the
-ASCII code (i.e. byte value) indicated by argument 'number'.
+ASCII code (i.e. byte value) indicated by argument ´number´.
 
 
 ### CINT( number )
@@ -150,7 +237,7 @@ See also INT() and FIX().
 
 ### COS( number )
 
-Returns the cosine of the argument 'number' in radians.
+Returns the cosine of the argument ´number´ in radians.
 
 
 ### CWD$
@@ -170,7 +257,7 @@ form "DD-MM-YYYY". For example, "28-07-2012".
 
 ### DATETIME$(n)
 
-Returns the date and time corresponding to the epoch number ‘n’ (number of
+Returns the date and time corresponding to the epoch number ´n´ (number of
 seconds that have elapsed since midnight GMT on January 1, 1970).
 
 The format of the returned string is “dd-mm-yyyy hh:mm:ss”. Use the text
@@ -183,21 +270,21 @@ Returns the day of the week for a given date as a string.
 
 For example, “Monday”, “Tuesday” etc.
 
-‘date$’ is a string and its format can be DD-MM-YY or DD-MM-YYYY or
+´date$´ is a string and its format can be DD-MM-YY or DD-MM-YYYY or
 YYYY-MM-DD. You can also use NOW to get the day for the current date,
 eg, PRINT DAY$(NOW)
 
 
 ### DEG( radians )
 
-Converts 'radians' to degrees.
+Converts ´radians´ to degrees.
 
 
 ### DEVICE(GAMEPAD channel, funct)
 
 Returns data from a USB PS3 or PS4 controller.
 
-'funct' is a 1 or 2 letter code indicating the information to return as follows:
+´funct´ is a 1 or 2 letter code indicating the information to return as follows:
     LX the position of the analog left joystick x axis
     LY the position of the analog left joystick y axis
     RX the position of the analog right joystick x axis
@@ -235,7 +322,7 @@ The button bitmap is as follows:
 
 ### DEVICE(MOUSE channel, funct)
 
-Returns data from a mouse connected via ‘channel’.
+Returns data from a mouse connected via ´channel´.
 
 A PS2 mouse is always allocated channel 2. Normally a USB mouse is also
 allocated to channel 2 but this can vary. See MM.INFO(USB n) for more
@@ -246,7 +333,7 @@ information.
 
 Returns data from a Wii Classic controller.
 
-'funct' is a 1 or 2 letter code indicating the information to return as follows:
+´funct´ is a 1 or 2 letter code indicating the information to return as follows:
     LX the position of the analog left joystick x axis
     LY the position of the analog left joystick y axis
     RX the position of the analog right joystick x axis
@@ -279,7 +366,7 @@ The button bitmap is as follows:
 
 Returns data from a Wii Nunchuck controller.
 
-'funct' is a 1 or 2 letter code indicating the information to return as follows:
+´funct´ is a 1 or 2 letter code indicating the information to return as follows:
     AX the x axis acceleration
     AY the y axis acceleration
     AZ the z axis acceleration
@@ -295,14 +382,14 @@ Returns data from a Wii Nunchuck controller.
 Will search the default Flash Filesystem or SD Card for files and return the
 names of entries found.
 
-'fspec' is a file specification using wildcards the same as used by the FILES
+´fspec´ is a file specification using wildcards the same as used by the FILES
 command. Eg, "*.*" will return all entries, "*.TXT" will return text files. Note
 that the wildcard *.* does not find files or folders without an extension.
 
-'type' is the type of entry to return and can be one of:
+´type´ is the type of entry to return and can be one of:
       ALL          Search for all files and directories
       DIR          Search for directories only
-      FILE         Search for files only (the default if 'type' is not specified)
+      FILE         Search for files only (the default if ´type´ is not specified)
 The function will return the first entry found. To retrieve subsequent entries
 use the function with no arguments. i.e. DIR$( ). The return of an empty
 string indicates that there are no more entries to retrieve.
@@ -320,8 +407,8 @@ You must change to the required directory before invoking this command.
 
 Measure the distance to a target using the HC-SR04 ultrasonic distance sensor.
 
-Four pin sensors have separate trigger and echo connections. 'trigger' is the I/O
-pin connected to the "trig" input of the sensor and 'echo' is the pin connected to
+Four pin sensors have separate trigger and echo connections. ´trigger´ is the I/O
+pin connected to the "trig" input of the sensor and ´echo´ is the pin connected to
 the "echo" output of the sensor.
 
 Three pin sensors have a combined trigger and echo connection and in that case
@@ -340,7 +427,7 @@ was detected or -2 if there was an error (i.e. sensor not connected).
 ### EOF( [#]fnbr )
 
 Will return true if the file previously opened on the Flash Filesystem or SD
-Card for INPUT with the file number ‘#fnbr’ is positioned at the end of the file.
+Card for INPUT with the file number ´#fnbr´ is positioned at the end of the file.
 
 The # is optional. Also see the OPEN, INPUT and LINE INPUT commands
 and the INPUT$ function.
@@ -358,9 +445,9 @@ for the current date and time, i.e. PRINT EPOCH(NOW)
 
 ### EVAL( string$ )
 
-Will evaluate 'string$' as if it is a BASIC expression and return the result.
+Will evaluate ´string$´ as if it is a BASIC expression and return the result.
 
-'string$' can be a constant, a variable or a string expression. The expression can
+´string$´ can be a constant, a variable or a string expression. The expression can
 use any operators, functions, variables, subroutines, etc that are known at the
 time of execution. The returned value will be an integer, float or string
 depending on the result of the evaluation.
@@ -371,7 +458,7 @@ Will display: 86.6025
 
 ### EXP( number )
 
-Returns the exponential value of 'number', i.e. e^x where x is 'number'.
+Returns the exponential value of ´number´, i.e. e^x where x is ´number´.
 
 
 ### FIELD$( string1, nbr, string2 [, string3] )
@@ -380,12 +467,12 @@ Returns a particular field in a string with the fields separated by delimiters.
 
 Note that a space character cannot be used as a delimeter.
 
-'nbr' is the field to return (the first is nbr 1). 'string1' is the string to search and
-'string2' is a string holding the delimiters (more than one can be used). The
+´nbr´ is the field to return (the first is nbr 1). ´string1´ is the string to search and
+´string2´ is a string holding the delimiters (more than one can be used). The
 space character may not be used as a delimiter.
 
-'string3' is optional and if specified will include characters that are used to
-quote text in 'string1' (ie, quoted text will not be searched for a delimiter).
+´string3´ is optional and if specified will include characters that are used to
+quote text in ´string1´ (ie, quoted text will not be searched for a delimiter).
 
 For example:
 S$ = "foo, boo, zoo, doo"
@@ -419,8 +506,8 @@ See also MM.FLAGS and the FLAG and FLAGS commands
 
 ### FORMAT$( nbr [, fmt$] )
 
-Will return a string representing ‘nbr’ formatted according to the specifications
-in the string ‘fmt$’.
+Will return a string representing ´nbr´ formatted according to the specifications
+in the string ´fmt$´.
 
 The format specification starts with a % character and ends with a letter.
 
@@ -428,16 +515,16 @@ Anything outside of this construct is copied to the output as is.
 
 The structure of a format specification is:
               % [flags] [width] [.precision] type
-Where ‘flags’ can be:
+Where ´flags´ can be:
      -         Left justify the value within a given field width
      0         Use 0 for the pad character instead of space
      +         Forces the + sign to be shown for positive numbers
      space Causes a positive value to display a space for the sign. Negative
                values still show the – sign
-‘width’ is the minimum number of characters to output, less than this the
+´width´ is the minimum number of characters to output, less than this the
 number will be padded, more than this the width will be expanded.
 
-‘precision’ specifies the number of fraction digits to generate with an e, or f
+´precision´ specifies the number of fraction digits to generate with an e, or f
 type or the maximum number of significant digits to generate with a g type and
 defaults to 4 digits. If specified, the precision must be preceded by a dot (.).
 
@@ -525,9 +612,9 @@ Returns: 0=invalid data, 1=valid data
 
 ### HEX$( number [, chars])
 
-Returns a string giving the hexadecimal (base 16) value for the 'number'.
+Returns a string giving the hexadecimal (base 16) value for the ´number´.
 
-'chars' is optional and specifies the number of characters in the string with zero
+´chars´ is optional and specifies the number of characters in the string with zero
 as the leading padding character(s).
 
 
@@ -543,9 +630,9 @@ string (i.e. "").
 
 ### INPUT$(nbr, [#]fnbr)
 
-Will return a string composed of ‘nbr’ characters read from a file or serial
-communications port opened as 'fnbr'. This function will return as many
-characters as are in the file or receive buffer up to ‘nbr’. If there are no
+Will return a string composed of ´nbr´ characters read from a file or serial
+communications port opened as ´fnbr´. This function will return as many
+characters as are in the file or receive buffer up to ´nbr´. If there are no
 characters available it will immediately return with an empty string.
 
 #0 can be used which refers to the console's input buffer.
@@ -555,13 +642,13 @@ The # is optional. Also see the OPEN command.
 
 ### INSTR( [start-position,] string-searched$, string- pattern$ [,size] )
 
-Returns the position at which 'string-pattern$' occurs in 'string-searched$',
-beginning at 'start-position'. If 'start-position' is not provided it will default to 1.
+Returns the position at which ´string-pattern$´ occurs in ´string-searched$´,
+beginning at ´start-position´. If ´start-position´ is not provided it will default to 1.
 
-Both the position returned and 'start-position' use 1 for the first character, 2 for
+Both the position returned and ´start-position´ use 1 for the first character, 2 for
 the second, etc.
 
-The function returns zero if 'string-pattern$' is not found.
+The function returns zero if ´string-pattern$´ is not found.
 
 If the optional parameter “size” is specified the “string-pattern” is treated as a
 regular expression. See Appendix E for the details.
@@ -596,7 +683,7 @@ down or zero if no key is down. The decimal values for the function and arrow
 keys are listed in Appendix F.
 
 This function will report multiple simultaneous key presses and the parameter
-'n' is the number of the keypress to report. KEYDOWN(0) will return the
+´n´ is the number of the keypress to report. KEYDOWN(0) will return the
 number of keys being pressed
 For example, if "c", "g" and "p" are pressed simultaneously KEYDOWN(0)
 will return 3, KEYDOWN(1) will return 99, KEYDOWN(2) will return 103,
@@ -604,7 +691,7 @@ etc. The keys do not need to be pressed simultaneously and will report in the
 order pressed. Taking a finger off a key will promote the next key pressed to
 #1.
 
-The first key ('n' = 1) is entered in the keyboard buffer (accessible using
+The first key (´n´ = 1) is entered in the keyboard buffer (accessible using
 INKEY$) while keys 2 to 6 can only be accessed via this function. Using this
 function will clear the console input buffer.
 
@@ -622,41 +709,57 @@ report on.
 
 ### LCASE$( string$ )
 
-Returns ‘string$’ converted to lowercase characters.
+Returns ´string$´ converted to lowercase characters.
+
+
+## Array Functions
+
+### BOUND(array() [,dimension]
+
+This returns the upper limit of the array for the dimension requested.
+
+The dimension defaults to one if not specified. Specifying a dimension value of
+0 will return the current value of OPTION BASE.
+
+Unused dimensions will return a value of zero.
+
+For example:
+DIM myarray(44,45)
+BOUND(myarray(),2) will return 45
 
 
 ### LCOMPARE(array1%(), array2%())
 
-Compare the contents of two long string variables ‘array1%()’ and ‘array2%()’.
+Compare the contents of two long string variables ´array1%()´ and ´array2%()´.
 
-The returned is an integer and will be -1 if ‘array1%()’ is less than ‘array2%()’.
+The returned is an integer and will be -1 if ´array1%()´ is less than ´array2%()´.
 
-It will be zero if they are equal in length and content and +1 if ‘array1%()’ is
-greater than ‘array2%()’. The comparison uses the ASCII character set and is
+It will be zero if they are equal in length and content and +1 if ´array1%()´ is
+greater than ´array2%()´. The comparison uses the ASCII character set and is
 case sensitive.
 
 
 ### LEFT$( string$, nbr )
 
-Returns a substring of ‘string$’ with ‘nbr' of characters from the left
+Returns a substring of ´string$´ with ´nbr´ of characters from the left
 (beginning) of the string.
 
 
 ### LEN( string$ )
 
-Returns the number of characters in 'string$'.
+Returns the number of characters in ´string$´.
 
 
 ### LGETBYTE(array%(), n)
 
-Returns the numerical value of the 'n'th byte in the LONGSTRING held in
-'array%()'. This function respects the setting of OPTION BASE in determining
+Returns the numerical value of the ´n´th byte in the LONGSTRING held in
+´array%()´. This function respects the setting of OPTION BASE in determining
 which byte to return.
 
 
 ### LGETSTR$(array%(), start, length)
 
-Returns part of a long string stored in ‘array%()’ as a normal MMBasic string.
+Returns part of a long string stored in ´array%()´ as a normal MMBasic string.
 
 The parameters start and length define the part of the string to be returned.
 
@@ -666,29 +769,31 @@ The parameters start and length define the part of the string to be returned.
 Returns the position of a search string in a long string.
 
 The returned value is an integer and will be zero if the substring cannot be
-found. ‘array%()’ is the string to be searched and must be a long string
-variable. ‘search$’ is the substring to look for and it must be a normal
+found. ´array%()´ is the string to be searched and must be a long string
+variable. ´search$´ is the substring to look for and it must be a normal
 MMBasic string or expression (not a long string). The search is case sensitive.
 
 Normally the search will start at the first character in ' array%()' but the
 optional third parameter allows the start position of the search to be specified.
 
-If the optional parameter ‘size’ is specified the ‘search$’ is treated as a regular
+If the optional parameter ´size´ is specified the ´search$´ is treated as a regular
 expression. See Appendix E for the details.
 
 
 ### LLEN(array%())
 
-Returns the length of a long string stored in ‘array%()’.
+Returns the length of a long string stored in ´array%()´.
 
+
+## File Functions
 
 ### LOC( [#]fnbr )
 
-For a file on the Flash Filesystem or SD Card opened as 'fnbr' this will return
+For a file on the Flash Filesystem or SD Card opened as ´fnbr´ this will return
 the current position of the read/write pointer in the file. Note that the first byte
 in a file is numbered 1.
 
-For a serial communications port opened as 'fnbr' this function will return the
+For a serial communications port opened as ´fnbr´ this function will return the
 number of bytes received and waiting in the receive buffer to be read. #0 can
 be used which refers to the console's input buffer.
 
@@ -697,10 +802,10 @@ The # is optional.
 
 ### LOF( [#]fnbr )
 
-For a file on the Flash Filesystem or SD Card opened as 'fnbr' this will return
+For a file on the Flash Filesystem or SD Card opened as ´fnbr´ this will return
 the current length of the file in bytes.
 
-For a serial communications port opened as 'fnbr' this function will return the
+For a serial communications port opened as ´fnbr´ this function will return the
 space (in characters) remaining in the transmit buffer. Note that when the
 buffer is full MMBasic will pause when adding a new character and wait for
 some space to become available so this function can be used to avoid this.
@@ -710,12 +815,12 @@ The # is optional.
 
 ### LOG( number )
 
-Returns the natural logarithm of the argument 'number'.
+Returns the natural logarithm of the argument ´number´.
 
 
 ### MAP( n )
 
-Returns the 24-bit RGB value for the index ‘n’ in the colour map table.
+Returns the 24-bit RGB value for the index ´n´ in the colour map table.
 
 See the MAP command. This allows the Basic programmer to use a colour
 specified by the MAP command
@@ -725,7 +830,7 @@ MAP SET
 Pixel x,y,map(8)
 
 
-### MATH Simple functions
+## MATH Simple functions
 
 The math function performs many simple mathematical calculations that can be
 programmed in Basic but there are speed advantages to coding looping
@@ -778,30 +883,47 @@ algorithm. If not seeded with MATH RANDOMIZE the first usage seeds with
 the time in microseconds since boot
 
 
-### MATH(CHI a()) MATH(CHI_p a()) MATH(CROSSING array() [,level] [,direction] MATH(CORREL a(), a()) MATH(MAX a() [,index%]) MATH(MEAN a()) MATH(MEDIAN a()) MATH(MIN a(), [index%])
+### MATH(CHI a()) 
 
 Returns the Pearson's chi-squared value of the two dimensional array a())
-   
+
+
+### MATH(CHI_p a())
+
 Returns the associated probability in % of the Pearson's chi-squared value of
 the two dimensional array a())
-  
+
+
+### MATH(CROSSING array() [,level] [,direction]
+
 This returns the array index at which the values in the array pass the "level" in
 the direction specified. level defaults to 0. Direction defaults to 1 ( valid values
 are -1 or 1)
  
+
+### MATH(CORREL a(), a()) 
+
 Returns the Pearson’s correlation coefficient between arrays a() and b()
- 
+
+### MATH(MAX a() [,index%])
+
 Returns the maximum of all values in the a() array, a() can have any number of
 dimensions. If the integer variable is specified then it will be updated with the
 index of the maximum value in the array. This is only available on one-
 dimensional arrays
- 
+
+
+### MATH(MEAN a()) 
+
 Returns the average of all values in the a() array, a() can have any number of
 dimensions
- 
+
+### MATH(MEDIAN a()) 
+
 Returns the median of all values in the a() array, a() can have any number of
 dimensions 
  
+### MATH(MIN a(), [index%])
  
 Returns the minimum of all values in the a() array, a() can have any number of
 dimensions. If the integer variable is specified then it will be updated with the
@@ -809,20 +931,25 @@ index of the minimum value in the array. This is only available on one-
 dimensional arrays.
 
 
-### MATH(SD a()) MATH(SUM a()) Vector Arithmetic
+### MATH(SD a())
 
 Returns the sample standard deviation of all values in the a() array, a() can have
 any number of dimensions
  
+### MATH(SUM a())
+
 Returns the sum of all values in the a() array, a() can have any number of
 dimensions
 
 
-### MATH(MAGNITUDE v()) MATH(DOTPRODUCT v1(), v2())
+### Vector Arithmetic
 
+### MATH(MAGNITUDE v())
 Returns the magnitude of the vector v(). The vector can have any number of
 elements 
- 
+
+### MATH(DOTPRODUCT v1(), v2())
+
 Returns the dot product of two vectors v1() and v2(). The vectors can have any
 number of elements but must have the same cardinality
 
@@ -834,12 +961,12 @@ Returns the determinant of the array. The array must be square.
 
 ### MATH(PID channel, setpoint!, measurement))
 
-This function must be called in the PID callback subroutine for the ‘channel’
+This function must be called in the PID callback subroutine for the ´channel´
 specified and returns the output of the controller function.
 
-The ‘setpoint’ value is the desired state that the controller is trying to achieve.
+The ´setpoint´ value is the desired state that the controller is trying to achieve.
 
-The ‘measurement’ is the current value of the real world.
+The ´measurement´ is the current value of the real world.
 
 https://www.thebackshed.com/forum/ViewTopic.php?FID=16&TID=17263
 For an example of setting up and running a PID controller
@@ -847,10 +974,10 @@ For an example of setting up and running a PID controller
 
 ### MATH(BASE64 ENCODE/DECODE in$/in(), out$/out())
 
-Returns the length of out$/out(). This base64 encodes or decodes the data in 'in'
-and puts the result in 'out'. Where arrays are used as the output they must be big
-enough relative to the input and the direction. Encryption increases length by
-4/3 and decryption decreases it by 3/4.
+Returns the length of out$/out(). This base64 encodes or decodes the data in ´in´
+and puts the result in ´out´. 
+
+Where arrays are used as the output they must be big enough relative to the input and the direction. Encryption increases length by 4/3 and decryption decreases it by 3/4.
 
 
 ### MAX( arg1 [, arg2 [, …]] ) or MIN( arg1 [, arg2 [, …]] )
@@ -863,17 +990,17 @@ converted to floats) and a float is returned.
 
 ### MID$( string$, start ) or MID$( string$, start, nbr )
 
-Returns a substring of ‘string$’ beginning at ‘start’ and continuing for ‘nbr’
+Returns a substring of ´string$´ beginning at ´start´ and continuing for ´nbr´
 characters. The first character in the string is number 1.
 
-If ‘nbr’ is omitted the returned string will extend to the end of ‘string$’
+If ´nbr´ is omitted the returned string will extend to the end of ´string$´
 
 
 ### OCT$( number [, chars])
 
-Returns a string giving the octal (base 8) representation of 'number'.
+Returns a string giving the octal (base 8) representation of ´number´.
 
-'chars' is optional and specifies the number of characters in the string with zero
+´chars´ is optional and specifies the number of characters in the string with zero
 as the leading padding character(s).
 
 
@@ -882,24 +1009,24 @@ as the leading padding character(s).
 PEEK(SHORT or give a error if not aligned e.g PEEK(SP
 Will return a byte or a word within the processor’s virtual memory space.
 
-BYTE will return the byte (8-bits) located at 'addr%'
-SHORT will return the short integer (16-bits) located at 'addr%'
+BYTE will return the byte (8-bits) located at ´addr%´
+SHORT will return the short integer (16-bits) located at ´addr%´
   
-WORD will return the word (32-bits) located at 'addr%'
+WORD will return the word (32-bits) located at ´addr%´
   
-INTEGER will return the integer (64-bits) located at 'addr%'
+INTEGER will return the integer (64-bits) located at ´addr%´
   
-FLOAT will return the floating point number (64-bits) located at 'addr%'
+FLOAT will return the floating point number (64-bits) located at ´addr%´
   
-VARADDR will return the address (32-bits) of the variable 'var' in memory.
+VARADDR will return the address (32-bits) of the variable ´var´ in memory.
 
 An array is specified as var().
 
-CFUNADDR will return the address (32-bits) of the CFunction 'cfun' in
+CFUNADDR will return the address (32-bits) of the CFunction ´cfun´ in
 memory. This address can be passed to another CFunction which can then call
 it to perform some common process.
 
-VAR, will return a byte in the memory allocated to 'var'. An array is specified
+VAR, will return a byte in the memory allocated to ´var´. An array is specified
 as var().
 
 VARTBL, will return a byte in the memory allocated to the variable table
@@ -909,7 +1036,7 @@ VARTBL.
 PROGMEM, will return a byte in the memory allocated to the program. Note
 that there is a comma after the keyword PROGMEM.
 
-Note that 'addr%' should be an integer.
+Note that ´addr%´ should be an integer.
 
 
 ### PEEK(BP, n%) PEEK(SP,n%) PEEK(WP,n%) PI
@@ -925,14 +1052,14 @@ the next short.
 PEEK(wp n%) ' returns the word at address n% and increments n% to point to
 the next word.
 
-
+### PI ()
 
 Returns the value of pi.
 
 
 ### PIN( pin )
 
-Returns the value on the external I/O ‘pin’. Zero means digital low, 1 means
+Returns the value on the external I/O ´pin´. Zero means digital low, 1 means
 digital high and for analogue inputs it will return the measured voltage as a
 floating point number.
 
@@ -986,7 +1113,7 @@ command
 ### PIO(READFIFO a, b, c)
 
 Read from a PIO FIFO
-‘a’ is the pio (0 or 1), ‘b’ id the state machine (0...3), ‘c’ is the FIFO register
+´a´ is the pio (0 or 1), ´b´ id the state machine (0...3), ´c´ is the FIFO register
 *0…3)
 
 
@@ -1029,8 +1156,8 @@ terminated by END PROGRAM
 
 ### PIXEL( x, y)
 
-Returns the colour of a pixel on the video output or LCD display. 'x' is the
-horizontal coordinate and 'y' is the vertical coordinate of the pixel.
+Returns the colour of a pixel on the video output or LCD display. ´x´ is the
+horizontal coordinate and ´y´ is the vertical coordinate of the pixel.
 
 If an LCD display is used it must use one of the SSD1963, ILI9341, ILI9488,
 or ST7789_320 controllers.
@@ -1040,8 +1167,8 @@ or ST7789_320 controllers.
 
 Returns the value of a number of I/O pins in one operation.
 
-'start' is an I/O pin number and its value will be returned as bit 0. 'start'+1 will be
-returned as bit 1, 'start'+2 will be returned as bit 2, and so on for 'nbr' number of
+´start´ is an I/O pin number and its value will be returned as bit 0. ´start´+1 will be
+returned as bit 1, ´start´+2 will be returned as bit 2, and so on for ´nbr´ number of
 bits. I/O pins used must be numbered consecutively and any I/O pin that is
 invalid or not configured as an input will cause an error. The start/nbr pair can be
 repeated up to 25 times if additional groups of input pins need to be added.
@@ -1060,15 +1187,15 @@ See the PORT command to simultaneously output to a number of pins.
 Measures the width of an input pulse from 1µs to 1 second with 0.1µs
 resolution.
 
-'pin' is the I/O pin to use for the measurement, it must be previously configured
-as a digital input. 'polarity' is the type of pulse to measure, if zero the function
+´pin´ is the I/O pin to use for the measurement, it must be previously configured
+as a digital input. ´polarity´ is the type of pulse to measure, if zero the function
 will return the width of the next negative pulse, if non zero it will measure the  
 next positive pulse.
 
-'t1' is the timeout applied while waiting for the pulse to arrive, 't2' is the timeout
+´t1´ is the timeout applied while waiting for the pulse to arrive, ´t2´ is the timeout
 used while measuring the pulse. Both are in microseconds (µs) and are
-optional. If 't2' is omitted the value of 't1' will be used for both timeouts. If
-both 't1' and 't2' are omitted then the timeouts will be set at 100000 (i.e.
+optional. If ´t2´ is omitted the value of ´t1´ will be used for both timeouts. If
+both ´t1´ and ´t2´ are omitted then the timeouts will be set at 100000 (i.e.
 
 100ms).
 
@@ -1081,17 +1208,17 @@ measurement is made and interrupts will be ignored during this period.
 
 ### RAD( degrees )
 
-Converts 'degrees' to radians.
+Converts ´degrees´ to radians.
 
 
 ### RGB(red, green, blue) or RGB(shortcut)
 
 Generates an RGB true colour value.
 
-'red', 'blue' and 'green' represent the intensity of each colour. A value of zero
+´red´, ´blue´ and ´green´ represent the intensity of each colour. A value of zero
 represents black and 255 represents full intensity.
 
-'shortcut' allows common colours to be specified by naming them. The colours
+´shortcut´ allows common colours to be specified by naming them. The colours
 that can be named are white, black, blue, green, cyan, red, magenta, yellow,
 brown, white, orange, pink, gold, salmon, beige, lightgrey and grey (or USA
 spelling gray/lightgray). For example, RGB(red) or RGB(cyan).
@@ -1099,32 +1226,32 @@ spelling gray/lightgray). For example, RGB(red) or RGB(cyan).
 
 ### RIGHT$( string$, number-of- chars )
 
-Returns a substring of ‘string$’ with ‘number-of-chars’ from the right (end) of
+Returns a substring of ´string$´ with ´number-of-chars´ from the right (end) of
 the string.
 
 
 ### RND( number ) or RND
 
 Returns a random (RP2350) or pseudo-random (RP2040) number in the range
-of 0 to 0.999999. The 'number' value is ignored if supplied.
+of 0 to 0.999999. The ´number´ value is ignored if supplied.
 
 See also the RANDOMIZE command (RP2040 only).
 
 
 ### SGN( number )
 
-Returns the sign of the argument 'number', +1 for positive numbers, 0 for 0, and
+Returns the sign of the argument ´number´, +1 for positive numbers, 0 for 0, and
 -1 for negative numbers.
 
 
 ### SIN( number )
 
-Returns the sine of the argument 'number' in radians.
+Returns the sine of the argument ´number´ in radians.
 
 
 ### SPACE$( number )
 
-Returns a string of blank spaces 'number' characters long.
+Returns a string of blank spaces ´number´ characters long.
 
 
 ### SPI ( data ) or SPI2 ( data )
@@ -1132,8 +1259,8 @@ Returns a string of blank spaces 'number' characters long.
 Send and receive data using an SPI channel.
 
 A single SPI transaction will send data while simultaneously receiving data
-from the slave. ‘data’ is the data to send and the function will return the data
-received during the transaction. ‘data’ can be an integer or a floating point
+from the slave. ´data´ is the data to send and the function will return the data
+received during the transaction. ´data´ can be an integer or a floating point
 variable or a constant.
 
 
@@ -1162,7 +1289,7 @@ If the collision was with the edge of the screen then the return value will be:
           &HF2       collision with top of screen
           &HF4       collision with right of screen
           &HF8       collision with bottom of screen
-Returns the distance between the centres of sprites ‘s1’ and ‘s2’ (returns -1 if
+Returns the distance between the centres of sprites ´s1´ and ´s2´ (returns -1 if
 either sprite is not active)
 
 
@@ -1210,9 +1337,9 @@ Bits 0-63 in the returned integer represent a current collision with sprites 1 t
 
 ### SPRITE(V,[#]s1, [#]s2)
 
-Returns the vector from sprite 's1' to 's2' in radians.
+Returns the vector from sprite ´s1´ to ´s2´ in radians.
 
-The angle is based on the clock so if 's2' is above 's1' on the screen then the
+The angle is based on the clock so if ´s2´ is above ´s1´ on the screen then the
 answer will be zero. This can be used on any pair of sprites that are visible. If
 either sprite is not visible the function will return -1.
 
@@ -1240,101 +1367,18 @@ sprite is currently displayed (active). Returns 10000 otherwise.
 
 ### SQR( number )
 
-Returns the square root of the argument 'number'.
-
-
-### STR$( number ) or STR$( number, m ) or STR$( number, m, n ) or STR$( number, m, n, c$ )
-
-Returns a string in the decimal (base 10) representation of 'number'.
-
-If 'm' is specified sufficient spaces will be added to the start of the number to
-ensure that the number of characters before the decimal point (including the
-negative or positive sign) will be at least 'm' characters. If 'm' is zero or the
-
-number has more than 'm' significant digits no padding spaces will be added.
-
-
-If 'm' is negative, positive numbers will be prefixed with the plus symbol and
-negative numbers with the negative symbol. If 'm' is positive then only the
-negative symbol will be used.
-
-'n' is the number of digits required to follow the decimal place. If it is zero the
-string will be returned without the decimal point. If it is negative the output
-will always use the exponential format with 'n' digits resolution. If 'n' is not
-specified the number of decimal places and output format will vary
-automatically according to the number.
-
-'c$' is a string and if specified the first character of this string will be used as
-the padding character instead of a space (see the 'm' argument). Examples:
-          STR$(123.456)              will return "123.456"
-          STR$(-123.456)             will return "-123.456"
-          STR$(123.456, 1)           will return "123.456"
-          STR$(123.456, -1)          will return "+123.456"
-          STR$(123.456, 6)           will return "   123.456"
-          STR$(123.456, -6)          will return " +123.456"
-          STR$(-123.456, 6)          will return " -123.456"
-          STR$(-123.456, 6, 5)       will return " -123.45600"
-          STR$(-123.456, 6, -5)      will return "    -1.23456e+02"
-          STR$(53, 6)                will return "    53"
-          STR$(53, 6, 2)             will return "    53.00"
-          STR$(53, 6, 2, "*")        will return "****53.00"
-
-
-### STR2BIN(type, string$ [,BIG])
-
-Returns a number equal to the binary representation in ‘string$’.
-
-‘type’ can be:
-INT64 converts 8 byte string representing a signed 64-bit integer to an integer
-UINT64 converts 8 byte string representing an unsigned 64-bit integer to an
-integer
-INT32 converts 4 byte string representing a signed 32-bit integer to an integer
-UINT32 converts 4 byte string representing an unsigned 32-bit integer to an
-integer
-INT16 converts 2 byte string representing a signed 16-bit integer to an integer
-UINT16 converts 2 byte string representing an unsigned 16-bit integer to an
-integer
-INT8 converts 1 byte string representing a signed 8-bit integer to an integer
-UINT8 converts 1 byte string representing an unsigned 8-bit integer to an
-integer
-SINGLE converts 4 byte string representing single precision float to a float
-DOUBLE converts 8 byte string representing single precision float to a float
-By default the string must contain the number in little-endian format (i.e. the
-least significant byte is the first one in the string). Setting the third parameter
-to ‘BIG’ will interpret the string in big-endian format (i.e. the most
-significant byte is the first one in the string).
-
-This function makes it easy to read data from binary data files, interpret
-numbers from sensors or efficiently read binary data from flash memory
-chips.
-
-An error will be generated if the string is the incorrect length for the
-conversion requested
-See also the function BIN2STR$
-
-
-### STRING$( nbr, ascii ) or STRING$( nbr, string$ )
-
-Returns a string 'nbr' bytes long consisting of either the first character of string$
-or the character representing the ASCII value 'ascii' which is an integer or float
-number in the range of 0 to 255.
-
-
-### TAB( number )
-
-Outputs spaces until the column indicated by 'number' has been reached on the
-console output.
+Returns the square root of the argument ´number´.
 
 
 ### TAN( number )
 
-Returns the tangent of the argument 'number' in radians.
+Returns the tangent of the argument ´number´ in radians.
 
 
 ### TEMPR( pin [,timeout])
 
 Return the temperature measured by a DS18B20 temperature sensor connected
-to 'pin' (which does not have to be configured).
+to ´pin´ (which does not have to be configured).
 
 The returned value is degrees C with a default resolution of 0.25ºC. If there is
 an error during the measurement the returned value will be 1000.
@@ -1387,17 +1431,5 @@ For the FT6336 TOUCH(X2) and TOUCH(Y2) returns the position of a second
 touch location or -1 if no second location is touched.
 
 
-### UCASE$( string$ )
-
-Returns ‘string$’ converted to uppercase characters.
-
-
-### VAL( string$ )
-
-Returns the numerical value of the ‘string$’. If 'string$' is an invalid number
-the function will return zero.
-
-This function will recognise the &H prefix for a hexadecimal number, &O for
-octal and &B for binary.
 
 

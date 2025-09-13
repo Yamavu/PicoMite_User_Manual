@@ -5,10 +5,8 @@ Note that the functions related to communications functions (I2C, 1-Wire, and SP
 
 Square brackets indicate that the parameter or characters are optional.
 
-ABS( number )
 
-Returns the absolute value of the argument 'number' (i.e. any negative sign is
-removed and a positive number is returned).
+{{#include function/abs.md}}
 
 ACOS( number )
 
