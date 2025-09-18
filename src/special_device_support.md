@@ -46,7 +46,7 @@ IR remote controls can address many different devices (VCR, TV, etc) so the prog
 
 ## Infrared Remote Control Transmitter
 <div style="float: right; margin-left: 20px;">
-  <img src="12_IR_circuit.png" alt="IR circuit example" width="250">
+  <img src="img/12_IR_circuit.png" alt="IR circuit example" width="250">
 </div>
 
 Using the IR SEND command you can transmit a 12 bit Sony infrared remote control signal. This is intended for Raspberry Pi Pico to Raspberry Pi Pico or Micromite communications but it will also work with Sony equipment that uses 12 bit codes. Note that all Sony products require that the message be sent three times with a 26 ms delay between each message.
@@ -62,8 +62,8 @@ The modulation frequency used is 38 kHz and this matches the common IR receivers
 ## Measuring Temperature
 
 <div style="float: right; margin-left: 20px;">
-  <img src="12_temp_circuit.png" alt="DS18B20 circuit example" width="250"><br>
-  <img src="12_temp_parasitic_circuit.png" alt="DS18B20 circuit example" width="250">
+  <img src="img/12_temp_circuit.png" alt="DS18B20 circuit example" width="250"><br>
+  <img src="img/12_temp_parasitic_circuit.png" alt="DS18B20 circuit example" width="250">
 </div>
 
 The TEMPR() function will get the temperature from a DS18B20 3.3V temperature sensor. This device can be purchased on eBay for about 4.7K US$5 in a variety of packages including a waterproof probe version.
@@ -92,7 +92,7 @@ The TEMPR START command can also be used to change the resolution of the measure
 ## Measuring Humidity and Temperature
 
 <div style="float: right; margin-left: 20px;">
-  <img src="12_DHT_circuit.png" alt="DHT22 circuit example" width="250"><br>
+  <img src="img/12_DHT_circuit.png" alt="DHT22 circuit example" width="250"><br>
 </div>
 
 The HUMID command will read the humidity and temperature from a DHT22 humidity/temperature sensor. This device is also sold as the RHT03 or AM2302 but all are compatible and can be purchased on eBay for under $5. The DHT11 sensor is also supported.
@@ -153,7 +153,7 @@ The command OPTION RTC AUTO ENABLE can also be used to set an automatic update o
 ## Measuring Distance
 
 <div style="float: right; margin-left: 20px;">
-  <img src="12_HC-SR04.jpg" alt="DHT22 circuit example" width="250"><br>
+  <img src="img/12_HC-SR04.jpg" alt="DHT22 circuit example" width="250"><br>
 </div>
 
 Using a HC-SR04 ultrasonic sensor and the DISTANCE() function you can measure the distance to a target.
@@ -178,7 +178,7 @@ Note that the maximum voltage on all the Raspberry Pi Pico’s I/O pins is 3.3V.
 ## LCD Display
 
 <div style="float: right; margin-left: 20px;">
-  <img src="12_KS0066.jpg" alt="DHT22 circuit example" width="350"><br>
+  <img src="img/12_KS0066.jpg" alt="DHT22 circuit example" width="350"><br>
 </div>
 
 
@@ -193,7 +193,7 @@ To setup the display you use the DEVICE LCD INIT command `LCD INIT d4, d5, d6, d
 Any I/O pins on the Raspberry Pi Pico can be used and you do not have to set them up beforehand (the LCD command automatically does that for you). The following shows a typical set up.
 
 <div style="clear: both; margin: .5em 15%;">
-<img src="12_LCD_circuit.png" alt="Raspberry Pi Pico pinout" style="width:100%">
+<img src="img/12_LCD_circuit.png" alt="Raspberry Pi Pico pinout" style="width:100%">
 </div>
 
 To display characters on the module you use the LCD command
@@ -227,7 +227,7 @@ Where `var` is a variable that will be updated with the key code and `int` is th
 Any I/O pins on the Raspberry Pi Pico can be used and you do not have to set them up beforehand, the KEYPAD command will automatically do that for you.
 
 <div style="clear: both; margin: .5em 25%;">
-<img src="12_Keypad_circuit.png" alt="Raspberry Pi Pico pinout" style="width:100%">
+<img src="img/12_Keypad_circuit.png" alt="Raspberry Pi Pico pinout" style="width:100%">
 </div>
 
 The detection and decoding of key presses is done in the background and the program will continue after this command without interruption. When a key press is detected the value of the variable var will be set to the number representing the key (this is the number inside the circles in the diagram above). Then the interrupt will be called.
