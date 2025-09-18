@@ -1,29 +1,23 @@
 # Long Strings
 
-Long Strings are a set of commands and functions that allow MMBasic to manipulate strings of unlimited
-length and are particularly useful when dealing with data sent via WiFi and the Internet. Standard strings in
-MMBasic are limited to a maximum length of 255 characters. Long strings duplicate these functions but will
-work with strings of any length limited only by the amount of available RAM.
+Long Strings are a set of commands and functions that allow MMBasic to manipulate strings of unlimited length and are particularly useful when dealing with data sent via WiFi and the Internet. Standard strings in MMBasic are limited to a maximum length of 255 characters. Long strings duplicate these functions but will work with strings of any length limited only by the amount of available RAM.
 
-Long String Variables
-Variables for holding long strings must be defined as integer arrays. The long string routines do not keep
-numbers in these arrays but just use them as blocks of memory for holding long strings.
-When creating these arrays they should be defined as single dimensioned integer arrays with the number of
-elements set to the number of characters required for the maximum string length divided by eight. The reason
-for dividing by eight is that each integer in an MMBasic array occupies eight bytes.
-The following is an example of declaring three long string variables which will be used to hold up to 2048
-characters in each:
+## Long String Variables
+
+Variables for holding long strings must be defined as integer arrays. The long string routines do not keep numbers in these arrays but just use them as blocks of memory for holding long strings. When creating these arrays they should be defined as single dimensioned integer arrays with the number of elements set to the number of characters required for the maximum string length divided by eight. The reason for dividing by eight is that each integer in an MMBasic array occupies eight bytes. The following is an example of declaring three long string variables which will be used to hold up to 2048 characters in each:
+
+```basic
 CONST MaxLen = 2048
 DIM INTEGER Str1(MaxLen/8), Str2(MaxLen/8), Str3(MaxLen/8)
+```
 
-These will contain empty strings when created (ie, their length will be zero). When these variables are passed
-to the long string functions they should be entered as the variable name followed by empty brackets. For
-example:
-LONGSTRING COPY Str1(), Str2()
+These will contain empty strings when created (ie, their length will be zero). When these variables are passed to the long string functions they should be entered as the variable name followed by empty brackets. For example `LONGSTRING COPY Str1(), Str2()`
 
 Long string variables can be passed as arguments to user defined subroutines and functions. For example:
+
+```basic
 Sub MySub longarg() AS INTEGER
-PRINT "Long string length is" LLEN(longarg())
+  PRINT "Long string length is" LLEN(longarg())
 END SUB
 ```
 
