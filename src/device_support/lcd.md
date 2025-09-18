@@ -4,6 +4,7 @@
   <img src="../img/12_KS0066.jpg" alt="DHT22 circuit example" width="350"><br>
 </div>
 
+*for system display panels see the chapter on [Display Panels](../display_panels.md)*
 
 The LCD command will display text on a standard LCD module with the minimum of programming effort.
 
