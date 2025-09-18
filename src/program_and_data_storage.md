@@ -125,7 +125,7 @@ the command `OPTION LIST` to list all options that have been set including the c
 The basic circuit diagram for connecting the SD Card connector using these pin allocations is illustrated below.
 
 <div style="float: left; margin-right: 20px;">
-  <img src="11_sd_pinout.jpg" alt="PicoMite to SD Card" width="450">
+  <img src="img/11_sd_pinout.jpg" alt="PicoMite to SD Card" width="450">
 </div>
 
 Raspberry Pi Pico Pins | | SD Card Pins 
@@ -150,7 +150,7 @@ Care must be taken when the SPI port is shared between a number of devices (SD C
 ## Combined Chip Select
 
 <div style="clear: both; margin: .5em 2em;">
-  <img src="11_combined_chip_select.jpg" alt="Circuit for Combined Chip Select" style="width:100%">
+  <img src="img/11_combined_chip_select.jpg" alt="Circuit for Combined Chip Select" style="width:100%">
 </div>
 
 The chip select pin used for the SD card and the touch controller on an LCD panel can be combined by using the

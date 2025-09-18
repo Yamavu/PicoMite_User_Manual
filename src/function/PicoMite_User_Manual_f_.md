@@ -75,18 +75,20 @@ automatically according to the number.
 
 `c$` is a string and if specified the first character of this string will be used as
 the padding character instead of a space (see the `m` argument). Examples:
-          STR$(123.456)              will return "123.456"
-          STR$(-123.456)             will return "-123.456"
-          STR$(123.456, 1)           will return "123.456"
-          STR$(123.456, -1)          will return "+123.456"
-          STR$(123.456, 6)           will return "   123.456"
-          STR$(123.456, -6)          will return " +123.456"
-          STR$(-123.456, 6)          will return " -123.456"
-          STR$(-123.456, 6, 5)       will return " -123.45600"
-          STR$(-123.456, 6, -5)      will return "    -1.23456e+02"
-          STR$(53, 6)                will return "    53"
-          STR$(53, 6, 2)             will return "    53.00"
-          STR$(53, 6, 2, "*")        will return "****53.00"
+Command                    | result
+:-:vvvv                    | :-:
+STR$(123.456)              | "123.456"
+STR$(-123.456)             | "-123.456"
+STR$(123.456, 1)           | "123.456"
+STR$(123.456, -1)          | "+123.456"
+STR$(123.456, 6)           | "   123.456"
+STR$(123.456, -6)          | " +123.456"
+STR$(-123.456, 6)          | " -123.456"
+STR$(-123.456, 6, 5)       | " -123.45600"
+STR$(-123.456, 6, -5)      | "    -1.23456e+02"
+STR$(53, 6)                | "    53"
+STR$(53, 6, 2)             | "    53.00"
+STR$(53, 6, 2, "*")        | "****53.00"
 
 
 ### UCASE$( string$ )

@@ -164,7 +164,7 @@ Initialises a OLED display using the SSD1306 controller with an I2C interface. T
 ## 8-bit Parallel LCD Panels
 
 <div style="float: right; margin-left: 20px;">
-  <img src="15_8bit_panel_SSD1963.jpg" alt="SSD1963" width="350">
+  <img src="img/15_8bit_panel_SSD1963.jpg" alt="SSD1963" width="350">
   <div>SSD1963 controller</div>
 </div>
 
@@ -176,7 +176,7 @@ Because they use a parallel interface data can be transferred much faster than a
 <br style="clear:both" />
 
 <div style="float: right; margin-left: 20px;">
-  <img src="15_8080_interface.jpg" alt="SSD1963" width="200">
+  <img src="img/15_8080_interface.jpg" alt="SSD1963" width="200">
   <div>8080 interface</div>
 </div>
 The SSD1963 displays in particular are also much larger, have more pixels and are brighter. MMBasic can drive some of them using 24-bit true colour for a full colour rendition (16 million colours).
@@ -461,7 +461,7 @@ Typical panels can be found on ebay.com and similar sites by searching for the k
 The panel should be connected to the Raspberry Pi Pico as illustrated:
 
 <div style="clear: both; margin: .5em 5em;">
-  <img src="16_spi_lcd.jpg" alt="ILI9341 pinout" style="width:100%">
+  <img src="img/16_spi_lcd.jpg" alt="ILI9341 pinout" style="width:100%">
 </div>
 
 To match the above connections the following configuration commands should be entered, one by one at the command prompt:

@@ -73,7 +73,7 @@ Congratulations. You have just written and run your first program on the PicoMit
 ## Flashing a LED
 
 <div style="float: right; margin-left: 20px;">
-  <img src="03_led.jpg" alt="GP21 - 470 ohms - LED >| - GND" width="250">
+  <img src="img/03_led.jpg" alt="GP21 - 470 ohms - LED >| - GND" width="250">
 </div>
 
 Connect a LED and a 470&#8486; resistor to pin *GP21* (marked on the underside of the board) and a ground pin as shown in the diagram on the right. 

@@ -149,7 +149,7 @@ Font<br>Number| Size<br>(width x height) | Character <br> Set | Description
 8 | 4x6 | All 95 ASCII characters | An even smaller font.
 
 <div style="float: right; margin-left: 20px;">
-  <img src="16_font.jpg" alt="Standard font ( font #1 )." width="450">
+  <img src="img/16_font.jpg" alt="Standard font ( font #1 )." width="450">
 </div>
 
 Note that font 3 has a 16 x 16 pixel size when used with VGA video output but a 16 x 24 size for HDMI and LCD panels.
@@ -454,5 +454,5 @@ other than `-1`. In that case the program will terminate.
 The screen display should look like this (the font used in this illustration is different):
 
 <div style="margin: .5em 5em;">
-  <img src="16_time_date.jpg" alt="output of the graphics example, time and date shown" width="350">
+  <img src="img/16_time_date.jpg" alt="output of the graphics example, time and date shown" width="350">
 </div>

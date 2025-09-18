@@ -42,7 +42,7 @@ distortion) so the following filter is recommended. This removes most of the car
 peak to peak (0.6V RMS) with reasonable fidelity up to 8KHz (more than enough for most amplified speakers):
 
 <div style="clear: both; margin: .5em 2em;">
-  <img src="13_filter.jpg" alt="Raspberry Pi Pico pinout" style="width:100%">
+  <img src="img/13_filter.jpg" alt="Raspberry Pi Pico pinout" style="width:100%">
 </div>
 
 Below is a superior circuit producing quality audio with an insignificant amount of the carrier remaining. This
@@ -50,7 +50,7 @@ is suitable for a more sophisticated HiFi amplifier/speaker configuration. The o
 15KHz at about 3V peak to peak (1V RMS) at 1KHz.
 
 <div style="clear: both; margin: .5em 2em;">
-  <img src="13_filter2.jpg" alt="Raspberry Pi Pico pinout" style="width:100%">
+  <img src="img/13_filter2.jpg" alt="Raspberry Pi Pico pinout" style="width:100%">
 </div>
 
 Both circuits are designed to feed an amplifier (not directly drive a headphone or speaker) and rely on capacitor

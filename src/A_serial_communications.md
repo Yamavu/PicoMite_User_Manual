@@ -1,5 +1,4 @@
 # Appendix A – Serial Communications
-Appendix A – Serial Communications
 Serial Communications
 Two serial interfaces are available for asynchronous serial communications. They are labelled COM1: and
 COM2:.

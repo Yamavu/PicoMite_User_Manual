@@ -2,7 +2,7 @@
 
 
 <div style="float: left; margin-right: 20px;">
-  <img src="01_pico.jpg" alt="A description of the image" width="250">
+  <img src="img/01_pico.jpg" alt="A description of the image" width="250">
 </div>
 The PicoMite is an operating firmware for all versions of the Raspberry Pi Pico including the Pico, Pico 2, Pico W and Pico 2 W.
 

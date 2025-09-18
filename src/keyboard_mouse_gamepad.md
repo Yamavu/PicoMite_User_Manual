@@ -24,7 +24,7 @@ sees signal voltages in the range 0 to 3.3V while the keyboard sees voltages 0 t
 There are many ways that this can be accomplished but the following circuit is a simple and low cost solution:
 
 <div style="clear: both; margin: .5em 2em;">
-  <img src="11_pico_ps2_pinout.jpg" alt="Raspberry Pi Pico - PS2 pinout" style="width:100%">
+  <img src="img/11_pico_ps2_pinout.jpg" alt="Raspberry Pi Pico - PS2 pinout" style="width:100%">
 </div>
 
 The recommended MOSFET is a TN0702N3-G or ZVNL110A however the commonly available 2N7000 has
@@ -35,7 +35,7 @@ After it is connected the keyboard must be enabled with the OPTION KEYBOARD comm
 ## PS2 Keyboard on the Raspberry Pi Pico 2 (RP2350)
 
 <div style="clear: both; margin: .5em 2em;">
-  <img src="11_pico_ps2_pinout.jpg" alt="Raspberry Pi Pico - PS2 pinout" style="width:100%">
+  <img src="img/11_pico_ps2_pinout.jpg" alt="Raspberry Pi Pico - PS2 pinout" style="width:100%">
 </div>
 
 
@@ -109,7 +109,7 @@ will allocate it to channel 2 by default– there is nothing extra required.
 
 ## USB Gamepad
 <div style="float: right; margin-left: 20px;">
-  <img src="11_gamepad.jpg" alt="SNES-like USB-controller" width="250">
+  <img src="img/11_gamepad.jpg" alt="SNES-like USB-controller" width="250">
 </div>
 
 One or more PS3 or PS4 controllers or gamepad such as a Super Nintendo

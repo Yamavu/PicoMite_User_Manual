@@ -232,7 +232,7 @@ ENDIF
 this can be extended to as many pages as you need.
 
 Sending an Image
-You can insert an image in your web page using the following html code <img src="pix.jpg"/>. When
+You can insert an image in your web page using the following html code <img src="img/pix.jpg"/>. When
 the remote browser reads this it will send the following request GET /pix.jpg HTTP. You can then send the
 requested image using the code shown in bold:
 s$ = LGetStr$(buff%(), p% + 4, t% - p% - 5)
@@ -240,8 +240,8 @@ IF s$ = "/" THEN
 WEB TRANSMIT PAGE a%,"index.html"
 ELSE IF s$ = "/page2.html" THEN
 WEB TRANSMIT PAGE a%,"page2.html"
-ELSE IF s$ = "/pix.jpg" THEN
-WEB TRANSMIT FILE a%,"pix.jpg","image/jpeg"
+ELSE IF s$ = "img//pix.jpg" THEN
+WEB TRANSMIT FILE a%,"img/pix.jpg","image/jpeg"
 ENDIF
 
 Note that pix.jpg must be a jpeg image residing in the default directory of the internal flash filesystem or SD
@@ -257,8 +257,8 @@ IF s$ = "/" THEN
 WEB TRANSMIT PAGE a%,"index.html"
 ELSE IF s$ = "/page2.html" THEN
 WEB TRANSMIT PAGE a%,"page2.html"
-ELSE IF s$ = "/pix.jpg" THEN
-WEB TRANSMIT FILE a%,"pix.jpg","image/jpeg"
+ELSE IF s$ = "img//pix.jpg" THEN
+WEB TRANSMIT FILE a%,"img/pix.jpg","image/jpeg"
 ELSE
 WEB TRANSMIT CODE a%, 404
 ENDIF

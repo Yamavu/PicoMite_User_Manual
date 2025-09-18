@@ -3,7 +3,7 @@
 This diagram shows the possible uses within MMBasic for each I/O pin on the Raspberry Pi Pico:
 
 <div style="clear: both; margin: .5em;">
-  <img src="04_pinout.svg" alt="RP2040 pinout" style="width:100%">
+  <img src="img/04_pinout.svg" alt="RP2040 pinout" style="width:100%">
 </div>
 
 For versions with VGA video output six pins (GP16 to GP21) are reserved for that function. Similarly HDMI
@@ -156,7 +156,7 @@ The maximum total I/O current load for the entire chip is 50mA.
 ## Power Supply
 
 <div style="float: right; margin-left: 20px;">
-  <img src="04_power.jpg" alt="RP2040 power supply" width="350">
+  <img src="img/04_power.jpg" alt="RP2040 power supply" width="350">
 </div>
 
 The Raspberry Pi Pico has a flexible power system.
