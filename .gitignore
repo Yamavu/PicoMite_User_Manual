@@ -11,4 +11,4 @@ src/options/*.md
 Embedded Fonts
 Extra Documentation/
 User Display Driver.txt
-src/img/font1/*/*
+src/fonts/font1/*/*

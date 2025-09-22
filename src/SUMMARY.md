@@ -50,6 +50,8 @@
   - [OV7670 Camera](./device_support/camera_OV7670.md)
 - [Display Panels](display_panels.md)
 - [Graphics Functions](graphics_functions.md)
+  - [Fonts](./fonts.md)
+    - [Font 1](./fonts/font1.md)
 - [WiFi and Internet Functions](wifi_and_internet_functions.md)
 - [Long Strings](long_strings.md)
 - [MMBasic Characteristics](mmbasic_characteristics.md)
