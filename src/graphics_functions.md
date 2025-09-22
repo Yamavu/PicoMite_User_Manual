@@ -5,112 +5,6 @@ These commands and functions operate on attached LCD panels and VGA/HDMI video o
 See the file: Graphics in the PicoMite.pdf
 
 
-## Supported Hardware
-
-
-### LCD Panels
-
-The resolution and number of colours supported by an LCD panel is determined by the panel itself and the
-driver – see the chapter Display Panels for the details.
-
-
-### VGA Video
-
-There are a number of modes which can be selected using the MODE command:
-
-
-#### OPTION RESOLUTION 640x480
-
-MODE | RESOLUTION | COLOUR | BUFFER
-:-: | :-: | :-: | :- 
-MODE 1 | 640x480 | monochrome<br>with RGB121 tiles | optional layer buffer
-MODE 2 | 320x240 | 4-bit colour | optional layer buffer (RP2350 only) <br>2<sup>nd</sup> optional layer buffer
-MODE 3 | 640x480 | 4-bit colour | optional layer buffer (RP2350 only)
-
-
-#### OPTION RESOLUTION 720x400
-
-MODE | RESOLUTION | COLOUR | BUFFER
-:-: | :-: | :-: | :- 
-MODE 1 | 720x400 | monochrome <br>with RGB121 tiles | optional layer buffer
-MODE 2 | 360x200 | 4-bit colour |  | optional layer buffer (RP2350 only) <br>2<sup>nd</sup> optional layer buffer
-MODE 3 | 720x400 | 4-bit colour |  | optional layer buffer (RP2350 only)
-
-
-#### OPTION RESOLUTION 800x600 (RP2350 only)
-
-MODE | RESOLUTION | COLOUR | BUFFER
-:-: | :-: | :-: | :- 
-MODE 1 | 800x600 | monochrome <br>with RGB121 tiles | optional layer buffer
-MODE 2 | 400x300  | 4-bit colour | two optional layers
-MODE 3 | 800x600  | 4-bit colour | optional layer buffer
-
-
-#### OPTION RESOLUTION 848x480 (RP2350 only)
-
-MODE | RESOLUTION | COLOUR  | BUFFER
-:-: | :-: | :-: | :- 
-MODE 1 | 848x480 | monochrome <br>with RGB121 tiles | optional layer buffer
-MODE 2 | 424x240  | 4-bit colour |  two optional layers
-MODE 3 | 848x480 | 4-bit colour | optional layer buffer
-
-
-### HDMI Video (RP2350 only)
-
-Each HDMI resolution can operate in a number of modes which are set using the `MODE` command:
-
-#### OPTION RESOLUTION 640x480
-
-MODE | RESOLUTION-COLOUR  | BUFFER
-:-: | :- | :- 
-MODE 1 | 640x480x2-colours with RGB555 | optional layer buffer
-MODE 2 | 320x240x16colours <br>and colour mapping to RGB555 palette | two optional layers
-MODE 3 | 640x480x16 colours <br> and colour mapping to RGB555 palette | optional layer buffer
-MODE 4 | 320x240x32768 colours | optional layer buffer
-MODE 5 | 320x240x256 colours <br> and colour mapping to RGB555 palette | optional layer buffer
-
-#### OPTION RESOLUTION 720x400
-
-MODE | RESOLUTION-COLOUR  | BUFFER
-:-: | :- | :- 
-MODE 1 | 720x400 monochrome <br>with RGB555 tiles| optional layer buffer
-MODE 2 | 360x200 4-bit colour and colour mapping to RGB555 palette| two optional layers
-MODE 3 | 720x400 4-bit colour and colour mapping to RGB555 palette| optional layer buffer
-MODE 4 | 360x200x32768 colours| optional layer buffer
-MODE 5 | 360x200x256 colours and colour mapping to RGB555 palette| optional layer buffer
-
-
-#### OPTION RESOLUTION 800x600 (RP2350 only)
-
-MODE 1 | 800x600 monochrome with RGB332 tiles| optional layer buffer
-MODE 2 | 400x300 4-bit colour and colour mapping to RGB332 palette| optional layer buffer
-MODE 3 | 800x600 4-bit colour and colour mapping to RGB332 palette| optional layer buffer
-MODE 5 | 400x300x256 colours| optional layer buffer
-
-
-#### OPTION RESOLUTION 848x480 (RP2350 only)
-
-MODE 1 | 848x480 monochrome with RGB332 tiles| optional layer buffer
-MODE 2 | 424x240 4-bit colour and colour mapping to RGB332 palette| optional layer buffer
-MODE 3 | 848x480 4-bit colour and colour mapping to RGB332 palette| optional layer buffer
-MODE 5 | 424x240x256 colours| optional layer buffer
-
-#### OPTION RESOLUTION 1280x720
-
-MODE 1 | 1280x720x2-colours with RGB332| optional layer buffer
-MODE 2 | 320x180x16colours and colour mapping to RGB332 palette| optional layer buffer
-MODE 3 | 640x360x16 colours and colour mapping to RGB332 palette| optional layer buffer
-MODE 5 | 320x180x256 colours| optional layer buffer
-
-
-#### OPTION RESOLUTION 1024x768
-
-MODE 1 | 1024x768x2-colours with RGB332tiles| optional layer buffer
-MODE 2 | 256x192x16colours and colour mapping to RGB332 palette| optional layer buffer
-MODE 3 | 512x384x16 colours and colour mapping to RGB332 palette| optional layer buffer
-MODE 5 | 256x192x256 colours| optional layer buffer
-
-
 ## Colours
 
 Colour is specified as a true colour 24 bit number where the top eight bits represent the intensity of the red colour, the middle eight bits the green intensity and the bottom eight bits the blue. The easiest way to generate this number is with the RGB() function which has the form:
@@ -131,6 +25,7 @@ The COLOUR command takes the format: `COLOUR foreground-colour, background-colou
 
 ## Fonts
 
+also see [the chapter on fonts](./fonts.md) for detailed depictions
 
 ### Built-in Fonts
 
@@ -138,7 +33,7 @@ There are eight built in fonts. These are:
 
 Font<br>Number| Size<br>(width x height) | Character <br> Set | Description
 :-: | :-: | :-: | :-  
-1 | 8 x 12 | All 95 ASCII characters<br>plus 7F to FF (hex) | Standard font (default on start-up).
+[1](./fonts/font1.md) | 8 x 12 | All 95 ASCII characters<br>plus 7F to FF (hex) | Standard font (default on start-up).
 2 | 12 x 20 | All 95 ASCII characters | Medium sized font.
 3 | 16 x 16 | All 95 ASCII characters | A large font for VGA versions
 3 | 16 x 24 | All 95 ASCII characters | A large font for HDMI versions and LCD panels.
@@ -287,16 +182,15 @@ The basic drawing commands are:
 
 ### Rotated Text
 
-As described above the alignment of the text in the `TEXT` command can be specified by using one or two
-characters in a string expression for the third parameter of the command. In this string you can also specify a third character to indicate the rotation of the text.
+As described above the alignment of the text in the `TEXT` command can be specified by using one or two characters in a string expression for the third parameter of the command. In this string you can also specify a 3ʳᵈ character to indicate the rotation of the text.
 
-This character can be one of:
-
-- `N` for normal orientation
-- `V` for vertical text with each character under the previous running from top to bottom.
-- `I` the text will be inverted (i.e. upside down)
-- `U` the text will be rotated counter clockwise by 90º
-- `D` the text will be rotated clockwise by 90º
+3ʳᵈ char | Meaning | Description
+:-: | :-: | :-
+`N` | normal |  normal orientation (*default*)
+`V` | vertical | for vertical text with each character under the previous running from top to bottom.
+`I` | inverted | the text will be inverted (i.e. upside down)
+`U` | up | the text will be rotated counter clockwise by 90º
+`D` | down | the text will be rotated clockwise by 90º
 
 As an example, the following will display the text "LCD Display" vertically down the left hand margin of the display panel and centred vertically:
 
@@ -456,3 +350,109 @@ The screen display should look like this (the font used in this illustration is 
 <div style="margin: .5em 5em;">
   <img src="img/16_time_date.jpg" alt="output of the graphics example, time and date shown" width="350">
 </div>
+
+
+## Supported Hardware
+
+
+### LCD Panels
+
+The resolution and number of colours supported by an LCD panel is determined by the panel itself and the
+driver – see the chapter [Display Panels](./display_panels.md) for the details.
+
+
+### VGA Video
+
+There are a number of modes which can be selected using the MODE command:
+
+
+#### OPTION RESOLUTION 640x480
+
+MODE | RESOLUTION | COLOUR | BUFFER
+:-: | :-: | :-: | :- 
+MODE 1 | 640x480 | monochrome<br>with RGB121 tiles | optional layer buffer
+MODE 2 | 320x240 | 4-bit colour | optional layer buffer (RP2350 only) <br>2<sup>nd</sup> optional layer buffer
+MODE 3 | 640x480 | 4-bit colour | optional layer buffer (RP2350 only)
+
+
+#### OPTION RESOLUTION 720x400
+
+MODE | RESOLUTION | COLOUR | BUFFER
+:-: | :-: | :-: | :- 
+MODE 1 | 720x400 | monochrome <br>with RGB121 tiles | optional layer buffer
+MODE 2 | 360x200 | 4-bit colour |  | optional layer buffer (RP2350 only) <br>2<sup>nd</sup> optional layer buffer
+MODE 3 | 720x400 | 4-bit colour |  | optional layer buffer (RP2350 only)
+
+
+#### OPTION RESOLUTION 800x600 (RP2350 only)
+
+MODE | RESOLUTION | COLOUR | BUFFER
+:-: | :-: | :-: | :- 
+MODE 1 | 800x600 | monochrome <br>with RGB121 tiles | optional layer buffer
+MODE 2 | 400x300  | 4-bit colour | two optional layers
+MODE 3 | 800x600  | 4-bit colour | optional layer buffer
+
+
+#### OPTION RESOLUTION 848x480 (RP2350 only)
+
+MODE | RESOLUTION | COLOUR  | BUFFER
+:-: | :-: | :-: | :- 
+MODE 1 | 848x480 | monochrome <br>with RGB121 tiles | optional layer buffer
+MODE 2 | 424x240  | 4-bit colour |  two optional layers
+MODE 3 | 848x480 | 4-bit colour | optional layer buffer
+
+
+### HDMI Video (RP2350 only)
+
+Each HDMI resolution can operate in a number of modes which are set using the `MODE` command:
+
+#### OPTION RESOLUTION 640x480
+
+MODE | RESOLUTION-COLOUR  | BUFFER
+:-: | :- | :- 
+MODE 1 | 640x480x2-colours with RGB555 | optional layer buffer
+MODE 2 | 320x240x16colours <br>and colour mapping to RGB555 palette | two optional layers
+MODE 3 | 640x480x16 colours <br> and colour mapping to RGB555 palette | optional layer buffer
+MODE 4 | 320x240x32768 colours | optional layer buffer
+MODE 5 | 320x240x256 colours <br> and colour mapping to RGB555 palette | optional layer buffer
+
+#### OPTION RESOLUTION 720x400
+
+MODE | RESOLUTION-COLOUR  | BUFFER
+:-: | :- | :- 
+MODE 1 | 720x400 monochrome <br>with RGB555 tiles| optional layer buffer
+MODE 2 | 360x200 4-bit colour and colour mapping to RGB555 palette| two optional layers
+MODE 3 | 720x400 4-bit colour and colour mapping to RGB555 palette| optional layer buffer
+MODE 4 | 360x200x32768 colours| optional layer buffer
+MODE 5 | 360x200x256 colours and colour mapping to RGB555 palette| optional layer buffer
+
+
+#### OPTION RESOLUTION 800x600 (RP2350 only)
+
+MODE 1 | 800x600 monochrome with RGB332 tiles| optional layer buffer
+MODE 2 | 400x300 4-bit colour and colour mapping to RGB332 palette| optional layer buffer
+MODE 3 | 800x600 4-bit colour and colour mapping to RGB332 palette| optional layer buffer
+MODE 5 | 400x300x256 colours| optional layer buffer
+
+
+#### OPTION RESOLUTION 848x480 (RP2350 only)
+
+MODE 1 | 848x480 monochrome with RGB332 tiles| optional layer buffer
+MODE 2 | 424x240 4-bit colour and colour mapping to RGB332 palette| optional layer buffer
+MODE 3 | 848x480 4-bit colour and colour mapping to RGB332 palette| optional layer buffer
+MODE 5 | 424x240x256 colours| optional layer buffer
+
+#### OPTION RESOLUTION 1280x720
+
+MODE 1 | 1280x720x2-colours with RGB332| optional layer buffer
+MODE 2 | 320x180x16colours and colour mapping to RGB332 palette| optional layer buffer
+MODE 3 | 640x360x16 colours and colour mapping to RGB332 palette| optional layer buffer
+MODE 5 | 320x180x256 colours| optional layer buffer
+
+
+#### OPTION RESOLUTION 1024x768
+
+MODE 1 | 1024x768x2-colours with RGB332tiles| optional layer buffer
+MODE 2 | 256x192x16colours and colour mapping to RGB332 palette| optional layer buffer
+MODE 3 | 512x384x16 colours and colour mapping to RGB332 palette| optional layer buffer
+MODE 5 | 256x192x256 colours| optional layer buffer
