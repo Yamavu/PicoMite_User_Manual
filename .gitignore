@@ -12,3 +12,4 @@ Embedded Fonts
 Extra Documentation/
 User Display Driver.txt
 src/fonts/font1/*/*
+*.bmp
