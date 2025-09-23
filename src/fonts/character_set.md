@@ -161,13 +161,13 @@ Fonts 1 and 4 have an extended character set. The symbols are not from the ASCII
 
 Int | Font 1 | Unicode<br>Codepoint | Description
 :-: | :-     | :-:    | :-
-128 | ![☑](font1/80.png) |  | box 
+128 | ![☐](font1/80.png) | U+2610 | BALLOT BOX 
 129 | ![☑](font1/81.png) | U+2611 | Ballot Box With Check
 130 | ![☒](font1/82.png) | U+2612 | Ballot Box With X
-131 | ![&nbsp;](font1/83.png) |  | box dot
-132 | ![&nbsp;](font1/84.png) |  | box dash
-133 | ![&nbsp;](font1/85.png) |  | box exclamation
-134 | ![&nbsp;](font1/86.png) |  | box questionmark
+131 | ![⊡](font1/83.png) | U+22A1 | SQUARED DOT OPERATOR
+132 | ![⊟](font1/84.png) | U+229F | SQUARED MINUS
+133 | ![&nbsp;](font1/85.png) |  | Ballot Box With Exclamation Mark
+134 | ![&nbsp;](font1/86.png) |  | Ballot Box With Question Mark
 135 | ![☻](font1/87.png) | U+263B | BLACK SMILING FACE
 136 | ![☺](font1/88.png) | U+263A | WHITE SMILING FACE
 137 | ![♦](font1/89.png) | U+2666 | BLACK DIAMOND SUIT
