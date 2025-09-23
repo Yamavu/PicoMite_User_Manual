@@ -51,6 +51,7 @@
 - [Display Panels](display_panels.md)
 - [Graphics Functions](graphics_functions.md)
   - [Fonts](./fonts.md)
+    - [Character Set](./fonts/character_set.md)
     - [Font 1](./fonts/font1.md)
     - [Font 2](./fonts/font2.md)
     - [Font 3](./fonts/font3.md)
