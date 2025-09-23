@@ -118,7 +118,7 @@ Int | HEX | Symbol |  Description                    | Font1
 91  | 5B |	[   |  Opening bracket                         |  ![\[](font1/5B.png) 
 92  | 5C |	\   |  Backslash                               |  ![\\](font1/5C.png) 
 93  | 5D |	]   |  Closing bracket                         |  ![\]](font1/5D.png) 
-94  | 5E |	^   |  Caret - circumflex                      |  ![^](font1/5E.png) 
+94  | 5E |	\^   |  Caret - circumflex                      |  ![\^](font1/5E.png) 
 95  | 5F |	_   |  Underscore                              |  ![_](font1/5F.png)
 96  | 60 |	`   |  Grave accent                            |  ![°](font1/60.png) 
 97  | 61 |	a   |  Lowercase a                             |  ![a](font1/61.png) 
