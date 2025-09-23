@@ -35,8 +35,7 @@ Font<br>Number| Size<br>(width x height) | Character <br> Set | Description
 :-: | :-: | :-: | :-  
 [1](./fonts/font1.md) | 8 x 12 | All 95 ASCII characters<br>plus 7F to FF (hex) | Standard font (default on start-up).
 [2](./fonts/font2.md) | 12 x 20 | All 95 ASCII characters | Medium sized font.
-[3](./fonts/font3.md) | 16 x 16 | All 95 ASCII characters | A large font for VGA versions
-[3](./fonts/font3.md) | 16 x 24 | All 95 ASCII characters | A large font for HDMI versions and LCD panels.
+[3](./fonts/font3.md) | 16 x 16 (VGA) <br> 16 x 24  (HDMI, LCD)| All 95 ASCII characters | A large font
 [4](./fonts/font4.md) | 10x16 | All 95 ASCII characters <br> plus 7F to FF (hex) | A font with extended graphic characters. <br>Suitable for high resolution displays.
 [5](./fonts/font5.md) | 24 x 32 | All 95 ASCII characters | Extra large font, very clear.
 [6](./fonts/font6.md) | 32 x 50 | 0 to 9 <br>+ some symbols | Numbers plus decimal point, positive,<br> negative, equals, degree and colon symbols. <br> Very clear.
