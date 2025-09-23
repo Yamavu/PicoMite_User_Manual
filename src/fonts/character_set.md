@@ -148,10 +148,10 @@ Int | HEX | Symbol |  Description                    | Font1
 121  | 79 |	y   |  Lowercase y                             |  ![y](font1/79.png) 
 122  | 7A |	z   |  Lowercase z                             |  ![z](font1/7A.png) 
 123  | 7B |	{   |  Opening brace                           |  ![{](font1/7B.png) 
-124  | 7C |	|   |  Vertical bar                            |  ![\|](font1/7C.png) 
+124  | 7C |	\|  |  Vertical bar                            |  ![ \| ](font1/7C.png) 
 125  | 7D |	}   |  Closing brace                           |  ![}](font1/7D.png) 
 126  | 7E |	~   |  Equivalency sign - tilde                |  ![~](font1/7E.png) 
-127  | 7F |	&nbsp; | &nbsp;                                  |  ![&nbsp;](font1/7F.png)
+127  | 7F |	⌂ | HOUSE U+2302 |  ![⌂](font1/7F.png)
 
 
 
@@ -159,54 +159,53 @@ Int | HEX | Symbol |  Description                    | Font1
 
 Fonts 1 and 4 have an extended character set. The symbols are not from the ASCII standard, some are not even in Unicode (as of 2025)
 
-
-Int | Symbol | Font 1
-:-: | :-:    | :-
-128 | &nbsp; | ![&nbsp;](font1/80.png) 
-129 |        | ![&nbsp;](font1/81.png) 
-130 |        | ![&nbsp;](font1/82.png) 
-131 |        | ![&nbsp;](font1/83.png) 
-132 |        | ![&nbsp;](font1/84.png) 
-133 |        | ![&nbsp;](font1/85.png) 
-134 |        | ![&nbsp;](font1/86.png) 
-135 |        | ![&nbsp;](font1/87.png)
-136 |        | ![&nbsp;](font1/88.png) 
-137 |        | ![&nbsp;](font1/89.png) 
-138 |        | ![&nbsp;](font1/8A.png) 
-139 |        | ![&nbsp;](font1/8B.png) 
-140 |        | ![&nbsp;](font1/8C.png) 
-141 |        | ![&nbsp;](font1/8D.png) 
-142 |        | ![&nbsp;](font1/8E.png) 
-143 |        | ![&nbsp;](font1/8F.png)
-144 |        | ![&nbsp;](font1/90.png) 
-145 |        | ![&nbsp;](font1/91.png) 
-146 |        | ![&nbsp;](font1/92.png) 
-147 |        | ![&nbsp;](font1/93.png) 
-148 |        | ![&nbsp;](font1/94.png) 
-149 |        | ![&nbsp;](font1/95.png) 
-150 |        | ![&nbsp;](font1/96.png) 
-151 |        | ![&nbsp;](font1/97.png)
-152 |        | ![&nbsp;](font1/98.png) 
-153 |        | ![&nbsp;](font1/99.png) 
-154 |        | ![&nbsp;](font1/9A.png) 
-155 |        | ![&nbsp;](font1/9B.png) 
-156 |        | ![&nbsp;](font1/9C.png) 
-157 |        | ![&nbsp;](font1/9D.png) 
-158 |        | ![&nbsp;](font1/9E.png) 
-159 |        | ![&nbsp;](font1/9F.png)
-160 |        | ![&nbsp;](font1/A0.png) 
-161 |        | ![&nbsp;](font1/A1.png) 
-162 |        | ![&nbsp;](font1/A2.png) 
-163 |        | ![&nbsp;](font1/A3.png) 
-164 |        | ![&nbsp;](font1/A4.png) 
-165 |        | ![&nbsp;](font1/A5.png) 
-166 |        | ![&nbsp;](font1/A6.png) 
-167 |        | ![&nbsp;](font1/A7.png)
-168 |        | ![&nbsp;](font1/A8.png) 
-169 |        | ![&nbsp;](font1/A9.png) 
-170 |        | ![&nbsp;](font1/AA.png) 
-171 |        | ![&nbsp;](font1/AB.png) 
-172 |        | ![&nbsp;](font1/AC.png) 
+Int | Font 1 | Unicode<br>Codepoint | Description
+:-: | :-     | :-:    | :-
+128 | ![☑](font1/80.png) |  | box 
+129 | ![☑](font1/81.png) | U+2611 | Ballot Box With Check
+130 | ![☒](font1/82.png) | U+2612 | Ballot Box With X
+131 | ![&nbsp;](font1/83.png) |  | box dot
+132 | ![&nbsp;](font1/84.png) |  | box dash
+133 | ![&nbsp;](font1/85.png) |  | box exclamation
+134 | ![&nbsp;](font1/86.png) |  | box questionmark
+135 | ![☻](font1/87.png) | U+263B | BLACK SMILING FACE
+136 | ![☺](font1/88.png) | U+263A | WHITE SMILING FACE
+137 | ![♦](font1/89.png) | U+2666 | BLACK DIAMOND SUIT
+138 | ![♣](font1/8A.png) | U+2663 | BLACK CLUB SUIT
+139 | ![♠](font1/8B.png) | U+2660 | BLACK SPADE SUIT
+140 | ![♥](font1/8C.png) | U+2665 | BLACK HEART SUIT
+141 | ![◙](font1/8D.png) | U+25D9 | INVERSE WHITE CIRCLE
+142 | ![●](font1/8E.png) | U+25CF | BLACK CIRCLE
+143 | ![♪](font1/8F.png) | U+266A | EIGHTH NOTE
+144 | ![↕](font1/90.png) | U+2195 | UP DOWN ARROW
+145 | ![↔](font1/91.png) | U+2194 | LEFT RIGHT ARROW
+146 | ![↑](font1/92.png) | U+2191 | UPWARDS ARROW
+147 | ![↓](font1/93.png) | U+2193 | DOWNWARDS ARROW
+148 | ![→](font1/94.png) | U+2192 | RIGHTWARDS ARROW
+149 | ![←](font1/95.png) | U+2190 | LEFTWARDS ARROW
+150 | ![⏻](font1/96.png) | U+23FB | POWER SYMBOL
+151 | ![💡](font1/97.png) | U+1F4A1 | ELECTRIC LIGHT BULB
+152 | ![🧍](font1/98.png) | U+1F9CD | STANDING PERSON
+153 | ![](font1/99.png) |  | SD CARD
+154 | ![](font1/9A.png) |  | LED WHITE
+155 | ![](font1/9B.png) |  | LED BLACK
+156 | ![🔊](font1/9C.png) | U+1F50A | SPEAKER WITH THREE SOUND WAVES
+157 | ![¶](font1/9D.png) | U+00B6 | PILCROW SIGN
+158 | ![🗲](font1/9E.png) | U+1F5F2 | LIGHTNING MOOD
+159 | ![★](font1/9F.png) | U+2605 | BLACK STAR
+160 | ![⏸](font1/A0.png) | U+23F8 | DOUBLE VERTICAL BAR
+161 | ![⏵](font1/A1.png) | U+23F5 | BLACK MEDIUM RIGHT-POINTING TRIANGLE
+162 | ![⏹](font1/A2.png) | U+23F9 | BLACK SQUARE FOR STOP
+163 | ![🔍](font1/A3.png) | U+1F50D | LEFT-POINTING MAGNIFYING GLASS
+164 | ![€](font1/A4.png) | U+20AC | EURO SIGN
+165 | ![🏠](font1/A5.png) | U+1F3E0 | HOUSE BUILDING
+166 | ![🗑](font1/A6.png) | U+1F5D1 | WASTEBASKET
+167 | ![](font1/A7.png) |  | 
+168 | ![🖵](font1/A8.png) | U+1F5B5 | SCREEN
+169 | ![❗](font1/A9.png) | U+2757 | HEAVY EXCLAMATION MARK SYMBOL
+170 | ![🌩](font1/AA.png) | U+1F329 | CLOUD WITH LIGHTNING
+171 | ![](font1/AB.png) |  | 
+172 | ![🔑](font1/AC.png) | U+1F511 | KEY
 
 #### Borders and UI Elements
 
