@@ -10,41 +10,41 @@ Picomite uses an ASCII compatible character encoding.
 The first 32 characters in the ASCII-table are unprintable control codes and are used to control peripherals such as printers.
 
 
-Int | HEX | Symbol |  Description                    | Font1
-:-: | :-: | :-: | :-                                 | :-
-00 | 00 | `NUL` | Null character, empty, not printable   | &nbsp;
-01 | 01	| `SOH` |  Start of Heading                  | ![&nbsp;](font1/01.png) 
-02 | 02	| `STX` |  Start of Text                     | ![&nbsp;](font1/02.png) 
-03 | 03	| `ETX` |  End of Text                       | ![&nbsp;](font1/03.png) 
-04 | 04	| `EOT` |  End of Transmission               | ![&nbsp;](font1/04.png) 
-05 | 05	| `ENQ` |  Enquiry                           | ![&nbsp;](font1/05.png) 
-06 | 06	| `ACK` |  Acknowledge                       | ![&nbsp;](font1/06.png) 
-07 | 07	| `BEL` |  Bell, Alert                       | ![&nbsp;](font1/07.png)
-08 | 08	| `BS`  |  Backspace                         | ![&nbsp;](font1/08.png) 
-09 | 09	| `HT`  |  Horizontal Tab                    | ![&nbsp;](font1/09.png) 
-10 | 0A	| `LF`  |  Line Feed                         | ![&nbsp;](font1/0A.png) 
-11 | 0B	| `VT`  |  Vertical Tabulation               | ![&nbsp;](font1/0B.png) 
-12 | 0C	| `FF`  |  Form Feed                         | ![&nbsp;](font1/0C.png) 
-13 | 0D	| `CR`  |  Carriage Return                   | ![&nbsp;](font1/0D.png) 
-14 | 0E	| `SO`  |  Shift Out                         | ![&nbsp;](font1/0E.png) 
-15 | 0F	| `SI`  |  Shift In                          | ![&nbsp;](font1/0F.png)
-16 | 10	| `DLE` |  Data Link Escape                  | ![&nbsp;](font1/10.png) 
-17 | 11	| `DC1` |  Device Control One (XON)          | ![&nbsp;](font1/11.png) 
-18 | 12	| `DC2` |  Device Control Two                | ![&nbsp;](font1/12.png) 
-19 | 13	| `DC3` |  Device Control Three (XOFF)       | ![&nbsp;](font1/13.png) 
-20 | 14	| `DC4` |  Device Control Four               | ![&nbsp;](font1/14.png) 
-21 | 15	| `NAK` |  Negative Acknowledge              | ![&nbsp;](font1/15.png) 
-22 | 16	| `SYN` |  Synchronous Idle                  | ![&nbsp;](font1/16.png) 
-23 | 17	| `ETB` |  End of Transmission Block         | ![&nbsp;](font1/17.png)
-24 | 18	| `CAN` |  Cancel                            | ![&nbsp;](font1/18.png) 
-25 | 19	| `EM`  |  End of medium                     | ![&nbsp;](font1/19.png) 
-26 | 1A	| `SUB` |  Substitute                        | ![&nbsp;](font1/1A.png) 
-27 | 1B	| `ESC` |  Escape                            | ![&nbsp;](font1/1B.png) 
-28 | 1C	| `FS`  |  File Separator                    | ![&nbsp;](font1/1C.png) 
-29 | 1D	| `GS`  |  Group Separator                   | ![&nbsp;](font1/1D.png) 
-30 | 1E | `RS`  |  Record Separator                  | ![&nbsp;](font1/1E.png) 
-31 | 1F	| `US`  |  Unit Separator                    | ![&nbsp;](font1/1F.png)
 
+Int | HEX | Symbol | Unicode<br>Codepoint | Description
+:-: | :-:  | :-:    | :-:                  | :-
+00 | 00 | ␀  | U+00000 |  Null character
+01 | 01	| ␁  | U+00001 |  Start of Heading
+02 | 02	| ␂  | U+00002 |  Start of Text
+03 | 03	| ␃  | U+00003 |  End of Text
+04 | 04	| ␄  | U+00004 |  End of Transmission
+05 | 05	| ␅  | U+00005 |  Enquiry
+06 | 06	| ␆  | U+00006 |  Acknowledge
+07 | 07	| ␇  | U+00007 |  Bell, Alert
+08 | 08	| ␈  | U+00008 |  Backspace
+09 | 09	| ␉  | U+00009 |  Horizontal Tab
+10 | 0A	| ␊  | U+0000A |  Line Feed
+11 | 0B	| ␋  | U+0000B |  Vertical Tabulation
+12 | 0C	| ␌  | U+0000C |  Form Feed
+13 | 0D	| ␍  | U+0000D |  Carriage Return
+14 | 0E	| ␎  | U+0000E |  Shift Out
+15 | 0F	| ␏  | U+0000F |  Shift In
+16 | 10	| ␐  | U+00010 |  Data Link Escape
+17 | 11	| ␑  | U+00011 |  Device Control One (XON)
+18 | 12	| ␒  | U+00012 |  Device Control Two
+19 | 13	| ␓  | U+00013 |  Device Control Three (XOFF)
+20 | 14	| ␔  | U+00014 |  Device Control Four
+21 | 15	| ␕  | U+00015 |  Negative Acknowledge
+22 | 16	| ␖  | U+00016 |  Synchronous Idle
+23 | 17	| ␗  | U+00017 |  End of Transmission Block
+24 | 18	| ␘  | U+00018 |  Cancel
+25 | 19	| ␙  | U+00019 |  End of medium
+26 | 1A	| ␚  | U+0001A |  Substitute
+27 | 1B	| ␛  | U+0001B |  Escape
+28 | 1C	| ␜  | U+0001C |  File Separator
+29 | 1D	| ␝  | U+0001D |  Group Separator
+30 | 1E | ␞  | U+0001E |  Record Separator
+31 | 1F	| ␟  | U+0001F |  Unit Separator
 
 
 
@@ -52,106 +52,107 @@ Int | HEX | Symbol |  Description                    | Font1
 
 Codes 32-127 are common for all the different variations of the ASCII table, they are called printable characters, represent letters, digits, punctuation marks, and a few miscellaneous symbols. You will find almost every character on your keyboard. 
 
-Character 127 should represent the command `DEL`. 
 
-Int | HEX | Symbol |  Description                    | Font1
-:-: | :-: | :-: | :-                                 | :-
-32  | 20 | `SP` |  Space                                   |  ![ ](font1/20.png) 
-33  | 21 |	!   |  Exclamation mark                        |  ![!](font1/21.png) 
-34  | 22 |	"   |  Double quotes (or speech marks)         |  !["](font1/22.png) 
-35  | 23 |	#   |  Number sign                             |  ![#](font1/23.png) 
-36  | 24 |	$   |  Dollar                                  |  ![$](font1/24.png) 
-37  | 25 |	%   |  Per cent sign                           |  ![%](font1/25.png) 
-38  | 26 |	&   |  Ampersand                               |  ![&](font1/26.png) 
-39  | 27 |	'   |  Single quote                            |  !['](font1/27.png)
-40  | 28 |	(   |  Open parenthesis (or open bracket)      |  ![(](font1/28.png) 
-41  | 29 |	)   |  Close parenthesis (or close bracket)    |  ![)](font1/29.png) 
-42  | 2A |	*   |  Asterisk                                |  ![*](font1/2A.png) 
-43  | 2B |	+   |  Plus                                    |  ![+](font1/2B.png) 
-44  | 2C |	,   |  Comma                                   |  ![,](font1/2C.png) 
-45  | 2D |	-   |  Hyphen-minus                            |  ![-](font1/2D.png) 
-46  | 2E |	.   |  Period, dot or full stop                |  ![.](font1/2E.png) 
-47  | 2F |	/   |  Slash or divide                         |  ![/](font1/2F.png)
-48  | 30 |	0   |  Zero                                    |  ![0](font1/30.png) 
-49  | 31 |	1   |  One                                     |  ![1](font1/31.png) 
-50  | 32 |	2   |  Two                                     |  ![2](font1/32.png) 
-51  | 33 |	3   |  Three                                   |  ![3](font1/33.png) 
-52  | 34 |	4   |  Four                                    |  ![4](font1/34.png) 
-53  | 35 |	5   |  Five                                    |  ![5](font1/35.png) 
-54  | 36 |	6   |  Six                                     |  ![6](font1/36.png) 
-55  | 37 |	7   |  Seven                                   |  ![7](font1/37.png)
-56  | 38 |	8   |  Eight                                   |  ![8](font1/38.png) 
-57  | 39 |	9   |  Nine                                    |  ![9](font1/39.png) 
-58  | 3A |	:   |  Colon                                   |  ![:](font1/3A.png) 
-59  | 3B |	;   |  Semicolon                               |  ![;](font1/3B.png) 
-60  | 3C |	<   |  Less than (or open angled bracket)      |  ![<](font1/3C.png) 
-61  | 3D |	=   |  Equals                                  |  ![=](font1/3D.png) 
-62  | 3E |	>   |  Greater than (or close angled bracket)  |  ![>](font1/3E.png) 
-63  | 3F |	?   |  Question mark                           |  ![?](font1/3F.png)
-64  | 40 |	@   |  At sign                                 |  ![@](font1/40.png) 
-65  | 41 |	A   |  Uppercase A                             |  ![A](font1/41.png) 
-66  | 42 |	B   |  Uppercase B                             |  ![B](font1/42.png) 
-67  | 43 |	C   |  Uppercase C                             |  ![C](font1/43.png) 
-68  | 44 |	D   |  Uppercase D                             |  ![D](font1/44.png) 
-69  | 45 |	E   |  Uppercase E                             |  ![E](font1/45.png) 
-70  | 46 |	F   |  Uppercase F                             |  ![F](font1/46.png) 
-71  | 47 |	G   |  Uppercase G                             |  ![G](font1/47.png)
-72  | 48 |	H   |  Uppercase H                             |  ![H](font1/48.png) 
-73  | 49 |	I   |  Uppercase I                             |  ![I](font1/49.png) 
-74  | 4A |	J   |  Uppercase J                             |  ![J](font1/4A.png) 
-75  | 4B |	K   |  Uppercase K                             |  ![K](font1/4B.png) 
-76  | 4C |	L   |  Uppercase L                             |  ![L](font1/4C.png) 
-77  | 4D |	M   |  Uppercase M                             |  ![M](font1/4D.png) 
-78  | 4E |	N   |  Uppercase N                             |  ![N](font1/4E.png) 
-79  | 4F |	O   |  Uppercase O                             |  ![O](font1/4F.png)
-80  | 50 |	P   |  Uppercase P                             |  ![P](font1/50.png) 
-81  | 51 |	Q   |  Uppercase Q                             |  ![Q](font1/51.png) 
-82  | 52 |	R   |  Uppercase R                             |  ![R](font1/52.png) 
-83  | 53 |	S   |  Uppercase S                             |  ![S](font1/53.png) 
-84  | 54 |	T   |  Uppercase T                             |  ![T](font1/54.png) 
-85  | 55 |	U   |  Uppercase U                             |  ![U](font1/55.png) 
-86  | 56 |	V   |  Uppercase V                             |  ![V](font1/56.png) 
-87  | 57 |	W   |  Uppercase W                             |  ![W](font1/57.png)
-88  | 58 |	X   |  Uppercase X                             |  ![X](font1/58.png) 
-89  | 59 |	Y   |  Uppercase Y                             |  ![Y](font1/59.png) 
-90  | 5A |	Z   |  Uppercase Z                             |  ![Z](font1/5A.png) 
-91  | 5B |	[   |  Opening bracket                         |  ![\[](font1/5B.png) 
-92  | 5C |	\   |  Backslash                               |  ![\\](font1/5C.png) 
-93  | 5D |	]   |  Closing bracket                         |  ![\]](font1/5D.png) 
-94  | 5E |	\^  |  Caret - circumflex                      |  ![\^](font1/5E.png) 
-95  | 5F |	_   |  Underscore                              |  ![_](font1/5F.png)
-96  | 60 |	`   |  Grave accent                            |  ![°](font1/60.png) 
-97  | 61 |	a   |  Lowercase a                             |  ![a](font1/61.png) 
-98  | 62 |	b   |  Lowercase b                             |  ![b](font1/62.png) 
-99  | 63 |	c   |  Lowercase c                             |  ![c](font1/63.png) 
-100  | 64 |	d   |  Lowercase d                             |  ![d](font1/64.png) 
-101  | 65 |	e   |  Lowercase e                             |  ![e](font1/65.png) 
-102  | 66 |	f   |  Lowercase f                             |  ![f](font1/66.png) 
-103  | 67 |	g   |  Lowercase g                             |  ![g](font1/67.png)
-104  | 68 |	h   |  Lowercase h                             |  ![h](font1/68.png) 
-105  | 69 |	i   |  Lowercase i                             |  ![i](font1/69.png) 
-106  | 6A |	j   |  Lowercase j                             |  ![j](font1/6A.png) 
-107  | 6B |	k   |  Lowercase k                             |  ![k](font1/6B.png) 
-108  | 6C |	l   |  Lowercase l                             |  ![l](font1/6C.png) 
-109  | 6D |	m   |  Lowercase m                             |  ![m](font1/6D.png) 
-110  | 6E |	n   |  Lowercase n                             |  ![n](font1/6E.png) 
-111  | 6F |	o   |  Lowercase o                             |  ![o](font1/6F.png)
-112  | 70 |	p   |  Lowercase p                             |  ![p](font1/70.png) 
-113  | 71 |	q   |  Lowercase q                             |  ![q](font1/71.png) 
-114  | 72 |	r   |  Lowercase r                             |  ![r](font1/72.png) 
-115  | 73 |	s   |  Lowercase s                             |  ![s](font1/73.png) 
-116  | 74 |	t   |  Lowercase t                             |  ![t](font1/74.png) 
-117  | 75 |	u   |  Lowercase u                             |  ![u](font1/75.png) 
-118  | 76 |	v   |  Lowercase v                             |  ![v](font1/76.png) 
-119  | 77 |	w   |  Lowercase w                             |  ![w](font1/77.png)
-120  | 78 |	x   |  Lowercase x                             |  ![x](font1/78.png) 
-121  | 79 |	y   |  Lowercase y                             |  ![y](font1/79.png) 
-122  | 7A |	z   |  Lowercase z                             |  ![z](font1/7A.png) 
-123  | 7B |	{   |  Opening brace                           |  ![{](font1/7B.png) 
-124  | 7C |	\|  |  Vertical bar                            |  ![ \| ](font1/7C.png) 
-125  | 7D |	}   |  Closing brace                           |  ![}](font1/7D.png) 
-126  | 7E |	~   |  Equivalency sign - tilde                |  ![~](font1/7E.png) 
-127  | 7F |	⌂ | HOUSE U+2302[^approx] |  ![⌂](font1/7F.png)
+Int | HEX | Symbol  | Unicode<br>Codepoint |  Description                    | Font1
+:-: | :-: | :-: | :-| :-                                 | :-
+32  | 20 | `SP` | U+00020   |  Space                                   |  ![ ](font1/20.png) 
+33  | 21 |	!   | U+00021   |  Exclamation mark                        |  ![!](font1/21.png) 
+34  | 22 |	"   | U+00022   |  Double quotes (or speech marks)         |  !["](font1/22.png) 
+35  | 23 |	#   | U+00023   |  Number sign                             |  ![#](font1/23.png) 
+36  | 24 |	$   | U+00024   |  Dollar                                  |  ![\$](font1/24.png) 
+37  | 25 |	%   | U+00025   |  Per cent sign                           |  ![%](font1/25.png) 
+38  | 26 |	&   | U+00026   |  Ampersand                               |  ![&](font1/26.png) 
+39  | 27 |	'   | U+00027   |  Single quote                            |  !['](font1/27.png)
+40  | 28 |	(   | U+00028   |  Open parenthesis (or open bracket)      |  ![(](font1/28.png) 
+41  | 29 |	)   | U+00029   |  Close parenthesis (or close bracket)    |  ![)](font1/29.png) 
+42  | 2A |	*   | U+0002A   |  Asterisk                                |  ![*](font1/2A.png) 
+43  | 2B |	+   | U+0002B   |  Plus                                    |  ![+](font1/2B.png) 
+44  | 2C |	,   | U+0002C   |  Comma                                   |  ![,](font1/2C.png) 
+45  | 2D |	-   | U+0002D   |  Hyphen-minus                            |  ![-](font1/2D.png) 
+46  | 2E |	.   | U+0002E   |  Period, dot or full stop                |  ![.](font1/2E.png) 
+47  | 2F |	/   | U+0002F   |  Slash or divide                         |  ![/](font1/2F.png)
+48  | 30 |	0   | U+00030   |  Zero                                    |  ![0](font1/30.png) 
+49  | 31 |	1   | U+00031   |  One                                     |  ![1](font1/31.png) 
+50  | 32 |	2   | U+00032   |  Two                                     |  ![2](font1/32.png) 
+51  | 33 |	3   | U+00033   |  Three                                   |  ![3](font1/33.png) 
+52  | 34 |	4   | U+00034   |  Four                                    |  ![4](font1/34.png) 
+53  | 35 |	5   | U+00035   |  Five                                    |  ![5](font1/35.png) 
+54  | 36 |	6   | U+00036   |  Six                                     |  ![6](font1/36.png) 
+55  | 37 |	7   | U+00037   |  Seven                                   |  ![7](font1/37.png)
+56  | 38 |	8   | U+00038   |  Eight                                   |  ![8](font1/38.png) 
+57  | 39 |	9   | U+00039   |  Nine                                    |  ![9](font1/39.png) 
+58  | 3A |	:   | U+0003A   |  Colon                                   |  ![:](font1/3A.png) 
+59  | 3B |	;   | U+0003B   |  Semicolon                               |  ![;](font1/3B.png) 
+60  | 3C |	<   | U+0003C   |  Less than (or open angled bracket)      |  ![<](font1/3C.png) 
+61  | 3D |	=   | U+0003D   |  Equals                                  |  ![=](font1/3D.png) 
+62  | 3E |	>   | U+0003E   |  Greater than (or close angled bracket)  |  ![>](font1/3E.png) 
+63  | 3F |	?   | U+0003F   |  Question mark                           |  ![?](font1/3F.png)
+64  | 40 |	@   | U+00040   |  At sign                                 |  ![@](font1/40.png) 
+65  | 41 |	A   | U+00041   |  Uppercase A                             |  ![A](font1/41.png) 
+66  | 42 |	B   | U+00042   |  Uppercase B                             |  ![B](font1/42.png) 
+67  | 43 |	C   | U+00043   |  Uppercase C                             |  ![C](font1/43.png) 
+68  | 44 |	D   | U+00044   |  Uppercase D                             |  ![D](font1/44.png) 
+69  | 45 |	E   | U+00045   |  Uppercase E                             |  ![E](font1/45.png) 
+70  | 46 |	F   | U+00046   |  Uppercase F                             |  ![F](font1/46.png) 
+71  | 47 |	G   | U+00047   |  Uppercase G                             |  ![G](font1/47.png)
+72  | 48 |	H   | U+00048   |  Uppercase H                             |  ![H](font1/48.png) 
+73  | 49 |	I   | U+00049   |  Uppercase I                             |  ![I](font1/49.png) 
+74  | 4A |	J   | U+0004A   |  Uppercase J                             |  ![J](font1/4A.png) 
+75  | 4B |	K   | U+0004B   |  Uppercase K                             |  ![K](font1/4B.png) 
+76  | 4C |	L   | U+0004C   |  Uppercase L                             |  ![L](font1/4C.png) 
+77  | 4D |	M   | U+0004D   |  Uppercase M                             |  ![M](font1/4D.png) 
+78  | 4E |	N   | U+0004E   |  Uppercase N                             |  ![N](font1/4E.png) 
+79  | 4F |	O   | U+0004F   |  Uppercase O                             |  ![O](font1/4F.png)
+80  | 50 |	P   | U+00050   |  Uppercase P                             |  ![P](font1/50.png) 
+81  | 51 |	Q   | U+00051   |  Uppercase Q                             |  ![Q](font1/51.png) 
+82  | 52 |	R   | U+00052   |  Uppercase R                             |  ![R](font1/52.png) 
+83  | 53 |	S   | U+00053   |  Uppercase S                             |  ![S](font1/53.png) 
+84  | 54 |	T   | U+00054   |  Uppercase T                             |  ![T](font1/54.png) 
+85  | 55 |	U   | U+00055   |  Uppercase U                             |  ![U](font1/55.png) 
+86  | 56 |	V   | U+00056   |  Uppercase V                             |  ![V](font1/56.png) 
+87  | 57 |	W   | U+00057   |  Uppercase W                             |  ![W](font1/57.png)
+88  | 58 |	X   | U+00058   |  Uppercase X                             |  ![X](font1/58.png) 
+89  | 59 |	Y   | U+00059   |  Uppercase Y                             |  ![Y](font1/59.png) 
+90  | 5A |	Z   | U+0005A   |  Uppercase Z                             |  ![Z](font1/5A.png) 
+91  | 5B |	[   | U+0005B   |  Opening bracket                         |  ![\[](font1/5B.png) 
+92  | 5C |	\   | U+0005C   |  Backslash                               |  ![\\](font1/5C.png) 
+93  | 5D |	]   | U+0005D   |  Closing bracket                         |  ![\]](font1/5D.png) 
+94  | 5E |	\^  | U+0005E   |  Caret - circumflex                      |  ![\^](font1/5E.png) 
+95  | 5F |	_   | U+0005F   |  Underscore                              |  ![_](font1/5F.png)
+96  | 60 |	`   | U+00060   |  Grave accent                            |  ![°](font1/60.png) 
+97  | 61 |	a   | U+00061   |  Lowercase a                             |  ![a](font1/61.png) 
+98  | 62 |	b   | U+00062   |  Lowercase b                             |  ![b](font1/62.png) 
+99  | 63 |	c   | U+00063   |  Lowercase c                             |  ![c](font1/63.png) 
+100  | 64 |	d   | U+00064   |  Lowercase d                             |  ![d](font1/64.png) 
+101  | 65 |	e   | U+00065   |  Lowercase e                             |  ![e](font1/65.png) 
+102  | 66 |	f   | U+00066   |  Lowercase f                             |  ![f](font1/66.png) 
+103  | 67 |	g   | U+00067   |  Lowercase g                             |  ![g](font1/67.png)
+104  | 68 |	h   | U+00068   |  Lowercase h                             |  ![h](font1/68.png) 
+105  | 69 |	i   | U+00069   |  Lowercase i                             |  ![i](font1/69.png) 
+106  | 6A |	j   | U+0006A   |  Lowercase j                             |  ![j](font1/6A.png) 
+107  | 6B |	k   | U+0006B   |  Lowercase k                             |  ![k](font1/6B.png) 
+108  | 6C |	l   | U+0006C   |  Lowercase l                             |  ![l](font1/6C.png) 
+109  | 6D |	m   | U+0006D   |  Lowercase m                             |  ![m](font1/6D.png) 
+110  | 6E |	n   | U+0006E   |  Lowercase n                             |  ![n](font1/6E.png) 
+111  | 6F |	o   | U+0006F   |  Lowercase o                             |  ![o](font1/6F.png)
+112  | 70 |	p   | U+00070   |  Lowercase p                             |  ![p](font1/70.png) 
+113  | 71 |	q   | U+00071   |  Lowercase q                             |  ![q](font1/71.png) 
+114  | 72 |	r   | U+00072   |  Lowercase r                             |  ![r](font1/72.png) 
+115  | 73 |	s   | U+00073   |  Lowercase s                             |  ![s](font1/73.png) 
+116  | 74 |	t   | U+00074   |  Lowercase t                             |  ![t](font1/74.png) 
+117  | 75 |	u   | U+00075   |  Lowercase u                             |  ![u](font1/75.png) 
+118  | 76 |	v   | U+00076   |  Lowercase v                             |  ![v](font1/76.png) 
+119  | 77 |	w   | U+00077   |  Lowercase w                             |  ![w](font1/77.png)
+120  | 78 |	x   | U+00078   |  Lowercase x                             |  ![x](font1/78.png) 
+121  | 79 |	y   | U+00079   |  Lowercase y                             |  ![y](font1/79.png) 
+122  | 7A |	z   | U+0007A   |  Lowercase z                             |  ![z](font1/7A.png) 
+123  | 7B |	{   | U+0007B   |  Opening brace                           |  ![{](font1/7B.png) 
+124  | 7C |	\|  | U+0007C   |  Vertical bar                            |  ![ \| ](font1/7C.png) 
+125  | 7D |	}   | U+0007D   |  Closing brace                           |  ![}](font1/7D.png) 
+126  | 7E |	~   | U+0007E   |  Equivalency sign - tilde                |  ![~](font1/7E.png) 
+127  | 7F |	⌂   | U+2302    |  HOUSE [^127] [^approx]                  |  ![⌂](font1/7F.png)
+
+[^127]Character 127 should represent the command `DEL`, but is replaced for all fonts on PicoMite.
 
 
 ### Symbols
