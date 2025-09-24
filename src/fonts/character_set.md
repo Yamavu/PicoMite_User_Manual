@@ -152,7 +152,7 @@ Int | HEX | Symbol  | Unicode<br>Codepoint |  Description                    | F
 126  | 7E |	~   | U+0007E   |  Equivalency sign - tilde                |  ![~](font1/7E.png) 
 127  | 7F |	⌂   | U+2302    |  HOUSE [^127] [^approx]                  |  ![⌂](font1/7F.png)
 
-[^127]Character 127 should represent the command `DEL`, but is replaced for all fonts on PicoMite.
+[^127]: Character 127 should represent the command `DEL`, but is replaced for all fonts on PicoMite.
 
 
 ### Symbols
