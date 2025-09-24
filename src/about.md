@@ -11,29 +11,21 @@ User Manual
 
 MMBasic BASIC Interpreter
 
-Ver 6.00.03
-
 for the
 
-Raspberry Pi Pico
+* Raspberry Pi Pico
+* Raspberry Pi Pico 2
+* Raspberry Pi Pico W
+* Raspberry Pi Pico 2 W
+* modules using the RP2040 and RP2350 processors
 
-Raspberry Pi Pico 2
-
-Raspberry Pi Pico W
-
-Raspberry Pi Pico 2 W
-
-\+
-
-modules using the RP2040 and RP2350 processors
-
+Ver 6.00.03 
 Revision 1
 (18 July 2025)
 
-
 For updates to this manual and more details on MMBasic go to
-http://geoffg.net/picomite.html
-and http://mmbasic.com
+* [Geoff Graham's PicoMite](http://geoffg.net/picomite.html)
+* [MMBasic](http://mmbasic.com)
 
 ## About
 
@@ -42,10 +34,13 @@ wrote the drivers for its hardware features. The MMBasic interpreter and this ma
 Graham ( http://geoffg.net ). In addition, many others have supported the project with specialised code, testing
 and suggestions.
 
+
 ### Support
+
 Support questions should be raised on the Back Shed forum ( http://www.thebackshed.com/forum/Microcontrollers )
 where there are many enthusiastic MMBasic users who would be only too happy to help. The developers of the
 PicoMite firmware are also regulars on this forum.
+
 
 ### Copyright and Acknowledgments
 
@@ -76,7 +71,14 @@ The compiled object code (the .uf2 file) for the PicoMite firmware is free softw
 This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY, without even
 the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
+
 ### This Manual
+
 Copyright 2025 Geoff Graham and Peter Mather
 The author of this manual is Geoff Graham with input by Peter Mather, Harm de Leeuw, Mick Ames and many
 others on The Back Shed forum. It is distributed under a Creative Commons Attribution-NonCommercialShareAlike 3.0 Australia license ([CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/au/))
+
+
+### This Website
+
+This website is made by Yamavu and distributed under a Creative Commons Attribution-NonCommercialShareAlike 3.0 Australia license ([CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/au/))
