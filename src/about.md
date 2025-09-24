@@ -81,4 +81,4 @@ others on The Back Shed forum. It is distributed under a Creative Commons Attrib
 
 ### This Website
 
-This website is made by Yamavu and distributed under a Creative Commons Attribution-NonCommercialShareAlike 3.0 Australia license ([CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/au/))
+This website is made by Yamavu and distributed under [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/au/).
