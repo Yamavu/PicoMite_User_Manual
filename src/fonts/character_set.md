@@ -209,59 +209,65 @@ Int | Font 1 | Unicode<br>Codepoint | Description
 
 #### Borders and UI Elements
 
-Int | Symbol | Font 1
-:-: | :-:    | :-
-173 |        | ![&nbsp;](font1/AD.png) 
-174 |        | ![&nbsp;](font1/AE.png) 
-175 |        | ![&nbsp;](font1/AF.png)
-176 |        | ![&nbsp;](font1/B0.png) 
-177 |        | ![&nbsp;](font1/B1.png) 
-178 |        | ![&nbsp;](font1/B2.png) 
-179 |        | ![&nbsp;](font1/B3.png) 
-180 |        | ![&nbsp;](font1/B4.png) 
-181 |        | ![&nbsp;](font1/B5.png) 
-182 |        | ![&nbsp;](font1/B6.png) 
-183 |        | ![&nbsp;](font1/B7.png)
-184 |        | ![&nbsp;](font1/B8.png) 
-185 |        | ![&nbsp;](font1/B9.png) 
-186 |        | ![&nbsp;](font1/BA.png) 
-187 |        | ![&nbsp;](font1/BB.png) 
-188 |        | ![&nbsp;](font1/BC.png) 
-189 |        | ![&nbsp;](font1/BD.png) 
-190 |        | ![&nbsp;](font1/BE.png) 
-191 |        | ![&nbsp;](font1/BF.png)
-192 |        | ![&nbsp;](font1/C0.png) 
-193 |        | ![&nbsp;](font1/C1.png) 
-194 |        | ![&nbsp;](font1/C2.png) 
-195 |        | ![&nbsp;](font1/C3.png) 
-196 |        | ![&nbsp;](font1/C4.png) 
-197 |        | ![&nbsp;](font1/C5.png) 
-198 |        | ![&nbsp;](font1/C6.png) 
-199 |        | ![&nbsp;](font1/C7.png)
-200 |        | ![&nbsp;](font1/C8.png) 
-201 |        | ![&nbsp;](font1/C9.png) 
-202 |        | ![&nbsp;](font1/CA.png) 
-203 |        | ![&nbsp;](font1/CB.png) 
-204 |        | ![&nbsp;](font1/CC.png) 
-205 |        | ![&nbsp;](font1/CD.png) 
-206 |        | ![&nbsp;](font1/CE.png) 
-207 |        | ![&nbsp;](font1/CF.png)
-208 |        | ![&nbsp;](font1/D0.png) 
-209 |        | ![&nbsp;](font1/D1.png) 
-210 |        | ![&nbsp;](font1/D2.png) 
-211 |        | ![&nbsp;](font1/D3.png) 
-212 |        | ![&nbsp;](font1/D4.png) 
-213 |        | ![&nbsp;](font1/D5.png) 
-214 |        | ![&nbsp;](font1/D6.png) 
-215 |        | ![&nbsp;](font1/D7.png)
-216 |        | ![&nbsp;](font1/D8.png) 
-217 |        | ![&nbsp;](font1/D9.png) 
-218 |        | ![&nbsp;](font1/DA.png) 
-219 |        | ![&nbsp;](font1/DB.png) 
-220 |        | ![&nbsp;](font1/DC.png) 
-221 |        | ![&nbsp;](font1/DD.png) 
-222 |        | ![&nbsp;](font1/DE.png) 
-223 |        | ![&nbsp;](font1/DF.png)
+Int | Font 1 | Unicode<br>Codepoint | Description
+:-: | :-     | :-:    | :-
+173 | ![𜱅](font1/AD.png) | U+1CC45 | DENSE HORIZONTAL FILL
+174 | ![𜱄](font1/AE.png) | U+1CC44 | DENSE VERTICAL FILL
+175 | ![🮕](font1/AF.png) | U+1FB95 | CHECKER BOARD FILL
+176 | ![🮘](font1/B0.png) | U+1FB98 | UPPER LEFT TO LOWER RIGHT FILL
+177 | ![▒](font1/B1.png) | U+2592  | MEDIUM SHADE
+178 | ![🮙](font1/B2.png) | U+1FB99 | UPPER RIGHT TO LOWER LEFT FILL
+
+Int | Font 1 | Unicode<br>Codepoint | Description
+:-: | :-     | :-:    | :-
+179 | ![│](font1/B3.png) | U+2502 | BOX DRAWINGS LIGHT VERTICAL
+180 | ![┤](font1/B4.png) | U+2524 | BOX DRAWINGS LIGHT VERTICAL AND LEFT
+181 | ![╡](font1/B5.png) | U+2561 | BOX DRAWINGS VERTICAL SINGLE AND LEFT DOUBLE
+182 | ![╢](font1/B6.png) | U+2562 | BOX DRAWINGS VERTICAL DOUBLE AND LEFT SINGLE
+183 | ![╖](font1/B7.png) | U+2556 | BOX DRAWINGS DOWN DOUBLE AND LEFT SINGLE
+184 | ![╕](font1/B8.png) | U+2555 | BOX DRAWINGS DOWN SINGLE AND LEFT DOUBLE
+185 | ![╣](font1/B9.png) | U+2563 | BOX DRAWINGS DOUBLE VERTICAL AND LEFT
+186 | ![║](font1/BA.png) | U+2551 | BOX DRAWINGS DOUBLE VERTICAL
+187 | ![╗](font1/BB.png) | U+2557 | BOX DRAWINGS DOUBLE DOWN AND LEFT
+188 | ![╝](font1/BC.png) | U+255D | BOX DRAWINGS DOUBLE UP AND LEFT
+189 | ![╜](font1/BD.png) | U+255C | BOX DRAWINGS UP DOUBLE AND LEFT SINGLE
+190 | ![╛](font1/BE.png) | U+255B | BOX DRAWINGS UP SINGLE AND LEFT DOUBLE
+191 | ![┐](font1/BF.png) | U+2510 | BOX DRAWINGS LIGHT DOWN AND LEFT
+192 | ![└](font1/C0.png) | U+2514 | BOX DRAWINGS LIGHT UP AND RIGHT
+193 | ![┴](font1/C1.png) | U+2534 | BOX DRAWINGS LIGHT UP AND HORIZONTAL
+194 | ![┬](font1/C2.png) | U+252C | BOX DRAWINGS LIGHT DOWN AND HORIZONTAL
+195 | ![├](font1/C3.png) | U+251C | BOX DRAWINGS LIGHT VERTICAL AND RIGHT
+196 | ![─](font1/C4.png) | U+2500 | BOX DRAWINGS LIGHT HORIZONTAL
+197 | ![┼](font1/C5.png) | U+253C | BOX DRAWINGS LIGHT VERTICAL AND HORIZONTAL
+198 | ![╞](font1/C6.png) | U+255E | BOX DRAWINGS VERTICAL SINGLE AND RIGHT DOUBLE
+199 | ![╟](font1/C7.png) | U+255F | BOX DRAWINGS VERTICAL DOUBLE AND RIGHT SINGLE
+200 | ![╚](font1/C8.png) | U+255A | BOX DRAWINGS DOUBLE UP AND RIGHT
+201 | ![╔](font1/C9.png) | U+2554 | BOX DRAWINGS DOUBLE DOWN AND RIGHT
+202 | ![╩](font1/CA.png) | U+2569 | BOX DRAWINGS DOUBLE UP AND HORIZONTAL
+203 | ![╦](font1/CB.png) | U+2566 | BOX DRAWINGS DOUBLE DOWN AND HORIZONTAL
+204 | ![╠](font1/CC.png) | U+2560 | BOX DRAWINGS DOUBLE VERTICAL AND RIGHT
+205 | ![═](font1/CD.png) | U+2550 | BOX DRAWINGS DOUBLE HORIZONTAL
+206 | ![╬](font1/CE.png) | U+256C | BOX DRAWINGS DOUBLE VERTICAL AND HORIZONTAL
+207 | ![╧](font1/CF.png) | U+2567 | BOX DRAWINGS UP SINGLE AND HORIZONTAL DOUBLE
+208 | ![╨](font1/D0.png) | U+2568 | BOX DRAWINGS UP DOUBLE AND HORIZONTAL SINGLE
+209 | ![╤](font1/D1.png) | U+2564 | BOX DRAWINGS DOWN SINGLE AND HORIZONTAL DOUBLE
+210 | ![╥](font1/D2.png) | U+2565 | BOX DRAWINGS DOWN DOUBLE AND HORIZONTAL SINGLE
+211 | ![╙](font1/D3.png) | U+2559 | BOX DRAWINGS UP DOUBLE AND RIGHT SINGLE
+212 | ![╘](font1/D4.png) | U+2558 | BOX DRAWINGS UP SINGLE AND RIGHT DOUBLE
+213 | ![╒](font1/D5.png) | U+2552 | BOX DRAWINGS DOWN SINGLE AND RIGHT DOUBLE
+214 | ![╓](font1/D6.png) | U+2553 | BOX DRAWINGS DOWN DOUBLE AND RIGHT SINGLE
+215 | ![╫](font1/D7.png) | U+256B | BOX DRAWINGS VERTICAL DOUBLE AND HORIZONTAL SINGLE
+216 | ![╪](font1/D8.png) | U+256A | BOX DRAWINGS VERTICAL SINGLE AND HORIZONTAL DOUBLE
+217 | ![┘](font1/D9.png) | U+2518 | BOX DRAWINGS LIGHT UP AND LEFT
+218 | ![┌](font1/DA.png) | U+250C | BOX DRAWINGS LIGHT DOWN AND RIGHT
+
+Int | Font 1 | Unicode<br>Codepoint | Description
+:-: | :-     | :-:    | :-
+219 | ![█](font1/DB.png) | U+2588 | FULL BLOCK
+220 | ![▄](font1/DC.png) | U+2584 | LOWER HALF BLOCK
+221 | ![▌](font1/DD.png) | U+258C | LEFT HALF BLOCK
+222 | ![▐](font1/DE.png) | U+2590 | RIGHT HALF BLOCK
+223 | ![▀](font1/DF.png) | U+2580 | UPPER HALF BLOCK
 
 #### Math Symbols
 
