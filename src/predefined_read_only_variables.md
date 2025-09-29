@@ -59,7 +59,7 @@ accordingly.
 
 MM.ERRNO is a number where non zero means that there was an error.
 
-They are reset to zero and an empty string by `RUN`, `ON ERROR IGNORE` or `ON ERROR SKIP`.
+They are reset to zero and an empty string by [RUN](./command/run.md), [ON ERROR IGNORE](./command/on_error.md#on-error-ignore) or [ON ERROR SKIP](./command/on_error.md#on-error-skip-nn).
 
 
 ## MM.ERRMSG$
@@ -68,7 +68,7 @@ If a statement caused an error which was ignored these variables will be set acc
 
 MM.ERRMSG$ is a string representing the error message that would have normally been displayed on the console. 
 
-They are reset to zero and an empty string by `RUN`, `ON ERROR IGNORE` or `ON ERROR SKIP`.
+They are reset to zero and an empty string by [RUN](./command/run.md), [ON ERROR IGNORE](./command/on_error.md#on-error-ignore) or [ON ERROR SKIP](./command/on_error.md#on-error-skip-nn).
 
 
 
