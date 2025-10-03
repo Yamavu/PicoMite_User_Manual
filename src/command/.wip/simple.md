@@ -1,4 +1,0 @@
-
-
-### Simple array arithmetic
-

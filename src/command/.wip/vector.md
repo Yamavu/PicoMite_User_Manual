@@ -1,4 +1,0 @@
-
-
-### Vector arithmetic
-
