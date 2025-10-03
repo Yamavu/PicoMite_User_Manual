@@ -1,7 +1,6 @@
-.wip
+## WEB
 
-
-### WEB
+*Only on Webmite*
 
 The WEB commands are used to manage the Internet capability of the WebMite.
 

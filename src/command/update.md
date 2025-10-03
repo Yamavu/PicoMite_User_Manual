@@ -1,5 +1,3 @@
-
-
 ### UPDATE FIRMWARE
 
 *not on USB versions*

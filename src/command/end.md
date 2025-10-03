@@ -27,12 +27,6 @@ Marks the end of a user defined function. See the FUNCTION command. Each functio
 
 ### END IF
 
-
-
-### END SUB
-
-Marks the end of a user defined subroutine. See the SUB command. Each sub must have one and only one matching END SUB statement. Use EXIT SUB if you need to return from a subroutine from within its body.
-
 ### END FUNCTION
 
 definition. For example: FUNCTION xxx (arg1, arg2) AS STRING 'arg1', 'arg2', etc are the arguments or parameters to the function (the brackets are always required, even if there are no arguments). An array is specified by using empty brackets. i.e. arg3(). The type of the argument can be specified by using a type suffix (i.e. arg1$) or by specifying the type using AS <type> (i.e. arg1 AS STRING). The argument can also be another defined function or the same function if recursion is to be used (the recursion stack is limited). To set the return value of the function you assign the value to the function's name. For example: FUNCTION SQUARE(a) SQUARE = a * a END FUNCTION Every definition must have one END FUNCTION statement. When this is reached the function will return its value to the expression from which it was called. The command EXIT FUNCTION can be used for an early exit. You use the function by using its name and arguments in a program just as you would a normal MMBasic function. For example: PRINT SQUARE(56.8) When the function is called each argument in the caller is matched to the argument in the function definition. These arguments are available only inside the function. Functions can be called with a variable number of arguments. Any omitted arguments in the function's list will be set to zero or a null string. Arguments in the caller's list that are a variable and have the correct type will be passed by reference to the function. This means that any changes to the corresponding argument in the function will also be copied to the caller's variable and therefore may be accessed after the function has ended. The argument can be prefixed with BYVAL which will prevent this mechanism and cause only the value to be used. Alternatively, the prefix BYREF instructs MMBasic that a reference is required and an error will be generated if that cannot be done. Arrays are passed by specifying the array name with empty brackets (eg, arg()) and are always passed by reference and must be the correct type. You must not jump into or out of a function using commands like GOTO. Doing so will have undefined side effects including ruining your day.

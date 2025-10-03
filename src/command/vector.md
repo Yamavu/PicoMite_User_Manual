@@ -1,5 +1,0 @@
-.wip
-
-
-### Vector arithmetic
-
