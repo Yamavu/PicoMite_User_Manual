@@ -1,7 +1,12 @@
-.wip
-
-
 ### SETPIN pin, cfg [, option] Will configure a a general descri 'pin' is the I/O 'option' is an o following:
+
+DIN
+
+Digital input 
+
+If `option` is omitted the input will be high impedance. If `option` is the keyword `"PULLUP"` or `"PULLDOWN"` a constant current of about 50µA will be used to pull the input pin up or down to 3.3V. 
+
+Due to a bug in the RP2350 chips it is recommended that a pulldown be implemented using a 8.2K or less resistor.
 
 n external I/O pin. Refer to the chapter Using the I/O pins for ption of the Pico's input/output capabilities. pin to configure, ‘cfg’ is the mode that the pin is to be set to and ptional parameter. 'cfg' is a keyword and can be any one of the
 
