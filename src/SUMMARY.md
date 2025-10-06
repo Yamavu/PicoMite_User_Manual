@@ -121,6 +121,7 @@
   - [RUN](command/run.md)
   - [SELECT CASE](command/select_case.md)
   - [Servo](command/servo.md)
+  - [SETPIN](./command/setpin.md)
   - [SETTICK](./command/settick.md)
   - [SORT](./command/sort.md)
   - [SPI](command/spi.md)

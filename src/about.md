@@ -23,9 +23,14 @@ Ver 6.00.03
 Revision 1
 (18 July 2025)
 
-For updates to this manual and more details on MMBasic go to
+For updates to this manual
 * [Geoff Graham's PicoMite](http://geoffg.net/picomite.html)
+
+For more details on MMBasic go to
 * [MMBasic](http://mmbasic.com)
+
+This Website on Github (open to Change Requests)
+* [PicoMite User Documentation](https://github.com/Yamavu/PicoMite_User_Manual)
 
 ## About
 
