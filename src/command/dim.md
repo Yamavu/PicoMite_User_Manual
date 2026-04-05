@@ -98,3 +98,9 @@ DIM s$(3) = ("foo", "boo", "doo", "zoo")
 Note that the number of initialising values must match the number of elements in the array including the base value set by OPTION BASE. If a multi dimensioned array is initialised then the first dimension will be initialised first followed by the second, etc.
 
 Also note that the initialising values must be after the LENGTH qualifier (if used) and after the type declaration (if used).
+
+## Alternatives to DIM
+
+For declaring constants (values that cannot be changed), see [CONST](./const.md).
+
+For declaring variables that are local to a subroutine or function, see [LOCAL](./local.md).
