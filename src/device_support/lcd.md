@@ -8,6 +8,8 @@
 
 The LCD command will display text on a standard LCD module with the minimum of programming effort.
 
+For detailed command reference, see the [LCD Commands](../command/lcd.md) section.
+
 This command will work with LCD modules that use the KS0066, HD44780 or SPLC780 controller chip and have 1, 2 or 4 lines. Typical displays include the LCD16X2 (futurlec.com), the Z7001 (altronics.com.au) and the QP5512 (jaycar.com.au). eBay is another good source where prices can range from $10 to $50.
 
 To setup the display you use the DEVICE LCD INIT command `LCD INIT d4, d5, d6, d7, rs, en`
