@@ -1,3 +1,11 @@
-### IMAGE file$ [,x, y, w, h]
+### IMAGE
 
-added to the file name. The image is saved as a true colour 24-bit image. ‘x’, ‘y’, ‘w’ and ‘h’ are optional and are the coordinates (‘x’ and ‘y’ are the top left coordinate) and dimensions (width and height) of the area to be saved. If not specified, the whole screen will be saved. Note that ‘width’, if used, must be a multiple of 2. SAVE COMPRESSED IMAGE will work the same except that RLE compression will be used to reduce the file size..
+Commands for loading and saving images on an attached LCD display panel. Images can be used to display logos, backgrounds, or save screenshots.
+
+#### Loading Images
+{{#include image_load.md}}
+{{#include image_load_jpg.md}}
+
+#### Saving Images
+{{#include image_save.md}}
+{{#include image_save_compressed.md}}

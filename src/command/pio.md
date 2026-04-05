@@ -72,4 +72,28 @@ PIO commands can only work with 32 GPIO ports. For the RP2350B this command tell
 
 ### PIO CONFIGURE pio, sm, clock [,startaddress] [,sidesetbase] [,sidesetno] [,sidesetout] [,setbase] [,setno] [,setout] [,outbase] [,outno] [,outout] [,inbase] [,jmppin] [,wraptarget] [,wrap] [,sideenable] [,sidepindir] [,pushthreshold] [,pullthreshold] [,autopush] [,autopull] [,inshiftdir] [,outshiftdir] [,joinrxfifo] [,jointxfifo] [,joinrxfifoget] [,joinrxfifoput]
 
-The parameters in this command are essentially the same as you would use in the PIO INIT command plus the helper functions PINCTRL, SHIFTCTRL and EXECCTRL but combined into a single command. This is required because the Pico sdk does some very clever processing behind the scenes to handle the RP2350B ‘sidesetbase’, ‘sidebase outbase’, ‘inbase’ and ‘jmppin’ are pin definitions. You can specify these as either a GPno or a pin number (e.g. GP3 or 5). In all cases specify the actual pin. So if PIO SET BASE is set to 16 for that PIO then values GP16 to GP47 are valid. If PIO SET BASE is not set or is set to 0 then pins GP0 to GP31 are valid. They all default to the base set except ‘jmppin’ (defaults to -1) which needs to be explicitly set if you want to use a ‘jmppin’ as this triggers setting the required status bit ‘clock’ is the desired PIO clock speed in Hz ‘startaddress’ is the PIO statement that will start execution - defaults to 0 ‘sidesetno’, ‘setno’ and ‘outno’ specify the number of pins that can be used for those functions - default to 0 ‘sidesetout’, ‘setout’ and ‘outout’ specify if those pins should be configured as outputs (1=yes, 0=no) - default to 0 ‘wraptarget and ‘wrap’ are in the range 0-31 and default to 0 and 31 ‘inshiftdir’ and ‘outshiftdir’ default to 1 - shift out of output shift register to right and shift input shift register to right (data enters from left). All other parameters are booleans that can enable a specific function - 1 to enable 0 to disable - all default to 0. Simple example: 'PIO Configure pio, sm, clock, startaddress, 'sidesetbase, sidesetno, sidesetout, 'setbase, setno, setout, outbase, outno, outout, inbase, 'jmppin, wraptarget, wrap, sideenable, sidepindir, 'pushthreshold, pullthreshold, autopush, autopull, inshiftdir, outshiftdir, 'joinrxfifo, jointxfifo, joinrxfifoget, joinrxfifoput PIO assemble 1 .program test .line 0 .wrap target Set pins,1 Set pins,0 .wrap .end program SetPin gp45,pio1 PIO set base 1,16 PIO configure 1,0,1000000,,,,,gp45,1,1,,,,,,Pio(.wrap target),Pio(.wrap) PIO start 1,0 Do Loop Although the PIO CONFIGURE command has many parameters, it is very easy to use if you adopt this simple approach: Copy the comment lines in the example into your program. For each parameter substitute your required value or delete the parameter leaving the commas intact. Once all substitutions are done delete any trailing commas Then assuming the line will be too long for the editor delete the CRs one by one starting at the end of the second last line and moving upwards. In this way you will have a valid command that is easy to input and edit. NB: You can also use continuation lines to make the editing easier (see OPTION CONTINUATION LINES)
+## PIO Assembler Instructions
+
+PIO assembler instructions are used within PIO programs to control state machine operations. These instructions are specified using the `PIO ASSEMBLE` command.
+
+### Data Transfer Instructions
+- [IN](in.md): Shift bits from a source into the Input Shift Register (ISR)
+- [OUT](out.md): Shift bits from the Output Shift Register (OSR) to a destination
+- [PUSH](push.md): Push ISR contents into the RX FIFO
+- [PULL](pull.md): Load data from TX FIFO into the OSR
+
+### Program Control Instructions
+- [JMP](jmp.md): Jump to an address if a condition is true
+- [WAIT](wait.md): Stall operation until a condition is true
+
+### Data Manipulation Instructions
+- [MOV](mov.md): Copy data from a source to a destination
+- [SET](set.md): Immediately write data to a destination
+
+### Interrupt Instructions
+- [IRQ](irq.md): Set, clear, or wait for interrupt flags
+
+### Miscellaneous Instructions
+- [NOP](nop.md): No operation (typically used for delays)
+
+See [Appendix F - The PIO Programming Package](../../F_the_pio_programming_package.md) for detailed information about PIO programming.
