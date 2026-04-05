@@ -3,9 +3,6 @@ PicoMite
 User Manual
 
 
-
-
-
 # PicoMite
 **A Raspberry Pi Pico Running the MMBasic BASIC Interpreter**
 

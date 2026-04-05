@@ -263,14 +263,26 @@ Functions for input/output operations including port access, pulse measurement, 
 
 ## PIO Functions
 
+The PIO (Programmable I/O) functions provide access to the Raspberry Pi Pico's PIO hardware for advanced I/O operations.
+
 see also [Appendix F – The PIO Programming Package](../F_the_pio_programming_package.md)
+
+See [PIO](function/pio.md) for comprehensive documentation.
+
+### Register Reading Functions
+
+- [PIO(FSTAT)](function/pio_fstat.md)
+- [PIO(FDEBUG)](function/pio_fdebug.md)
+- [PIO(FLEVEL)](function/pio_flevel.md)
+
+### DMX Functions
 
 - [PIO(DMX RX)](function/pio_dmx_rx.md)
 - [PIO(DMX TX)](function/pio_dmx_tx.md)
+
+### Helper Functions for INIT MACHINE
+
 - [PIO(EXECCTRL)](function/pio_execctrl.md)
-- [PIO(FDEBUG)](function/pio_fdebug.md)
-- [PIO(FLEVEL)](function/pio_flevel.md)
-- [PIO(FSTAT)](function/pio_fstat.md)
 - [PIO(PINCTRL)](function/pio_pinctrl.md)
 - [PIO(SHIFTCTRL)](function/pio_shiftctrl.md)
 

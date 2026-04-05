@@ -1,7 +1,10 @@
-### SELECT CASE value
+## SELECT Commands
 
-Executes one of several groups of statements, depending on the value of an
+The SELECT CASE statement executes one of several groups of statements, depending on the value of an expression.
 
-### SELECT CA
+### SELECT CASE Subcommands
 
-SE nbr%
+{{#include select_case_main.md}}
+{{#include select_case.md}}
+{{#include select_case_else.md}}
+{{#include select_end.md}}

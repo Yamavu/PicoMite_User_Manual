@@ -28,7 +28,10 @@ Square brackets indicate that the parameter or characters are optional.
 * [RETURN](command/return.md)
 * [RUN](command/run.md)
 * [SELECT](command/select.md)
-* [SELECT CASE](command/select_case.md)
+  * [SELECT CASE](command/select_case_main.md)
+  * [CASE](command/select_case.md)
+  * [CASE ELSE](command/select_case_else.md)
+  * [END SELECT](command/select_end.md)
 * [SUB](command/sub.md)
 * [WHILE](command/while.md)
 
@@ -120,8 +123,13 @@ Square brackets indicate that the parameter or characters are optional.
 * [I2C](command/i2c.md)
 * [IR](command/ir.md)
 * [ONEWIRE](command/onewire.md)
-* [SPI](command/spi.md)
-* [SPI2](command/spi2.md)
+* [SPI/SPI2](command/spi_spi2.md)
+  * [SPI OPEN](command/spi_open.md)
+  * [SPI READ](command/spi_read.md)
+  * [SPI WRITE (data)](command/spi_write_data.md)
+  * [SPI WRITE (string)](command/spi_write_string.md)
+  * [SPI WRITE (array)](command/spi_write_array.md)
+  * [SPI CLOSE](command/spi_close.md)
 * [XMODEM](command/xmodem.md)
 
 ## File Operations
@@ -138,7 +146,6 @@ Square brackets indicate that the parameter or characters are optional.
 * [RENAME](command/rename.md)
 * [RMDIR](command/rmdir.md)
 * [SAVE](command/save.md)
-* [SEE](command/see.md)
 * [SEEK](command/seek.md)
 
 ## Math & Calculations
