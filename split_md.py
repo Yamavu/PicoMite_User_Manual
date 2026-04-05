@@ -2,12 +2,12 @@
 
 import re
 import sys
+from argparse import ArgumentParser
 from pathlib import Path
-# from typing import Set, List
+from typing import Set, List
 
 
-
-def prep_name(name):
+def prep_name2(name):
     repl = [r"\S+\s*\|.+", r"\W", r"<br\s*\\?>"]
     for r in repl:
         name = re.sub(r, "_", name)
@@ -15,6 +15,15 @@ def prep_name(name):
     name = re.sub("_+", "_", name)
     name = name.strip("_").lower()
     return name
+
+def prep_name(name):
+    # Extract function name before (
+    _name:re.Match|None = re.match(r"(\w+)\(", name)
+    if _name:
+        name = _name.group(1)
+    else:
+        name = prep_name2(name)
+    return name.lower()
 
 
 def split_markdown_by_headings(file_path: str, level: int = 1):
@@ -26,7 +35,7 @@ def split_markdown_by_headings(file_path: str, level: int = 1):
     under that heading until the next H3 heading.
     """
     input_path = Path(file_path)
-    output_dir = input_path.parent()
+    output_dir = input_path.parent
 
     if not input_path.is_file():
         print(f"Error: File '{file_path}' not found.", file=sys.stderr)
@@ -42,10 +51,10 @@ def split_markdown_by_headings(file_path: str, level: int = 1):
             parts[-1]["end"] = m.start(0)
         parts.append({"filename": f"{prep_name(m.group(1))}.md", "start": m.start(1)})
         # p.write_text(content[m.start(1):m.end(0)], encoding="UTF-8")
-    print(parts)
-    if len(parts) > 0:
-        parts[-1]["end"] = len(content)
-        chapter = {"filename": input_path.name, "start": 0, "end": parts[0]["start"]}
+    if len(parts) == 0:
+        raise ValueError(f"no parts found in {file_path}")
+    parts[-1]["end"] = len(content)
+    chapter = {"filename": input_path.name, "start": 0, "end": parts[0]["start"]}
     for part in parts:
         for k in ["filename", "start", "end"]:
             assert part.get(k) is not None
@@ -71,12 +80,10 @@ def split_markdown_by_headings(file_path: str, level: int = 1):
 
 def main():
     """Main function to handle command-line arguments and script execution."""
-    if len(sys.argv) != 2:
-        print(f"Usage: {sys.argv[0]} <markdown-file>", file=sys.stderr)
-        sys.exit(1)
-
-    input_file = sys.argv[1]
-    split_markdown_by_headings(input_file, 2)
+    p = ArgumentParser(description="Split a markdown file into multiple files based on H3 headings.")
+    p.add_argument("markdown_file", help="Path to the markdown file to be split.")
+    args = p.parse_args()
+    split_markdown_by_headings(args.markdown_file, 3)
 
 
 if __name__ == "__main__":
