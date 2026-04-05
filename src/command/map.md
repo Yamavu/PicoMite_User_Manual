@@ -1,6 +1,3 @@
-.wip
-
-
 ### MAP
 
 The MAP commands allow the programmer to set the colours used in 4 or 8-bit colour modes. Each value in the 4 or 8-bit colour pallet can be set to an independent 24-bit colour (ie, RGB555 format). See the MAP function for more information

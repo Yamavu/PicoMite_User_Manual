@@ -1,6 +1,3 @@
-.wip
-
-
 ### WATCHDOG timeout or
 
 Starts the watchdog timer which will automatically restart the processors when it has timed out. This can be used to recover from some event that disabled the running program (such as an endless loop or a programming or other error that

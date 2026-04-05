@@ -198,8 +198,8 @@ Functions for input/output operations including port access, pulse measurement, 
 
 see also [Appendix F – The PIO Programming Package](../F_the_pio_programming_package.md)
 
-- [PIO(DMA RX POINTER)](function/pio_dma_rx_pointer.md)
-- [PIO(DMA TX POINTER)](function/pio_dma_tx_pointer.md)
+- [PIO(DMX RX)](function/pio_dmx_rx.md)
+- [PIO(DMX TX)](function/pio_dmx_tx.md)
 - [PIO(EXECCTRL)](function/pio_execctrl.md)
 - [PIO(FDEBUG)](function/pio_fdebug.md)
 - [PIO(FLEVEL)](function/pio_flevel.md)

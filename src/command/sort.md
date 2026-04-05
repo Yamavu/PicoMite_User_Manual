@@ -1,6 +1,3 @@
-.wip
-
-
 ### SORT array() [,indexarray()] [,flags] [,startposition] [,elementstosort]
 
 This command takes an array of any type (integer, float or string) and sorts it into ascending order in place. 

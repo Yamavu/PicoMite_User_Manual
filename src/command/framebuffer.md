@@ -1,6 +1,3 @@
-.wip
-
-
 ### FRAMEBUFFER
 
 The Framebuffer command allow you to allocate some of the variable memory to either a framebuffer, a second display layer, or both and then use these in interesting ways to both avoid tearing artefacts and/or play graphics objects over the background display.

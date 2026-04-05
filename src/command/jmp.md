@@ -1,5 +1,2 @@
-.wip
-
-
 ### JMP params
 

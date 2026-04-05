@@ -1,15 +1,7 @@
-.wip
+## COLOR
 
+Sets the default colour for commands (PRINT, TEXT, etc) that display on the attached LCD panel.
 
-### COLOR fore [, back]
+{{#include color_set.md}}
 
-colour. The background is optional and if not specified will default to any previously set background colour or black if not previously changed.
-
-
-### COLOUR fore [, back] or
-
-Sets the default colour for commands (PRINT, etc) that display on the on the attached LCD panel. 'fore' is the foreground colour, 'back' is the background
-
-### COLOUR MAP inarray%(), outarray%() [,colourmap%()]
-
-This command generates RGB888 colours in outarray% from colour codes (0- 15) in inarray%. If the optional colourmap% parameter is used this must be 16 elements long). In this case the values in inarray% are mapped to the colours for that index value in colourmap%
+{{#include color_map.md}}

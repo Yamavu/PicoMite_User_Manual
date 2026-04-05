@@ -1,6 +1,3 @@
-.wip
-
-
 ### OP
 
 TION RESOLUTION 800 x 600 MODE 1 800 x 600 x 2-colours with RGB332 tiles (use the TILE command as normal) MODE 2 400 x 300 x 16colours with optional layer and colour mapping to RGB332 palette MODE 3 800 x 400 x 16 colours with optional layer and colour mapping to RGB332 palette MODE 5 400 x 300 x 256 colours with optional layer (no memory usage)

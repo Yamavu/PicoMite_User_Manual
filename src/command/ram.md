@@ -1,6 +1,3 @@
-.wip
-
-
 ### RAM
 
 RP2350 with PSRAM enabled only The RAM command allows access to up to 5 RAM program slots (similar to flash slots). RAM slots survive a H/W and software reset but not a power cycle.

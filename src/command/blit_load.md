@@ -1,0 +1,7 @@
+### BLIT LOAD[BMP] [#]b, fname$ [,x] [,y] [,w] [,h]
+
+`BLIT LOAD` will load a blit buffer from a 24-bit bmp image file. `x,y` define the start position in the image to start loading and `w,h` specify the width and height of the area to be loaded. 
+
+This command will work on most display panels (not just panels using the ILI9341 controller).
+
+eg, `BLIT LOAD #1,"image1", 50,50,100,100` will load an area of 100 pixels square with the top left had corner at 50,50 from the image `image1.bmp`

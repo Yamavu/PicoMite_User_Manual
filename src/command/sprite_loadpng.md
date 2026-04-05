@@ -1,0 +1,3 @@
+### SPRITE LOADPNG [#]b, fname$ [,transparent] [,alphacut]
+
+Loads SPRITE number `b` from the png file `fname$`. If no extension is specified .png will be automatically added to the filename. The file must be in RGBA8888 format which is the normal default. The optional parameter `transparent` (defaults to 0) specifies one of the colour codes (0-15) which will be allocated to pixels in the png file with an alpha value less than `alphacut` (defaults to 20). The variable transparency can then used with the command SPRITE SET TRANSPARENT n or FRAMEBUFFER LAYER n to display the sprite with the transparent region hidden.

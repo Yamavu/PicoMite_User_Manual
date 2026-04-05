@@ -1,6 +1,3 @@
-.wip
-
-
 ### RTC GETTIME
 
 RTC GETTIME will get the current date/time from a PCF8563, DS1307 or DS3231 real time clock and set the internal MMBasic clock accordingly. The date/time can then be retrieved with the DATE$ and TIME$ functions.

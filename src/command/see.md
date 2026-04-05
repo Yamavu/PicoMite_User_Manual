@@ -1,6 +1,3 @@
-.wip
-
-
 ### See DIM for the full syntax.
 
 command uses exactly the same syntax as DIM and will create variables that will only be visible within the subroutine or function. They will be automatically discarded when the subroutine or function exits.

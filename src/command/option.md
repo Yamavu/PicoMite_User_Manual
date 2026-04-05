@@ -1,6 +1,3 @@
-.wip
-
-
 ### OPTION RE
 
 SOLUTION 720 x 400

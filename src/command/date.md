@@ -1,6 +1,3 @@
-.wip
-
-
 ### DATE$ = "DD-MM-YY[YY]" or
 
 Set the date of the internal clock/calendar. DD, MM and YY are numbers, for example: DATE$ = "28-7-2014"

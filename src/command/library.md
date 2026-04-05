@@ -1,6 +1,3 @@
-.wip
-
-
 ### LIBRARY SAVE or
 
 The library is a special segment of program memory that can contain program code such as subroutines, functions and CFunctions. These routines are not visible to the programmer but are available to the running program and act the

@@ -1,5 +1,2 @@
-.wip
-
-
 ### Simple array arithmetic
 

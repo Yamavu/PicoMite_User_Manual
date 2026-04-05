@@ -1,5 +1,3 @@
-.wip
-
 ### MODE 1 VGA VERSI or VGA video
 
 ONS ONLY supports a number of resolutions (see OPTION RESOLUTION).

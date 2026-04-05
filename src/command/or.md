@@ -1,6 +1,3 @@
-.wip
-
-
 ### Or OPTION RE
 
 SOLUTION 640 x 480

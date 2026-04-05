@@ -1,6 +1,3 @@
-.wip
-
-
 ### GUI BITMAP x, y, bits [, width] [, height] [, scale] [, c] [, bc]
 
 Displays the bits in a bitmap on a VGA/HDMI monitor or LCD panel starting at 'x' and 'y' on an attached device. 'height' and 'width' are the dimensions of the bitmap as displayed on the device and default to 8x8. 'scale' is optional and defaults to that set by the FONT command. 'c' is the drawing colour and 'bc' is the background colour. They are optional and default to the current foreground and background colours. The bitmap can be an integer or a string variable or constant and is drawn using the first byte as the first bits of the top line (bit 7 first, then bit 6, etc) followed by the next byte, etc. When the top line has been filled the next line of the displayed bitmap will start with the next bit in the integer or string. See the chapter Graphics Commands and Functions for a definition of the colours and graphics coordinates. NOT VGA AND HDMI VERSIONS

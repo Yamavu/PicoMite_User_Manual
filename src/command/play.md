@@ -1,6 +1,3 @@
-.wip
-
-
 ### PLAY
 
 This command will generate a variety of audio outputs. See the OPTION AUDIO command for setting the I/O pins to be used for the output. The audio is a pulse width modulated signal (PWM) so a low pass filter is required to remove the carrier frequency.

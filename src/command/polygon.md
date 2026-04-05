@@ -1,6 +1,3 @@
-.wip
-
-
 ### POLYGON n, xarray%(), yarray%() [, bordercolour] [, fillcolour]
 
 Draws a filled or outline polygon with ‘n’ xy-coordinate pairs in ‘xarray%()’ and ‘yarray%()’. If ‘fillcolour’ is omitted then just the polygon outline is drawn. If ‘bordercolour’ is omitted then it will default to the current default foreground colour.

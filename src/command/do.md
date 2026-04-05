@@ -1,6 +1,3 @@
-.wip
-
-
 ### DO <statements>
 
 This structure will loop forever; the EXIT DO command can be used to terminate the loop or control must be explicitly transferred outside of the loop

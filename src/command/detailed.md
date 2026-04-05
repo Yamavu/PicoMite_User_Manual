@@ -1,5 +1,2 @@
-.wip
-
-
 ### Detailed Listing
 
