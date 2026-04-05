@@ -13,5 +13,3 @@ JSON$(a%(), “weather[0].description”)
 JSON$(a%(),”list[4].weather[0].description
 ```
 
-
-## Binary Functions

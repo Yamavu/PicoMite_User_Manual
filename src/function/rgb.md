@@ -10,6 +10,3 @@ that can be named are white, black, blue, green, cyan, red, magenta, yellow,
 brown, white, orange, pink, gold, salmon, beige, lightgrey and grey (or USA
 spelling gray/lightgray). For example, RGB(red) or RGB(cyan).
 
-
-## I/O Funcitons
-

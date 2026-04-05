@@ -27,6 +27,3 @@ The return value is a bitmask as follows:
 caps_lock = 1, num_lock = 2, scroll_lock = 4
 Note that some keyboards will limit the number of active keys that they can
 report on.
-
-
-## Longstring functions

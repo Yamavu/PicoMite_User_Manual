@@ -16,19 +16,49 @@ These functions perform trigonometric calculations and angle conversions, essent
 
 String functions manipulate text data, allowing you to convert, extract, search, and format strings for display and data processing.
 
+See [STR](function/str.md) for comprehensive string documentation.
+
+### String Conversion
+
 - [STR$](function/str$.md)
+- [STRING$](function/string$.md)
+- [VAL](function/val.md)
+
+### String Case Conversion
+
 - [UCASE$](function/ucase$.md)
 - [LCASE$](function/lcase$.md)
-- [ASC](function/asc.md)
-- [CHR$](function/chr$.md)
-- [VAL](function/val.md)
-- [STRING$](function/string$.md)
+
+### String Extraction
+
 - [LEFT$](function/left$.md)
 - [MID$](function/mid$.md)
 - [RIGHT$](function/right$.md)
-- [LEN](function/len.md)
+
+### String Formatting & Utilities
+
 - [SPACE$](function/space$.md)
 - [TAB](function/tab.md)
+
+### String Search
+
+- [INSTR](function/instr.md)
+- [LINSTR](function/linstr.md)
+
+### Binary String Conversion
+
+- [BIN2STR$](function/bin2str$.md)
+- [STR2BIN](function/str2bin.md)
+
+### Long String Operations
+
+- [LGETSTR$](function/lgetstr$.md)
+
+### Additional String Functions
+
+- [ASC](function/asc.md)
+- [CHR$](function/chr$.md)
+- [LEN](function/len.md)
 - [JSON$](function/json$.md)
 
 ## Binary Functions
@@ -37,8 +67,6 @@ These functions handle binary, hexadecimal, and octal number conversions, as wel
 
 - [BIT](function/bit.md)
 - [BIN$](function/bin$.md)
-- [BIN2STR$](function/bin2str$.md)
-- [STR2BIN](function/str2bin.md)
 - [BYTE](function/byte.md)
 - [HEX$](function/hex$.md)
 - [OCT$](function/oct$.md)
@@ -55,12 +83,21 @@ Special functions that provide access to MMBasic's internal capabilities and eva
 
 Functions for retrieving and manipulating time and date information from the system clock.
 
-- [DATE$](function/date$.md)
+See [Date & Time](function/datetime_time.md) for comprehensive date and time documentation.
+
+### Date Functions
+
+- [DATE$](function/date.md)
 - [DATETIME$](function/datetime$.md)
-- [DAY$](function/day$.md)
-- [EPOCH](function/epoch.md)
-- [TIME$](function/time$.md)
+- [DAY$](function/day_date.md)
+
+### Time Functions
+
 - [TIMER](function/timer.md)
+
+### Time System Functions
+
+- [EPOCH](function/epoch.md)
 
 ## DEVICE functions
 
@@ -77,23 +114,35 @@ Functions for interfacing with external devices such as game controllers, mice, 
 
 ## GPS functions
 
-The GPS functions are used to return data from a serial communications
-channel opened as GPS.
+The GPS functions are used to return data from a serial communications channel opened as GPS. The function GPS(VALID) should be checked before any of these functions are used to ensure that the returned value is valid.
 
-The function GPS(VALID) should be checked before any of these functions are
-used to ensure that the returned value is valid.
+See [GPS](function/gps.md) for comprehensive GPS documentation.
 
-- [GPS(ALTITUDE)](function/gps_altitude.md)
-- [GPS(DATE)](function/gps_date.md)
-- [GPS(DOP)](function/gps_dop.md)
-- [GPS(FIX)](function/gps_fix.md)
-- [GPS(GEOID)](function/gps_geoid.md)
+### Position Functions
+
 - [GPS(LATITUDE)](function/gps_latitude.md)
 - [GPS(LONGITUDE)](function/gps_longitude.md)
-- [GPS(SATELLITES)](function/gps_satellites.md)
-- [GPS(SPEED)](function/gps_speed.md)
+- [GPS(ALTITUDE)](function/gps_altitude.md)
+
+### Time Functions
+
+- [GPS(DATE)](function/gps_date.md)
 - [GPS(TIME)](function/gps_time.md)
+
+### Navigation Functions
+
+- [GPS(SPEED)](function/gps_speed.md)
 - [GPS(TRACK)](function/gps_track.md)
+
+### Quality and Accuracy Functions
+
+- [GPS(FIX)](function/gps_fix.md)
+- [GPS(SATELLITES)](function/gps_satellites.md)
+- [GPS(DOP)](function/gps_dop.md)
+- [GPS(GEOID)](function/gps_geoid.md)
+
+### Status Functions
+
 - [GPS(VALID)](function/gps_valid.md)
 
 ## Input Event functions
@@ -102,7 +151,6 @@ Functions for handling keyboard and input device events, including key presses a
 
 - [INKEY$](function/inkey$.md)
 - [INPUT$](function/input$.md)
-- [INSTR](function/instr.md)
 - [KEYDOWN](function/keydown.md)
 
 ## Longstring functions
@@ -230,23 +278,34 @@ see also [Appendix F – The PIO Programming Package](../F_the_pio_programming_p
 
 *VGA AND HDMI VERSIONS ONLY*
 
-The SPRITE functions return information regarding sprites which are small
-graphic images on the VGA/HDMI screen. These are useful when writing
-games. See also the [SPRITE commands](../command/sprite.md).
+The SPRITE functions return information regarding sprites which are small graphic images on the VGA/HDMI screen. These are useful when writing games. See also the [SPRITE commands](../command/sprite.md).
 
-- [SPRITE(C)](function/sprite_c.md)
-- [SPRITE(D)](function/sprite_d.md)
-- [SPRITE(E)](function/sprite_e.md)
-- [SPRITE(H)](function/sprite_h.md)
-- [SPRITE(L)](function/sprite_l.md)
-- [SPRITE(N)](function/sprite_n.md)
-- [SPRITE(N,n)](function/sprite_n_layer.md)
-- [SPRITE(S)](function/sprite_s.md)
-- [SPRITE(T)](function/sprite_t.md)
-- [SPRITE(V)](function/sprite_v.md)
-- [SPRITE(W)](function/sprite_w.md)
+See [SPRITE](function/sprite.md) for comprehensive documentation.
+
+### Position & Dimensions
+
 - [SPRITE(X)](function/sprite_x.md)
 - [SPRITE(Y)](function/sprite_y.md)
+- [SPRITE(W)](function/sprite_w.md)
+- [SPRITE(H)](function/sprite_h.md)
+
+### Collision & Contact Detection
+
+- [SPRITE(C)](function/sprite_c.md)
+- [SPRITE(T)](function/sprite_t.md)
+- [SPRITE(E)](function/sprite_e.md)
+
+### Sprite Management
+
+- [SPRITE(N)](function/sprite_n.md)
+- [SPRITE(N,n)](function/sprite_n_layer.md)
+- [SPRITE(L)](function/sprite_l.md)
+- [SPRITE(S)](function/sprite_s.md)
+
+### Distance & Vector Operations
+
+- [SPRITE(D)](function/sprite_d.md)
+- [SPRITE(V)](function/sprite_v.md)
 
 ## Misc functions
 
@@ -254,8 +313,18 @@ Miscellaneous utility functions for handling optional devices including distance
 
 - [DISTANCE](function/distance.md)
 - [TEMPR](function/tempr.md)
+
+### TOUCH Functions
+
+See [TOUCH](function/touch.md) for comprehensive documentation.
+
+#### Touch Coordinates
+
 - [TOUCH(X)](function/touch_x.md)
 - [TOUCH(Y)](function/touch_y.md)
+
+#### Multi-touch Coordinates (FT6336)
+
 - [TOUCH(X2)](function/touch_x2.md)
 - [TOUCH(Y2)](function/touch_y2.md)
 

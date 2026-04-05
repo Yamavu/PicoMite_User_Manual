@@ -9,6 +9,3 @@ depending on the result of the evaluation.
 
 For example: S$ = "COS(RAD(30)) * 100" : PRINT EVAL(S$)
 Will display: 86.6025
-
-
-## Time and Date Functions
