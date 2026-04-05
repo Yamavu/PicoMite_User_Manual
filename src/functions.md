@@ -148,34 +148,53 @@ programmed in Basic but there are speed advantages to coding looping
 structures in C and there is the advantage that once debugged they are there for
 everyone without re-inventing the wheel.
 
+See [MATH](function/math.md) for comprehensive documentation.
+
+### Trigonometric & Logarithmic Functions
+
 - [MATH(ATAN3)](function/math_atan3.md)
 - [MATH(COSH)](function/math_cosh.md)
 - [MATH(LOG10)](function/math_log10.md)
 - [MATH(SINH)](function/math_sinh.md)
 - [MATH(TANH)](function/math_tanh.md)
-- [MATH(CRCn)](function/math_crcn.md)
+
+### Random & Encoding Functions
+
 - [MATH(RAND)](function/math_rand.md)
+- [MATH(BASE64)](function/math_base64.md)
+- [MATH(CRCn)](function/math_crcn.md)
+
+### Basic Statistical Functions
+
+- [MATH(MEAN)](function/math_mean.md)
+- [MATH(MEDIAN)](function/math_median.md)
+- [MATH(SUM)](function/math_sum.md)
+- [MATH(SD)](function/math_sd.md)
+- [MATH(MIN)](function/math_min.md)
+- [MATH(MAX)](function/math_max.md)
+
+### Advanced Statistical Functions
+
+- [MATH(CHI)](function/math_chi.md)
+- [MATH(CHI_p)](function/math_chi_p.md)
+- [MATH(CORREL)](function/math_correl.md)
+- [MATH(CROSSING)](function/math_crossing.md)
+
+### Vector & Matrix Operations
+
+- [MATH(MAGNITUDE)](function/math_magnitude.md)
+- [MATH(DOTPRODUCT)](function/math_dotproduct.md)
+- [MATH(M_DETERMINANT)](function/math_m_determinant.md)
+
+### Control Systems
+
+- [MATH(PID)](function/math_pid.md)
 
 ## Array functions
 
 Functions for array manipulation and statistical calculations, including bounds checking and mathematical operations on arrays.
 
 - [BOUND](function/bound.md)
-- [MATH(CHI)](function/math_chi.md)
-- [MATH(CHI_p)](function/math_chi_p.md)
-- [MATH(CROSSING)](function/math_crossing.md)
-- [MATH(CORREL)](function/math_correl.md)
-- [MATH(MAX)](function/math_max.md)
-- [MATH(MEAN)](function/math_mean.md)
-- [MATH(MEDIAN)](function/math_median.md)
-- [MATH(MIN)](function/math_min.md)
-- [MATH(SD)](function/math_sd.md)
-- [MATH(SUM)](function/math_sum.md)
-- [MATH(MAGNITUDE)](function/math_magnitude.md)
-- [MATH(DOTPRODUCT)](function/math_dotproduct.md)
-- [MATH(M_DETERMINANT)](function/math_m_determinant.md)
-- [MATH(PID)](function/math_pid.md)
-- [MATH(BASE64)](function/math_base64.md)
 
 ## Graphics functions
 
