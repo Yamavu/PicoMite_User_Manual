@@ -317,6 +317,8 @@
     - [IRQ](command/irq.md)
     - [JMP](command/jmp.md)
     - [KEYPAD](command/keypad.md)
+      - [KEYPAD](command/keypad_open.md)
+      - [KEYPAD CLOSE](command/keypad_close.md)
     - [LENGTH](command/length.md)
     - [LIBRARY](command/library.md)
     - [LONGSTRING](command/longstring.md)
