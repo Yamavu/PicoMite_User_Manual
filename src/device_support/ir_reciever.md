@@ -2,7 +2,7 @@
 
 You can easily add a remote control to your project using the IR command. When enabled this function will run in the background and interrupt the running program whenever a key is pressed on the IR remote control.
 
-It will work with any NEC or Sony compatible remote controls including ones that generate extended IR Receiver messages. Most cheap programmable remote controls will generate either protocol and using one of these you 3.3V can add a sophisticated flair to your Pico based project.
+It will work with any NEC (see [this pdf](https://www.ad-notam.com/download/RS232/ad_notam_IR_protocol_DFU.pdf)) or Sony compatible remote controls including ones that generate extended IR Receiver messages. Most cheap programmable remote controls will generate either protocol and using one of these you 3.3V can add a sophisticated flair to your Pico based project.
 
 The NEC protocol is also used by many other PicoMite manufacturers including Apple, Pioneer, Sanyo, Akai and Toshiba so their branded remotes can be used.
 
@@ -30,3 +30,9 @@ END SUB
 ```
 
 IR remote controls can address many different devices (VCR, TV, etc) so the program would normally examine the device code first to determine if the signal was intended for the program and, if it was, then take action based on the key pressed. There are many different devices and key codes so the best method of determining what codes your remote generates is to use the above program to discover the codes.
+
+### more complex example 
+https://www.ad-notam.com/download/RS232/ad_notam_IR_protocol_DFU.pdf
+```basic
+
+```

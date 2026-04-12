@@ -432,29 +432,29 @@
     - [RAD](function/rad.md)
   - [String Functions](functions.md#string-functions)
     - [STR](function/str.md)
-    - String Conversion
+    - [String Conversion](functions.md#string-conversion)
       - [STR$](function/str$.md)
       - [STRING$](function/string$.md)
       - [VAL](function/val.md)
-    - String Case Conversion
+    - [String Case Conversion](functions.md#string-case-conversion)
       - [UCASE$](function/ucase$.md)
       - [LCASE$](function/lcase$.md)
-    - String Extraction
+    - [String Extraction](functions.md#string-extraction)
       - [LEFT$](function/left$.md)
       - [MID$](function/mid$.md)
       - [RIGHT$](function/right$.md)
-    - String Formatting & Utilities
+    - [String Formatting & Utilities](functions.md#string-formatting--utilities)
       - [SPACE$](function/space$.md)
       - [TAB](function/tab.md)
-    - String Search
+    - [String Search](functions.md#string-search)
       - [INSTR](function/instr.md)
       - [LINSTR](function/linstr.md)
-    - Binary String Conversion
+    - [Binary String Conversion](functions.md#binary-string-conversion)
       - [BIN2STR$](function/bin2str$.md)
       - [STR2BIN](function/str2bin.md)
-    - Long String Operations
+    - [Long String Operations](functions.md#long-string-operations)
       - [LGETSTR$](function/lgetstr$.md)
-    - Additional String Functions
+    - [Additional String Functions](functions.md#additional-string-functions)
       - [ASC](function/asc.md)
       - [CHR$](function/chr$.md)
       - [LEN](function/len.md)
@@ -471,46 +471,46 @@
     - [EVAL](function/eval.md)
   - [Time and Date Functions](functions.md#time-and-date-functions)
     - [Date & Time](function/datetime_time.md)
-    - Date Functions
+    - [Date Functions](functions.md#date-functions)
       - [DATE$](function/date.md)
       - [DATETIME$](function/datetime$.md)
       - [DAY$](function/day_date.md)
-    - Time Functions
+    - [Time Functions](functions.md#time-functions)
       - [TIMER](function/timer.md)
-    - Time System Functions
+    - [Time System Functions](functions.md#time-system-functions)
       - [EPOCH](function/epoch.md)
   - [DEVICE Functions](functions.md#device-functions)
     - [DEVICE](function/device.md)
-    - Gamepad Support
+    - [Gamepad Support](functions.md)
       - [DEVICE(GAMEPAD)](function/device_gamepad.md)
-    - Mouse Support
+    - [Mouse Support](functions.md)
       - [DEVICE(MOUSE)](function/device_mouse.md)
-    - Wii Controller Support
+    - [Wii Controller Support](functions.md)
       - [DEVICE(WII CLASSIC)](function/device_wii_classic.md)
       - [DEVICE(WII NUNCHUCK)](function/device_wii_nunchuck.md)
-    - Device Utilities
+    - [Device Utilities](functions.md)
       - [FIELD$](function/field$.md)
       - [FLAG](function/flag.md)
       - [FORMAT$](function/format$.md)
       - [GETSCANLINE](function/getscanline.md)
   - [GPS Functions](functions.md#gps-functions)
     - [GPS](function/gps.md)
-    - Position Functions
+    - [Position Functions](functions.md)
       - [GPS(LATITUDE)](function/gps_latitude.md)
       - [GPS(LONGITUDE)](function/gps_longitude.md)
       - [GPS(ALTITUDE)](function/gps_altitude.md)
-    - Time Functions
+    - [Time Functions](functions.md#time-functions-1)
       - [GPS(DATE)](function/gps_date.md)
       - [GPS(TIME)](function/gps_time.md)
-    - Navigation Functions
+    - [Navigation Functions](functions.md#navigation-functions)
       - [GPS(SPEED)](function/gps_speed.md)
       - [GPS(TRACK)](function/gps_track.md)
-    - Quality and Accuracy Functions
+    - [Quality and Accuracy Functions](functions.md#quality-and-accuracy-functions)
       - [GPS(FIX)](function/gps_fix.md)
       - [GPS(SATELLITES)](function/gps_satellites.md)
       - [GPS(DOP)](function/gps_dop.md)
       - [GPS(GEOID)](function/gps_geoid.md)
-    - Status Functions
+    - [Status Functions](functions.md#status-functions)
       - [GPS(VALID)](function/gps_valid.md)
   - [Input Event Functions](functions.md#input-event-functions)
     - [INKEY$](function/inkey$.md)
@@ -542,33 +542,33 @@
     - [SQR](function/sqr.md)
   - [MATH Functions](functions.md#math-functions)
     - [MATH](function/math.md)
-    - Trigonometric & Logarithmic Functions
+    - [Trigonometric & Logarithmic Functions](functions.md#trigonometric--logarithmic-functions)
       - [MATH(ATAN3)](function/math_atan3.md)
       - [MATH(COSH)](function/math_cosh.md)
       - [MATH(LOG10)](function/math_log10.md)
       - [MATH(SINH)](function/math_sinh.md)
       - [MATH(TANH)](function/math_tanh.md)
-    - Random & Encoding Functions
+    - [Random & Encoding Functions](functions.md#random--encoding-functions)
       - [MATH(RAND)](function/math_rand.md)
       - [MATH(BASE64)](function/math_base64.md)
       - [MATH(CRCn)](function/math_crcn.md)
-    - Basic Statistical Functions
+    - [Basic Statistical Functions](functions.md#basic-statistical-functions)
       - [MATH(MEAN)](function/math_mean.md)
       - [MATH(MEDIAN)](function/math_median.md)
       - [MATH(SUM)](function/math_sum.md)
       - [MATH(SD)](function/math_sd.md)
       - [MATH(MIN)](function/math_min.md)
       - [MATH(MAX)](function/math_max.md)
-    - Advanced Statistical Functions
+    - [Advanced Statistical Functions](functions.md#advanced-statistical-functions)
       - [MATH(CHI)](function/math_chi.md)
       - [MATH(CHI_p)](function/math_chi_p.md)
       - [MATH(CORREL)](function/math_correl.md)
       - [MATH(CROSSING)](function/math_crossing.md)
-    - Vector & Matrix Operations
+    - [Vector & Matrix Operations](functions.md#vector--matrix-operations)
       - [MATH(MAGNITUDE)](function/math_magnitude.md)
       - [MATH(DOTPRODUCT)](function/math_dotproduct.md)
       - [MATH(M_DETERMINANT)](function/math_m_determinant.md)
-    - Control Systems
+    - [Control Systems](functions.md#control-systems)
       - [MATH(PID)](function/math_pid.md)
   - [Graphics Functions](functions.md#graphics-functions)
     - [MAP](function/map.md)
@@ -591,45 +591,46 @@
     - [PIO(SHIFTCTRL)](function/pio_shiftctrl.md)
   - [SPRITE Functions](functions.md#sprite-functions)
     - [SPRITE](function/sprite.md)
-    - Position & Dimensions
+    - [Position & Dimensions](functions.md#position--dimensions)
       - [SPRITE(X)](function/sprite_x.md)
       - [SPRITE(Y)](function/sprite_y.md)
       - [SPRITE(W)](function/sprite_w.md)
       - [SPRITE(H)](function/sprite_h.md)
-    - Collision & Contact Detection
+    - [Collision & Contact Detection](functions.md#collision--contact-detection)
       - [SPRITE(C)](function/sprite_c.md)
       - [SPRITE(T)](function/sprite_t.md)
       - [SPRITE(E)](function/sprite_e.md)
-    - Sprite Management
+    - [Sprite Management](functions.md#sprite-management)
       - [SPRITE(N)](function/sprite_n.md)
       - [SPRITE(N,n)](function/sprite_n_layer.md)
       - [SPRITE(L)](function/sprite_l.md)
       - [SPRITE(S)](function/sprite_s.md)
-    - Distance & Vector Operations
+    - [Distance & Vector Operations](functions.md#distance--vector-operations)
       - [SPRITE(D)](function/sprite_d.md)
       - [SPRITE(V)](function/sprite_v.md)
   - [Misc Functions](functions.md#misc-functions)
     - [DISTANCE](function/distance.md)
     - [TEMPR](function/tempr.md)
     - [TOUCH](function/touch.md)
-    - Touch Coordinates
+    - [Touch Coordinates](functions.md#touch-coordinates)
       - [TOUCH(X)](function/touch_x.md)
       - [TOUCH(Y)](function/touch_y.md)
-    - Multi-touch Coordinates (FT6336)
+    - [Multi-touch Coordinates (FT6336)](functions.md#multi-touch-coordinates-ft6336)
       - [TOUCH(X2)](function/touch_x2.md)
       - [TOUCH(Y2)](function/touch_y2.md)
 - [Obsolete Commands and Functions](obsolete_commands_and_functions.md)
+- Appendices
+  - [Appendix A – Serial Communications](A_serial_communications.md)
+  - [Appendix B – I²C Communications](B_I²C_communications.md)
+  - [Appendix C – 1-Wire Communications](C_1-wire_communications.md)
+  - [Appendix D – SPI Communications](D_spi_communications.md)
+  - [Appendix E – Regex Syntax](E_regex_syntax.md)
+  - [Appendix F – The PIO Programming Package](F_the_pio_programming_package.md)
+  - [Appendix G – Sprites](G_sprites.md)
+  - [Appendix H – Special Keyboard Keys](H_special_keyboard_keys.md)
+  - [Appendix J - The CMM2 3D engine](J_CMM2_3D_engine.md)
 
 ---
 
-[Appendix A – Serial Communications](A_serial_communications.md)
-[Appendix B – I²C Communications](B_I²C_communications.md)
-[Appendix C – 1-Wire Communications](C_1-wire_communications.md)
-[Appendix D – SPI Communications](D_spi_communications.md)
-[Appendix E – Regex Syntax](E_regex_syntax.md)
-[Appendix F – The PIO Programming Package](F_the_pio_programming_package.md)
-[Appendix G – Sprites](G_sprites.md)
-[Appendix H – Special Keyboard Keys](H_special_keyboard_keys.md)
-[Appendix J - The CMM2 3D engine](J_CMM2_3D_engine.md)
 [Colors Palettes](./colors.md)
 [Sprite Format](./sprite_format.md)
