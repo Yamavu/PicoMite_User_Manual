@@ -67,6 +67,8 @@
 
 ---
 
+# Options Reference
+
 - [Options](options.md)
   - [Audio](options_audio.md)
     - [OPTION AUDIO](option/audio.md)
@@ -137,6 +139,9 @@
     - [OPTION SDCARD](option/sdcard.md)
     - [OPTION SDCARD COMBINED](option/sdcard_combined.md)
     - [OPTION MODBUFF](option/modbuff_enable_disable_sizeink.md)
+
+# Commands Reference
+
 - [Commands](commands.md)
   - [Program Control & Flow](commands.md#program-control--flow)
     - [CALL](command/call.md)
@@ -419,6 +424,8 @@
     - [TRACE LIST](command/trace_list.md)
     - [UPDATE](command/update.md)
 
+# Functions Reference
+
 - [Functions](functions.md)
   - [Trigonometric Functions](functions.md#trigonometric-functions)
     - [ACOS](function/acos.md)
@@ -619,7 +626,10 @@
       - [TOUCH(X2)](function/touch_x2.md)
       - [TOUCH(Y2)](function/touch_y2.md)
 - [Obsolete Commands and Functions](obsolete_commands_and_functions.md)
-- Appendices
+
+---
+
+# Appendices
   - [Appendix A – Serial Communications](A_serial_communications.md)
   - [Appendix B – I²C Communications](B_I²C_communications.md)
   - [Appendix C – 1-Wire Communications](C_1-wire_communications.md)
